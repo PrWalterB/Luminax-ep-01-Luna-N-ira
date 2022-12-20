@@ -1,0 +1,270 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Scripts/Cinematics/AnimLandOosphiros.gd" type="Script" id=1]
+[ext_resource path="res://Backgrounds/backsea.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Cinematics/LandOo/background11.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Cinematics/LandOo/sprite260_0.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Cinematics/LandOo/sprite265_0.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Other/sprite264_0.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Cinematics/LandOo/sprite235_0.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Cinematics/LandOo/sprite235_2.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Cinematics/LandOo/sprite235_4.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Cinematics/LandOo/sprite235_6.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Cinematics/LandOo/sprite235_9.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Cinematics/LandOo/sprite235_11.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Cinematics/LandOo/sprite235_13.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Cinematics/LandOo/sprite235_15.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Props/sprite142_0.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Props/sprite142_3.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Cinematics/LandOo/sprite234_0.png" type="Texture" id=17]
+[ext_resource path="res://Sons/Activ_Tunnmar.wav" type="AudioStream" id=18]
+[ext_resource path="res://Sons/Ambiance_Vagues.wav" type="AudioStream" id=19]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 795.398, 373.392, 0, 0, 0, 0, 795.267, 644.279 )
+}
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "active",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Curve2D" id=4]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -82.5732, 33.5434, 0, 0, 0, 0, 185.638, 218.796, 0, 0, 0, 0, 210.956, 235.313, 0, 0, 0, 0, 243.455, 245.372, 0, 0, 0, 0, 286.786, 252.336, 0, 0, 0, 0, 359.849, 269.199, 0, 0, 0, 0, 440.599, 291.999, 0, 0, 0, 0, 537.498, 317.649, 0, 0, 0, 0, 651.526, 346.15, 0, 0, 0, 0, 732.621, 358.961, 0, 0, 0, 0, 796.001, 361.538 )
+}
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "default",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "stop",
+"speed": 5.0
+} ]
+
+[node name="AnimLandOosphiros" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="back" type="Sprite" parent="Node2D"]
+modulate = Color( 0.145098, 0.552941, 0.94902, 1 )
+position = Vector2( 549.189, 320.08 )
+scale = Vector2( 55.7073, 36.4378 )
+texture = ExtResource( 2 )
+
+[node name="funn2" type="Sprite" parent="Node2D"]
+position = Vector2( 793.18, 373.616 )
+scale = Vector2( 0.505992, 0.590185 )
+texture = ExtResource( 3 )
+
+[node name="plate" type="Path2D" parent="Node2D"]
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/plate"]
+position = Vector2( 795.398, 373.392 )
+rotation = 1.57125
+rotate = false
+
+[node name="plate2" type="AnimatedSprite" parent="Node2D/plate/PathFollow2D"]
+position = Vector2( 6.11792, -0.817627 )
+rotation = -1.5708
+scale = Vector2( 0.505855, 0.589474 )
+frames = SubResource( 2 )
+
+[node name="ombre" type="Sprite" parent="Node2D"]
+position = Vector2( 792.499, 327.242 )
+texture = ExtResource( 6 )
+
+[node name="cache" type="Node2D" parent="Node2D"]
+editor/display_folded = true
+
+[node name="cache" type="Sprite" parent="Node2D/cache"]
+modulate = Color( 0.145098, 0.552941, 0.94902, 1 )
+position = Vector2( 485.982, 435.054 )
+scale = Vector2( 7.3991, 5.65265 )
+texture = ExtResource( 2 )
+
+[node name="cache2" type="Sprite" parent="Node2D/cache"]
+modulate = Color( 0.145098, 0.552941, 0.94902, 1 )
+position = Vector2( 504.149, 363.397 )
+rotation = 0.174533
+scale = Vector2( 6.47015, 2.09017 )
+texture = ExtResource( 2 )
+
+[node name="cache3" type="Sprite" parent="Node2D/cache"]
+modulate = Color( 0.145098, 0.552941, 0.94902, 1 )
+position = Vector2( 515.341, 344.442 )
+rotation = 0.349066
+scale = Vector2( 6.02757, 2.09017 )
+texture = ExtResource( 2 )
+
+[node name="cache4" type="Sprite" parent="Node2D/cache"]
+modulate = Color( 0.145098, 0.552941, 0.94902, 1 )
+position = Vector2( 527.02, 330.273 )
+rotation = 0.523599
+scale = Vector2( 5.62455, 2.09017 )
+texture = ExtResource( 2 )
+
+[node name="cache5" type="Sprite" parent="Node2D/cache"]
+modulate = Color( 0.145098, 0.552941, 0.94902, 1 )
+position = Vector2( 563.762, 334.832 )
+rotation = 0.698132
+scale = Vector2( 3.31688, 2.09017 )
+texture = ExtResource( 2 )
+
+[node name="cache6" type="Sprite" parent="Node2D/cache"]
+modulate = Color( 0.145098, 0.552941, 0.94902, 1 )
+position = Vector2( 573.491, 317.691 )
+rotation = 0.872665
+scale = Vector2( 3.31688, 2.09017 )
+texture = ExtResource( 2 )
+
+[node name="waves" type="Node2D" parent="Node2D"]
+editor/display_folded = true
+
+[node name="wave" type="AnimatedSprite" parent="Node2D/waves"]
+position = Vector2( 1065.81, 483.745 )
+frames = SubResource( 3 )
+frame = 3
+playing = true
+
+[node name="wave14" type="AnimatedSprite" parent="Node2D/waves"]
+position = Vector2( 791.828, 641.285 )
+frames = SubResource( 3 )
+frame = 2
+playing = true
+
+[node name="wave13" type="AnimatedSprite" parent="Node2D/waves"]
+position = Vector2( -192.343, -57.008 )
+frames = SubResource( 3 )
+frame = 2
+playing = true
+
+[node name="wave7" type="AnimatedSprite" parent="Node2D/waves"]
+position = Vector2( 1030.02, 308.055 )
+frames = SubResource( 3 )
+frame = 2
+playing = true
+
+[node name="wave4" type="AnimatedSprite" parent="Node2D/waves"]
+position = Vector2( 789.259, 229.97 )
+frames = SubResource( 3 )
+frame = 2
+playing = true
+
+[node name="wave8" type="AnimatedSprite" parent="Node2D/waves"]
+position = Vector2( 551.751, 545.562 )
+frames = SubResource( 3 )
+frame = 1
+playing = true
+
+[node name="wave2" type="AnimatedSprite" parent="Node2D/waves"]
+position = Vector2( 597.301, 324.322 )
+frames = SubResource( 3 )
+frame = 2
+playing = true
+
+[node name="wave9" type="AnimatedSprite" parent="Node2D/waves"]
+position = Vector2( 272.938, 414.435 )
+frames = SubResource( 3 )
+frame = 2
+playing = true
+
+[node name="wave5" type="AnimatedSprite" parent="Node2D/waves"]
+position = Vector2( 522.462, 262.654 )
+frames = SubResource( 3 )
+frame = 2
+playing = true
+
+[node name="wave11" type="AnimatedSprite" parent="Node2D/waves"]
+position = Vector2( -3.69943, 111.981 )
+frames = SubResource( 3 )
+frame = 1
+playing = true
+
+[node name="wave3" type="AnimatedSprite" parent="Node2D/waves"]
+position = Vector2( 213.94, 286.571 )
+frames = SubResource( 3 )
+frame = 2
+playing = true
+
+[node name="wave12" type="AnimatedSprite" parent="Node2D/waves"]
+position = Vector2( 3.47552, 238.738 )
+frames = SubResource( 3 )
+frame = 1
+playing = true
+
+[node name="wave6" type="AnimatedSprite" parent="Node2D/waves"]
+position = Vector2( 364.705, 159.694 )
+frames = SubResource( 3 )
+frame = 1
+playing = true
+
+[node name="wave10" type="AnimatedSprite" parent="Node2D/waves"]
+position = Vector2( 125.87, 54.4734 )
+frames = SubResource( 3 )
+playing = true
+
+[node name="vaisseau" type="Path2D" parent="Node2D"]
+editor/display_folded = true
+curve = SubResource( 4 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/vaisseau"]
+position = Vector2( -82.5732, 33.5434 )
+rotate = false
+
+[node name="ship" type="AnimatedSprite" parent="Node2D/vaisseau/PathFollow2D"]
+position = Vector2( -3.90479, -37.8264 )
+frames = SubResource( 5 )
+animation = "stop"
+playing = true
+
+[node name="Camera2D" type="Camera2D" parent="Node2D/vaisseau/PathFollow2D/ship"]
+position = Vector2( 14.7363, 28.8471 )
+current = true
+zoom = Vector2( 0.3, 0.3 )
+smoothing_enabled = true
+
+[node name="funn" type="Sprite" parent="Node2D"]
+position = Vector2( 795.222, 450.533 )
+scale = Vector2( 0.506073, 0.594275 )
+texture = ExtResource( 17 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Timer2" type="Timer" parent="."]
+
+[node name="Timer3" type="Timer" parent="."]
+
+[node name="Sounds" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+
+[node name="Vagues" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
+[connection signal="timeout" from="Timer3" to="." method="_on_Timer3_timeout"]
+[connection signal="finished" from="Sounds" to="." method="_on_Sounds_finished"]

@@ -1,0 +1,442 @@
+[gd_scene load_steps=38 format=2]
+
+[ext_resource path="res://Scripts/Maps/MaisonsVulav.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Cinematics/Begin/back1.png" type="Texture" id=2]
+[ext_resource path="res://Backgrounds/Interiors/MaisonVulav1.png" type="Texture" id=3]
+[ext_resource path="res://Backgrounds/Interiors/MaisonVulav2.png" type="Texture" id=4]
+[ext_resource path="res://Backgrounds/Interiors/MaisonVulav3.png" type="Texture" id=5]
+[ext_resource path="res://Backgrounds/Interiors/MaisonVulav4.png" type="Texture" id=6]
+[ext_resource path="res://Backgrounds/Interiors/MaisonVulav5.png" type="Texture" id=7]
+[ext_resource path="res://Backgrounds/Interiors/MaisonVulav1front.png" type="Texture" id=8]
+[ext_resource path="res://Backgrounds/Interiors/MaisonVulav2front.png" type="Texture" id=9]
+[ext_resource path="res://Backgrounds/Interiors/MaisonVulav3front.png" type="Texture" id=10]
+[ext_resource path="res://Backgrounds/Interiors/MaisonVulav4front.png" type="Texture" id=11]
+[ext_resource path="res://Backgrounds/Interiors/MaisonVulav5front.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Props/holo_0_0.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Props/holo_0_1.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/Props/PNJ.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Sprites/PNJ/animals/moustfeu_0_0.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/PNJ/animals/moustfeu_0_1.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/PNJ/animals/moustfeu_1_0.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/PNJ/animals/moustfeu_1_1.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/PNJ/animals/moustfeu_2_0.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/PNJ/animals/moustfeu_2_1.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Other/invisble.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/PNJ/animals/moustfeu_3_0.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/PNJ/animals/moustfeu_3_1.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/PNJ/animals/moustfeu_3_2.png" type="Texture" id=25]
+[ext_resource path="res://Scenes/Maps/dialogpiq.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Scenes/Player/player.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Scenes/Other/Transition.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Scenes/Other/fleche.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Scenes/Entities/Fantomis.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Scenes/Player/GUICanvas.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Scenes/Player/mouse.tscn" type="PackedScene" id=32]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "default",
+"speed": 6.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "default",
+"speed": 6.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[node name="MaisonsVulav" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite2" type="Sprite" parent="Node2D"]
+position = Vector2( 1924.14, 355.394 )
+scale = Vector2( 47.3198, 27.0028 )
+z_index = -10
+texture = ExtResource( 2 )
+
+[node name="Back" type="Node2D" parent="Node2D"]
+editor/display_folded = true
+position = Vector2( 1221.43, 941.876 )
+scale = Vector2( 0.8, 0.8 )
+z_index = -10
+
+[node name="M1" type="Sprite" parent="Node2D/Back"]
+position = Vector2( -878.458, -801.186 )
+texture = ExtResource( 3 )
+
+[node name="M2" type="Sprite" parent="Node2D/Back"]
+position = Vector2( 448.911, -843.04 )
+texture = ExtResource( 4 )
+
+[node name="M3" type="Sprite" parent="Node2D/Back"]
+position = Vector2( 1713.5, -843.04 )
+texture = ExtResource( 5 )
+
+[node name="M4" type="Sprite" parent="Node2D/Back"]
+position = Vector2( 3034.89, -828.092 )
+texture = ExtResource( 6 )
+
+[node name="M5" type="Sprite" parent="Node2D/Back"]
+position = Vector2( 4592.18, -811.483 )
+texture = ExtResource( 7 )
+
+[node name="Front" type="Node2D" parent="Node2D"]
+editor/display_folded = true
+position = Vector2( 1221.43, 941.876 )
+scale = Vector2( 0.8, 0.8 )
+z_index = 2
+
+[node name="M1" type="Sprite" parent="Node2D/Front"]
+position = Vector2( -878.458, -801.186 )
+texture = ExtResource( 8 )
+
+[node name="M2" type="Sprite" parent="Node2D/Front"]
+position = Vector2( 448.911, -843.04 )
+texture = ExtResource( 9 )
+
+[node name="M3" type="Sprite" parent="Node2D/Front"]
+position = Vector2( 1713.5, -843.04 )
+texture = ExtResource( 10 )
+
+[node name="M4" type="Sprite" parent="Node2D/Front"]
+position = Vector2( 3034.89, -828.092 )
+texture = ExtResource( 11 )
+
+[node name="M5" type="Sprite" parent="Node2D/Front"]
+position = Vector2( 4592.18, -811.483 )
+texture = ExtResource( 12 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node2D/Front"]
+position = Vector2( 4738.27, -802.835 )
+scale = Vector2( 1.25, 1.25 )
+frames = SubResource( 1 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Node2D/Front"]
+position = Vector2( 4697.23, -846.93 )
+scale = Vector2( 1.25, 1.25 )
+frames = SubResource( 1 )
+frame = 1
+playing = true
+
+[node name="People" type="Node2D" parent="Node2D"]
+editor/display_folded = true
+scale = Vector2( 1.2, 1.2 )
+
+[node name="00LBrumen0" parent="Node2D/People" instance=ExtResource( 15 )]
+position = Vector2( 464.5, 232.11 )
+animation = "00LBrumen"
+frame = 3
+
+[node name="00milkdude0" parent="Node2D/People" instance=ExtResource( 15 )]
+position = Vector2( 1299.51, 209.567 )
+animation = "00milkdude"
+frame = 3
+
+[node name="00catgrandma0" parent="Node2D/People" instance=ExtResource( 15 )]
+position = Vector2( 2164.74, 211.749 )
+animation = "00catgrandma"
+frame = 1
+
+[node name="00LZeikio0" parent="Node2D/People" instance=ExtResource( 15 )]
+position = Vector2( 2211.22, 207.359 )
+animation = "00LZeikio"
+frame = 1
+
+[node name="00LVeos0" parent="Node2D/People" instance=ExtResource( 15 )]
+position = Vector2( 3067.87, 234.958 )
+rotation = -1.58791
+animation = "00LVeos"
+
+[node name="02WFSailer0" parent="Node2D/People" instance=ExtResource( 15 )]
+position = Vector2( 4176.09, 234.344 )
+animation = "02WFSailer"
+
+[node name="Moustfeu" type="Node2D" parent="Node2D"]
+editor/display_folded = true
+
+[node name="Moustic" type="AnimatedSprite" parent="Node2D/Moustfeu"]
+position = Vector2( 2548.5, 234.74 )
+frames = SubResource( 2 )
+playing = true
+
+[node name="Wheatley" type="AnimatedSprite" parent="Node2D/Moustfeu"]
+position = Vector2( 2541.49, 277.549 )
+frames = SubResource( 3 )
+frame = 1
+playing = true
+
+[node name="Mastic" type="AnimatedSprite" parent="Node2D/Moustfeu"]
+position = Vector2( 2561.52, 256.52 )
+frames = SubResource( 4 )
+frame = 1
+playing = true
+
+[node name="Panache" type="AnimatedSprite" parent="Node2D/Moustfeu"]
+position = Vector2( 2636.27, 256.812 )
+frames = SubResource( 5 )
+frame = 10
+playing = true
+
+[node name="Team" type="Node2D" parent="Node2D"]
+position = Vector2( -8.97826, -1921.64 )
+
+[node name="00Doublix0" parent="Node2D/Team" instance=ExtResource( 15 )]
+position = Vector2( 4928, 253 )
+animation = "00Doublix"
+frame = 1
+
+[node name="00Doobliks0" parent="Node2D/Team" instance=ExtResource( 15 )]
+position = Vector2( 4948, 265 )
+animation = "00Doobliks"
+
+[node name="02Tog0" parent="Node2D/Team" instance=ExtResource( 15 )]
+position = Vector2( 4906, 282 )
+animation = "02Tog"
+
+[node name="01Progfer0" parent="Node2D/Team" instance=ExtResource( 15 )]
+position = Vector2( 4948.8, 322.845 )
+animation = "01Progfer"
+
+[node name="00OlH0" parent="Node2D/Team" instance=ExtResource( 15 )]
+visible = false
+position = Vector2( 4929, 284 )
+animation = "00OlApp"
+frame = 1
+
+[node name="0000801" parent="Node2D/Team" instance=ExtResource( 26 )]
+position = Vector2( 4927.92, 278.575 )
+scale = Vector2( 0.264027, 0.737109 )
+
+[node name="0000803" parent="Node2D/Team" instance=ExtResource( 26 )]
+position = Vector2( 4909.16, 291.453 )
+scale = Vector2( 0.264027, 0.737109 )
+
+[node name="0000805" parent="Node2D/Team" instance=ExtResource( 26 )]
+position = Vector2( 4948.7, 305.461 )
+scale = Vector2( 0.41269, 0.84466 )
+
+[node name="0000808" parent="Node2D/Team" instance=ExtResource( 26 )]
+position = Vector2( 4948.02, 278.801 )
+scale = Vector2( 0.264027, 0.737109 )
+
+[node name="player" parent="Node2D" instance=ExtResource( 27 )]
+position = Vector2( -14.3076, -29.0398 )
+
+[node name="walls" type="StaticBody2D" parent="Node2D"]
+editor/display_folded = true
+collision_mask = 7
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/walls"]
+polygon = PoolVector2Array( 550.79, 342.504, 438.667, 342.504, 438.375, 326.444, 439.251, 303.669, 440.71, 281.186, 452.682, 281.186, 453.558, 289.362, 461.734, 293.741, 516.044, 293.741, 523.051, 285.858, 523.927, 279.142, 528.891, 280.018, 533.271, 286.15, 538.235, 287.61, 548.454, 287.61, 554.878, 282.062, 555.754, 278.85, 559.55, 278.558, 560.426, 283.814, 586.413, 290.822, 595.173, 283.23, 596.925, 294.909, 593.713, 308.341, 596.377, 342.189, 572.426, 342.189, 572.776, 362.468, 597.251, 360.37, 612.984, 334.62, 602.764, 238.556, 437.207, 237.388, 428.155, 362.943, 551.958, 363.235, 551.082, 356.811 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Node2D/walls"]
+polygon = PoolVector2Array( 449.205, 320.439, 449.139, 327.352, 523.734, 327.962, 523.856, 314.411, 522.635, 310.016, 524.832, 303.545, 521.002, 301.982, 452.891, 302.041, 449.139, 315.632 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Node2D/walls"]
+polygon = PoolVector2Array( 1573.9, 317.634, 1573.58, 300.436, 1539.34, 300.436, 1537.45, 283.711, 1537.61, 268.88, 1520.57, 268.407, 1517.25, 268.88, 1515.36, 268.88, 1515.26, 264.081, 1598.07, 264.081, 1611.06, 264.257, 1612.5, 266.052, 1616.63, 266.859, 1631.08, 267.129, 1636.43, 265.287, 1639.44, 260.488, 1640.31, 256.404, 1640.41, 251.861, 1644.19, 251.81, 1646.49, 259.853, 1645.99, 269.129, 1645.8, 276.583, 1647.33, 282.763, 1646.84, 300, 1595.62, 300, 1595.43, 318.237, 1661.58, 313.371, 1659.38, 197.618, 1473.21, 201.139, 1491.26, 323.934 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Node2D/walls"]
+polygon = PoolVector2Array( 2582.75, 323.596, 2582.25, 304.995, 2520.14, 305.161, 2520.96, 293.806, 2521.09, 286.622, 2524.45, 286.738, 2539.64, 292.885, 2541.38, 292.769, 2555.76, 290.334, 2557.62, 282.679, 2558.55, 274.444, 2557.62, 270.965, 2548.11, 270.269, 2550.2, 266.209, 2553.68, 264.469, 2558.32, 267.949, 2564.81, 267.833, 2568.75, 265.745, 2568.87, 260.526, 2568.67, 255.033, 2574.53, 255.277, 2573.43, 264.922, 2575.63, 266.509, 2578.8, 266.021, 2580.76, 264.922, 2580.15, 255.277, 2583.2, 255.644, 2583.57, 262.114, 2585.03, 263.701, 2588.82, 263.579, 2589.55, 259.428, 2588.45, 257.231, 2584.3, 255.033, 2603.59, 254.911, 2604.44, 259.673, 2599.56, 262.114, 2604.32, 264.678, 2607.74, 264.8, 2610.43, 263.335, 2608.5, 260.219, 2608.6, 254.65, 2621.23, 254.849, 2620.83, 257.136, 2622.62, 264.693, 2625.11, 264.892, 2632.27, 266.583, 2634.26, 266.483, 2642.11, 263.301, 2645.99, 261.213, 2646.19, 255.943, 2659.71, 254.852, 2660.71, 273.165, 2661.09, 278.086, 2634.83, 277.858, 2632.64, 292.552, 2632.55, 298.206, 2660.73, 297.757, 2660.53, 305.066, 2604.87, 305.124, 2604.66, 323.337, 2673.97, 322.804, 2671.98, 211.68, 2586.42, 208.468, 2515.18, 211.096, 2517.47, 322.913, 2560.5, 324.531, 2573.12, 324.208 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Node2D/walls"]
+polygon = PoolVector2Array( 4692.77, 271.56, 4751.32, 255.06, 4836.52, 279.219, 4838.66, 275.651, 4846.51, 270.419, 4846.27, 275.176, 4850.79, 279.932, 4856.02, 282.548, 4861.49, 281.597, 4866.25, 276.841, 4870.29, 271.608, 4875.05, 273.035, 4880.52, 271.133, 4883.86, 268.081, 4885.47, 265.542, 4889.94, 266.003, 4889.94, 270.543, 4893.55, 275.237, 4897.78, 277.237, 4901.94, 277.629, 4908.34, 273.174, 4909.96, 270.501, 4910.12, 263.617, 4912.55, 265.642, 4917.16, 267.747, 4919.76, 267.91, 4924.55, 265.469, 4927.7, 262.37, 4928.27, 260.663, 4928.74, 254.147, 4932.23, 254.361, 4932.34, 261.347, 4934.3, 264.559, 4937.58, 267.33, 4940.47, 268.292, 4941.09, 268.914, 4943.75, 269.084, 4946.07, 267.896, 4950.25, 264.615, 4950.65, 271.177, 4955.25, 276.965, 4959.4, 278.715, 4962.16, 278.623, 4966.46, 277.031, 4971.05, 271.479, 4970.72, 266.597, 4973.76, 266.927, 4973.49, 290.859, 4999.45, 319.445, 5069.15, 318.122, 5069.06, 328.128, 5066.06, 337.142, 5062.84, 345.299, 5058.11, 345.513, 5055.11, 342.508, 5051.46, 342.294, 5049.96, 342.079, 5046.95, 342.508, 5043.52, 342.508, 5039.01, 344.869, 5037.08, 342.079, 5034.93, 341.006, 5032.36, 340.147, 5029.14, 340.147, 5026.13, 341.006, 5022.27, 341.435, 5020.12, 343.152, 5019.91, 356.889, 5020.54, 405.661, 5028.94, 363.648, 5033.47, 365.266, 5037.68, 363.648, 5038.65, 360.089, 5038.49, 370.912, 5042.47, 375.727, 5052.21, 377.988, 5050.55, 389.639, 5051.66, 392.413, 5043.89, 402.399, 5031.13, 406.559, 5006.44, 411.552, 4998.91, 414.077, 4982.59, 416.545, 4939.59, 413.772, 4897.58, 412.596, 4882.05, 412.846, 4862.03, 403.583, 4844.66, 385.889, 4837.05, 365.674, 4835.96, 359.14, 4850.31, 358.697, 4850.05, 370.292, 4852.95, 377.67, 4866.39, 377.143, 4871.36, 370.345, 4871.54, 364.607, 4875.65, 377.435, 4923.69, 409.97, 4951.76, 402.597, 4971.5, 409.018, 4997.51, 412.154, 4996.81, 402.888, 4989.57, 396.777, 4979.38, 396.777, 4971.73, 402.835, 4971.73, 393.084, 4966.5, 385.474, 4956.27, 385.236, 4951.99, 391.181, 4949.14, 384.284, 4938.44, 384.047, 4937.25, 388.09, 4929.88, 383.095, 4922.03, 382.62, 4914.18, 385.236, 4914.37, 366.939, 4914.14, 358.82, 4909.85, 355.341, 4899.41, 355.689, 4895.46, 357.776, 4895.06, 365.545, 4892.27, 364.115, 4887.46, 362.887, 4881.41, 362.981, 4876.31, 366.099, 4871.54, 358.718, 4870.86, 352.07, 4866.1, 349.066, 4855.84, 348.816, 4850.83, 351.069, 4834.25, 327.272, 4836.47, 300.291, 4793.58, 302.171, 4769.46, 285.749, 4760.55, 298.408, 4689.05, 280.429, 4691.9, 271.265, 4678.18, 273.739, 4688.32, 338.343, 4906.58, 480.068, 5193, 371.999, 5169, 226, 4806, 161 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Node2D/walls"]
+polygon = PoolVector2Array( 3587.51, 309.766, 3587.66, 271.562, 3668.09, 271.656, 3664.64, 280.135, 3666, 286.834, 3668.93, 291.335, 3682.54, 293.533, 3696.25, 292.8, 3700.12, 291.754, 3700.16, 335.257, 3753.82, 334.109, 3755.36, 203.207, 3566.45, 206.801, 3552.59, 248.895, 3553.1, 346.943, 3564.14, 357.561, 3751.24, 358.602, 3752.75, 340.112, 3709.08, 342.817, 3700.16, 335.441, 3699.45, 334.962, 3642.08, 334.461, 3587.05, 333.909 )
+
+[node name="Transitions" type="Node2D" parent="Node2D"]
+editor/display_folded = true
+
+[node name="-2100029VillageDejean" parent="Node2D/Transitions" instance=ExtResource( 28 )]
+position = Vector2( 561.531, 359.895 )
+scale = Vector2( 2.08, 1 )
+
+[node name="00640050VillageDejean" parent="Node2D/Transitions" instance=ExtResource( 28 )]
+position = Vector2( 2593.34, 324.357 )
+scale = Vector2( 2.08, 1 )
+
+[node name="02940216VillageDejean" parent="Node2D/Transitions" instance=ExtResource( 28 )]
+position = Vector2( 3629.04, 336.335 )
+scale = Vector2( 2.08, 1 )
+
+[node name="-1900206VillageDejean" parent="Node2D/Transitions" instance=ExtResource( 28 )]
+position = Vector2( 1584.93, 319.083 )
+scale = Vector2( 2.08, 1 )
+
+[node name="02620059VillageDejean" parent="Node2D/Transitions" instance=ExtResource( 28 )]
+position = Vector2( 4726.14, 284.464 )
+rotation = 0.254145
+scale = Vector2( 7.78502, 1.15693 )
+
+[node name="Dialogues" type="Node2D" parent="Node2D"]
+
+[node name="0000652" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 556.424, 290.96 )
+scale = Vector2( 0.256242, 1.33852 )
+
+[node name="0000654" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 540.54, 278.95 )
+scale = Vector2( 0.401441, 1.33852 )
+
+[node name="0000671" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 581.594, 281.724 )
+scale = Vector2( 0.570972, 1.33852 )
+
+[node name="0000673" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 516.524, 313.863 )
+scale = Vector2( 0.399615, 1.73144 )
+
+[node name="0000676" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 469.354, 315.181 )
+scale = Vector2( 0.399615, 1.73144 )
+
+[node name="0000678" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 155.698, 224.267 )
+scale = Vector2( 0.399615, 1.73144 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Dialogues/0000678"]
+polygon = PoolVector2Array( 1029.69, 45.3481, 1026.29, 54.8162, 1075.11, 54.6517, 1071.33, 45.27 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Node2D/Dialogues/0000678"]
+position = Vector2( 2617.55, -17.1914 )
+polygon = PoolVector2Array( 1029.12, 48.1237, 1026.29, 54.8162, 1075.11, 54.6517, 1072.96, 47.9965 )
+
+[node name="0000680" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 1558.94, 260.634 )
+scale = Vector2( 0.292616, 1.73144 )
+
+[node name="0000687" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 1536.12, 284.813 )
+scale = Vector2( 0.292616, 1.73144 )
+
+[node name="0000689" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 1627.29, 250.656 )
+scale = Vector2( 0.549937, 2.125 )
+
+[node name="0000691" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 1580.07, 257.66 )
+scale = Vector2( 0.390735, -1.1454 )
+
+[node name="0000693" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 1604.25, 256.53 )
+scale = Vector2( 0.390735, -1.1454 )
+
+[node name="0000695" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 2596.49, 266.389 )
+scale = Vector2( 0.390735, -1.1454 )
+
+[node name="0000704" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 2657.72, 257.126 )
+scale = Vector2( 0.390735, -1.1454 )
+
+[node name="0000707" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 2570.15, 262.277 )
+scale = Vector2( 0.390735, -1.1454 )
+
+[node name="0000709" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 2552.52, 283.063 )
+scale = Vector2( 0.390735, -1.1454 )
+
+[node name="0000711" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 2633.42, 259.874 )
+scale = Vector2( 0.390735, -1.1454 )
+
+[node name="0000713" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 2647.7, 285.77 )
+scale = Vector2( 0.557172, -1.24411 )
+
+[node name="0000715" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 3528.31, 169.319 )
+scale = Vector2( 0.557172, -1.24411 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Dialogues/0000715"]
+polygon = PoolVector2Array( 138.879, -95.588, 135.004, -119.617, 123.99, -129.546, 245.571, -128.607, 263.808, -128.479, 261.391, -113.343, 202.59, -112.618, 198.07, -94.7118 )
+
+[node name="0000717" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 3579.28, 283.697 )
+scale = Vector2( 0.557172, -1.24411 )
+
+[node name="0000719" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 3604.02, 266.098 )
+scale = Vector2( 0.557172, -1.24411 )
+
+[node name="0000721" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 3658.05, 266.098 )
+scale = Vector2( 0.557172, -1.24411 )
+
+[node name="0000723" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 3709.28, 305.509 )
+scale = Vector2( 0.557172, -1.24411 )
+
+[node name="0000725" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 3674.23, 287.589 )
+scale = Vector2( 0.646431, -1.08333 )
+
+[node name="1Boss2dial" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 4989.13, 293.005 )
+rotation = -0.692147
+scale = Vector2( -0.677601, -3.28192 )
+
+[node name="0000812" parent="Node2D/Dialogues" instance=ExtResource( 26 )]
+position = Vector2( 4989.13, 293.005 )
+rotation = -0.692147
+scale = Vector2( -0.540906, -2.9637 )
+
+[node name="fleche2" parent="Node2D" instance=ExtResource( 29 )]
+position = Vector2( 5011.7, 253.113 )
+frame = 1
+
+[node name="fleche1" parent="Node2D" instance=ExtResource( 29 )]
+position = Vector2( 4849.29, 292.747 )
+rotation = 1.5708
+
+[node name="14143fire" parent="Node2D" instance=ExtResource( 30 )]
+position = Vector2( 3666.58, 300.209 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 31 )]
+
+[node name="mouse" parent="CanvasLayer" instance=ExtResource( 32 )]
+position = Vector2( -41.3338, 17.5976 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 4758.13, 264.457 )
+rotation = -0.859495
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Charge" type="Timer" parent="."]
+[connection signal="animation_finished" from="Node2D/Team/00OlH0" to="." method="_on_00OlH0_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Charge" to="." method="_on_Charge_timeout"]

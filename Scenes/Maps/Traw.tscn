@@ -1,0 +1,1042 @@
+[gd_scene load_steps=177 format=2]
+
+[ext_resource path="res://Scripts/Maps/Traw.gd" type="Script" id=1]
+[ext_resource path="res://Backgrounds/sprite156_0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_1_0.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_1_1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_4_0.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_4_1.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_4_2.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_4_3.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_4_4.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_4_5.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_4_6.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_4_7.png" type="Texture" id=12]
+[ext_resource path="res://Backgrounds/brouillard.png" type="Texture" id=13]
+[ext_resource path="res://Backgrounds/brouillard_1.png" type="Texture" id=14]
+[ext_resource path="res://Backgrounds/brouillard_2.png" type="Texture" id=15]
+[ext_resource path="res://Backgrounds/brouillard_3.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_2_0.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_2_1.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_0.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_1.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_2.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_3.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_4.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_5.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_6.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_7.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_8.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_9.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_10.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_11.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_12.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_13.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_14.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_15.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_16.png" type="Texture" id=35]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_17.png" type="Texture" id=36]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_18.png" type="Texture" id=37]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_19.png" type="Texture" id=38]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_20.png" type="Texture" id=39]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_21.png" type="Texture" id=40]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_22.png" type="Texture" id=41]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_23.png" type="Texture" id=42]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_24.png" type="Texture" id=43]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_25.png" type="Texture" id=44]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_26.png" type="Texture" id=45]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_27.png" type="Texture" id=46]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_28.png" type="Texture" id=47]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_29.png" type="Texture" id=48]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_30.png" type="Texture" id=49]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_31.png" type="Texture" id=50]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_32.png" type="Texture" id=51]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_33.png" type="Texture" id=52]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_34.png" type="Texture" id=53]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_35.png" type="Texture" id=54]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_36.png" type="Texture" id=55]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_37.png" type="Texture" id=56]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_38.png" type="Texture" id=57]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_39.png" type="Texture" id=58]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_40.png" type="Texture" id=59]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_41.png" type="Texture" id=60]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_42.png" type="Texture" id=61]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_43.png" type="Texture" id=62]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_44.png" type="Texture" id=63]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_45.png" type="Texture" id=64]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_46.png" type="Texture" id=65]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_47.png" type="Texture" id=66]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_48.png" type="Texture" id=67]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_49.png" type="Texture" id=68]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_50.png" type="Texture" id=69]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_51.png" type="Texture" id=70]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_52.png" type="Texture" id=71]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_53.png" type="Texture" id=72]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_54.png" type="Texture" id=73]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_55.png" type="Texture" id=74]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_56.png" type="Texture" id=75]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_57.png" type="Texture" id=76]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_3_58.png" type="Texture" id=77]
+[ext_resource path="res://Backgrounds/background19.png" type="Texture" id=78]
+[ext_resource path="res://Sprites/Mobs/Traw/peint_0.png" type="Texture" id=79]
+[ext_resource path="res://Scenes/Maps/dialogpiq.tscn" type="PackedScene" id=80]
+[ext_resource path="res://Sprites/Mobs/Traw/Bocal_0.png" type="Texture" id=81]
+[ext_resource path="res://Sprites/Mobs/Traw/Bocal_1.png" type="Texture" id=82]
+[ext_resource path="res://Sprites/Mobs/Traw/arm1.png" type="Texture" id=83]
+[ext_resource path="res://Sprites/Mobs/Traw/arm2.png" type="Texture" id=84]
+[ext_resource path="res://Sprites/Mobs/Traw/gun_screen.png" type="Texture" id=85]
+[ext_resource path="res://Sprites/Mobs/Traw/coude_0.png" type="Texture" id=86]
+[ext_resource path="res://Sprites/Mobs/Traw/coude_1.png" type="Texture" id=87]
+[ext_resource path="res://Sprites/Mobs/Traw/coude_2.png" type="Texture" id=88]
+[ext_resource path="res://Sprites/Mobs/Traw/coude_3.png" type="Texture" id=89]
+[ext_resource path="res://Sprites/Mobs/Traw/coude_4.png" type="Texture" id=90]
+[ext_resource path="res://Sprites/Mobs/Traw/coude_5.png" type="Texture" id=91]
+[ext_resource path="res://Sprites/Mobs/Traw/coude_6.png" type="Texture" id=92]
+[ext_resource path="res://Sprites/Mobs/Traw/gun_laser.png" type="Texture" id=93]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/laser.png" type="Texture" id=94]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/MEGALASER.png" type="Texture" id=95]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/MEGALASER_1.png" type="Texture" id=96]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/MEGALASER_2.png" type="Texture" id=97]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/MEGALASER_3.png" type="Texture" id=98]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/MEGALASER_4.png" type="Texture" id=99]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/MEGALASER_5.png" type="Texture" id=100]
+[ext_resource path="res://Sprites/Mobs/Traw/gun_miss.png" type="Texture" id=101]
+[ext_resource path="res://Sprites/Mobs/Traw/gun_pince.png" type="Texture" id=102]
+[ext_resource path="res://Sprites/Mobs/Traw/eye.png" type="Texture" id=103]
+[ext_resource path="res://Sprites/Mobs/Traw/eye_hit.png" type="Texture" id=104]
+[ext_resource path="res://Scripts/Entities/pincetraw.gd" type="Script" id=105]
+[ext_resource path="res://Sprites/Mobs/Traw/side_0.png" type="Texture" id=106]
+[ext_resource path="res://Sprites/Mobs/Traw/side_1.png" type="Texture" id=107]
+[ext_resource path="res://Sprites/Mobs/Traw/side_2.png" type="Texture" id=108]
+[ext_resource path="res://Sprites/Mobs/Traw/side_3.png" type="Texture" id=109]
+[ext_resource path="res://Sprites/Mobs/Traw/side_4.png" type="Texture" id=110]
+[ext_resource path="res://Sprites/Mobs/Traw/side_5.png" type="Texture" id=111]
+[ext_resource path="res://Sprites/Mobs/Traw/side_6.png" type="Texture" id=112]
+[ext_resource path="res://Sprites/Mobs/Traw/side_7.png" type="Texture" id=113]
+[ext_resource path="res://Sprites/Mobs/Traw/side_8.png" type="Texture" id=114]
+[ext_resource path="res://Sprites/Mobs/Traw/side_9.png" type="Texture" id=115]
+[ext_resource path="res://Sprites/Mobs/Traw/side_10.png" type="Texture" id=116]
+[ext_resource path="res://Sprites/Mobs/Traw/side_11.png" type="Texture" id=117]
+[ext_resource path="res://Sprites/Mobs/Traw/side_12.png" type="Texture" id=118]
+[ext_resource path="res://Sprites/Mobs/Traw/center_0.png" type="Texture" id=119]
+[ext_resource path="res://Sprites/Mobs/Traw/center_1.png" type="Texture" id=120]
+[ext_resource path="res://Sprites/Mobs/Traw/center_2.png" type="Texture" id=121]
+[ext_resource path="res://Sprites/Mobs/Traw/Head.png" type="Texture" id=122]
+[ext_resource path="res://Sprites/Mobs/Traw/Head_0.png" type="Texture" id=123]
+[ext_resource path="res://Sprites/Mobs/Traw/Head_1.png" type="Texture" id=124]
+[ext_resource path="res://Sprites/Mobs/Traw/Head_2.png" type="Texture" id=125]
+[ext_resource path="res://Sprites/Mobs/Traw/Head_3.png" type="Texture" id=126]
+[ext_resource path="res://Sprites/Mobs/Traw/Head_4.png" type="Texture" id=127]
+[ext_resource path="res://Sprites/Mobs/Traw/Head_5.png" type="Texture" id=128]
+[ext_resource path="res://Sprites/Mobs/Traw/Head_6.png" type="Texture" id=129]
+[ext_resource path="res://Sprites/Mobs/Traw/Head_7.png" type="Texture" id=130]
+[ext_resource path="res://Sprites/Mobs/Traw/Head_8.png" type="Texture" id=131]
+[ext_resource path="res://Scenes/Entities/Tentacle3.tscn" type="PackedScene" id=132]
+[ext_resource path="res://Scenes/Entities/OneOrgan.tscn" type="PackedScene" id=133]
+[ext_resource path="res://Sprites/Mobs/Olga/coude.png" type="Texture" id=134]
+[ext_resource path="res://Sprites/Mobs/Olga/coude_dead.png" type="Texture" id=135]
+[ext_resource path="res://Sprites/Mobs/Olga/Sides.png" type="Texture" id=136]
+[ext_resource path="res://Sprites/Mobs/Olga/Sides_1.png" type="Texture" id=137]
+[ext_resource path="res://Sprites/Mobs/Olga/SidesOpen_1.png" type="Texture" id=138]
+[ext_resource path="res://Sprites/Mobs/Olga/Sides_dead.png" type="Texture" id=139]
+[ext_resource path="res://Sprites/Mobs/Olga/center.png" type="Texture" id=140]
+[ext_resource path="res://Sprites/Mobs/Olga/center_1.png" type="Texture" id=141]
+[ext_resource path="res://Sprites/Mobs/Olga/center_2.png" type="Texture" id=142]
+[ext_resource path="res://Sprites/Mobs/Olga/center_dead.png" type="Texture" id=143]
+[ext_resource path="res://Sprites/Mobs/Olga/Head.png" type="Texture" id=144]
+[ext_resource path="res://Sprites/Mobs/Olga/Head_1.png" type="Texture" id=145]
+[ext_resource path="res://Sprites/Mobs/Olga/Head_2.png" type="Texture" id=146]
+[ext_resource path="res://Sprites/Mobs/Olga/Head_3.png" type="Texture" id=147]
+[ext_resource path="res://Sprites/Mobs/Olga/Head_dead.png" type="Texture" id=148]
+[ext_resource path="res://Sprites/Mobs/Olga/laser.png" type="Texture" id=149]
+[ext_resource path="res://Scenes/Props/PNJ.tscn" type="PackedScene" id=150]
+[ext_resource path="res://Scenes/Player/player.tscn" type="PackedScene" id=151]
+[ext_resource path="res://Sprites/Mobs/Traw/elec_0.png" type="Texture" id=152]
+[ext_resource path="res://Sprites/Mobs/Traw/elec_1.png" type="Texture" id=153]
+[ext_resource path="res://Sprites/Mobs/Traw/elec_2.png" type="Texture" id=154]
+[ext_resource path="res://Sprites/Mobs/Traw/elec_3.png" type="Texture" id=155]
+[ext_resource path="res://Sprites/Cinematics/Begin/back1.png" type="Texture" id=156]
+[ext_resource path="res://Sons/Hurlement.wav" type="AudioStream" id=157]
+[ext_resource path="res://Scenes/Player/GUICanvas.tscn" type="PackedScene" id=158]
+[ext_resource path="res://Scenes/Player/mouse.tscn" type="PackedScene" id=159]
+[ext_resource path="res://Sons/ALERTAALERTA.wav" type="AudioStream" id=160]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "mod1",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "mod4",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "mod0",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "mod2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ) ],
+"loop": true,
+"name": "mod3",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 81 ), ExtResource( 82 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 94 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ) ],
+"loop": true,
+"name": "LASER",
+"speed": 30.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 103 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 104 ) ],
+"loop": true,
+"name": "hit",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 118 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 119 ), ExtResource( 120 ), ExtResource( 119 ), ExtResource( 121 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ), ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ), ExtResource( 130 ), ExtResource( 129 ), ExtResource( 128 ), ExtResource( 127 ), ExtResource( 126 ), ExtResource( 125 ), ExtResource( 124 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 134 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 135 ) ],
+"loop": true,
+"name": "dead",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ ExtResource( 136 ), ExtResource( 137 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 138 ) ],
+"loop": true,
+"name": "open",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 139 ) ],
+"loop": true,
+"name": "dead",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ ExtResource( 140 ), ExtResource( 141 ), ExtResource( 142 ), ExtResource( 141 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 143 ) ],
+"loop": true,
+"name": "dead",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=13]
+animations = [ {
+"frames": [ ExtResource( 144 ), ExtResource( 145 ), ExtResource( 146 ), ExtResource( 147 ), ExtResource( 146 ), ExtResource( 145 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 148 ) ],
+"loop": true,
+"name": "dead",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [ ExtResource( 149 ) ],
+"loop": true,
+"name": "LASER",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ ExtResource( 152 ), ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 69.5198, 10 )
+
+[node name="Traw" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="fdb" type="Sprite" parent="Node2D"]
+position = Vector2( 1424.47, 911.109 )
+scale = Vector2( -9.11434, 8.47106 )
+z_index = -10
+texture = ExtResource( 2 )
+
+[node name="screen" type="AnimatedSprite" parent="Node2D"]
+position = Vector2( 1425.65, 796.322 )
+scale = Vector2( 0.26989, 0.307781 )
+z_index = -10
+frames = SubResource( 1 )
+animation = "mod0"
+frame = 1
+playing = true
+
+[node name="fd" type="Sprite" parent="Node2D"]
+position = Vector2( 1424.47, 911.109 )
+z_index = -10
+texture = ExtResource( 78 )
+
+[node name="peint" type="Sprite" parent="Node2D"]
+position = Vector2( 1430.68, 931.11 )
+z_index = -10
+texture = ExtResource( 79 )
+
+[node name="0001135" parent="Node2D" instance=ExtResource( 80 )]
+visible = false
+position = Vector2( 1425, 962.703 )
+
+[node name="Traw" type="Node2D" parent="Node2D"]
+editor/display_folded = true
+position = Vector2( 1424.8, 857.196 )
+
+[node name="Bocal" type="AnimatedSprite" parent="Node2D/Traw"]
+position = Vector2( -0.236328, -0.0194702 )
+frames = SubResource( 2 )
+frame = 1
+playing = true
+
+[node name="gauche" type="Node2D" parent="Node2D/Traw"]
+editor/display_folded = true
+position = Vector2( -45, -8 )
+
+[node name="Arms" type="Node2D" parent="Node2D/Traw/gauche"]
+position = Vector2( 45, 8 )
+
+[node name="Arm1" type="Node2D" parent="Node2D/Traw/gauche/Arms"]
+editor/display_folded = true
+position = Vector2( -17.6344, -49.6591 )
+rotation = 1.14357
+
+[node name="armback" type="Sprite" parent="Node2D/Traw/gauche/Arms/Arm1"]
+texture = ExtResource( 83 )
+offset = Vector2( -32.1143, 0.299683 )
+
+[node name="armfront" type="Sprite" parent="Node2D/Traw/gauche/Arms/Arm1/armback"]
+position = Vector2( -57.5944, -0.796936 )
+rotation = 0.587121
+texture = ExtResource( 84 )
+offset = Vector2( 0.236816, 21.1972 )
+
+[node name="gun" type="Sprite" parent="Node2D/Traw/gauche/Arms/Arm1/armback/armfront"]
+position = Vector2( -2.81903, 58.3054 )
+texture = ExtResource( 85 )
+
+[node name="screen" type="AnimatedSprite" parent="Node2D/Traw/gauche/Arms/Arm1/armback/armfront/gun"]
+position = Vector2( -0.0238469, 0.00870865 )
+scale = Vector2( 0.109103, 0.042059 )
+frames = SubResource( 3 )
+playing = true
+
+[node name="coude" type="AnimatedSprite" parent="Node2D/Traw/gauche/Arms/Arm1/armback"]
+position = Vector2( -60.6091, 0.445618 )
+frames = SubResource( 4 )
+frame = 3
+
+[node name="Arm2" type="Node2D" parent="Node2D/Traw/gauche/Arms"]
+editor/display_folded = true
+position = Vector2( -38.4645, -25.9895 )
+rotation = 0.861345
+
+[node name="armback" type="Sprite" parent="Node2D/Traw/gauche/Arms/Arm2"]
+rotation = 0.0420525
+texture = ExtResource( 83 )
+offset = Vector2( -32.1143, 0.299683 )
+
+[node name="armfront" type="Sprite" parent="Node2D/Traw/gauche/Arms/Arm2/armback"]
+position = Vector2( -57.5944, -0.796936 )
+rotation = -1.09956
+texture = ExtResource( 84 )
+offset = Vector2( 0.236816, 21.1972 )
+
+[node name="gun" type="Sprite" parent="Node2D/Traw/gauche/Arms/Arm2/armback/armfront"]
+position = Vector2( -0.0772705, 50.8578 )
+rotation = 1.5708
+texture = ExtResource( 93 )
+
+[node name="LASER" type="AnimatedSprite" parent="Node2D/Traw/gauche/Arms/Arm2/armback/armfront/gun"]
+visible = false
+position = Vector2( 10.991, 0.258545 )
+scale = Vector2( 61.3244, 0.373697 )
+frames = SubResource( 5 )
+animation = "LASER"
+frame = 3
+playing = true
+offset = Vector2( 16.0003, -0.571777 )
+
+[node name="MEGALASER" type="Area2D" parent="Node2D/Traw/gauche/Arms/Arm2/armback/armfront/gun/LASER"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Traw/gauche/Arms/Arm2/armback/armfront/gun/LASER/MEGALASER"]
+polygon = PoolVector2Array( 0.000703812, -8.75879, -3.8147e-05, 7.37598, 32.0004, 7.45532, 31.9997, -8.68018 )
+disabled = true
+
+[node name="coude" type="AnimatedSprite" parent="Node2D/Traw/gauche/Arms/Arm2/armback"]
+position = Vector2( -60.6091, 0.445618 )
+frames = SubResource( 4 )
+frame = 4
+
+[node name="Arm3" type="Node2D" parent="Node2D/Traw/gauche/Arms"]
+editor/display_folded = true
+position = Vector2( -46.5085, -8.20782 )
+rotation = 0.169385
+
+[node name="armback" type="Sprite" parent="Node2D/Traw/gauche/Arms/Arm3"]
+rotation = 0.613891
+texture = ExtResource( 83 )
+offset = Vector2( -32.1143, 0.299683 )
+
+[node name="armfront" type="Sprite" parent="Node2D/Traw/gauche/Arms/Arm3/armback"]
+position = Vector2( -57.5944, -0.796936 )
+rotation = -1.09956
+texture = ExtResource( 84 )
+offset = Vector2( 0.236816, 21.1972 )
+
+[node name="gun" type="Sprite" parent="Node2D/Traw/gauche/Arms/Arm3/armback/armfront"]
+position = Vector2( 0.229248, 53.6935 )
+rotation = 1.5708
+texture = ExtResource( 101 )
+
+[node name="pos0" type="Position2D" parent="Node2D/Traw/gauche/Arms/Arm3/armback/armfront"]
+position = Vector2( -6.32623, 75.806 )
+
+[node name="pos1" type="Position2D" parent="Node2D/Traw/gauche/Arms/Arm3/armback/armfront"]
+position = Vector2( -3.69989, 68.1783 )
+
+[node name="pos2" type="Position2D" parent="Node2D/Traw/gauche/Arms/Arm3/armback/armfront"]
+position = Vector2( -0.756897, 68.2039 )
+
+[node name="pos3" type="Position2D" parent="Node2D/Traw/gauche/Arms/Arm3/armback/armfront"]
+position = Vector2( 2.24976, 68.2091 )
+
+[node name="pos4" type="Position2D" parent="Node2D/Traw/gauche/Arms/Arm3/armback/armfront"]
+position = Vector2( 5.2095, 68.1765 )
+
+[node name="coude" type="AnimatedSprite" parent="Node2D/Traw/gauche/Arms/Arm3/armback"]
+position = Vector2( -60.6091, 0.445618 )
+frames = SubResource( 4 )
+frame = 4
+
+[node name="Arm4" type="Node2D" parent="Node2D/Traw/gauche/Arms"]
+editor/display_folded = true
+position = Vector2( -57.9396, 15.501 )
+rotation = 0.63879
+
+[node name="armback" type="Sprite" parent="Node2D/Traw/gauche/Arms/Arm4"]
+texture = ExtResource( 83 )
+offset = Vector2( -32.1143, 0.299683 )
+
+[node name="armfront" type="Sprite" parent="Node2D/Traw/gauche/Arms/Arm4/armback"]
+position = Vector2( -57.5944, -0.796936 )
+rotation = -1.89892
+texture = ExtResource( 84 )
+offset = Vector2( 0.236816, 21.1972 )
+
+[node name="gun" type="Sprite" parent="Node2D/Traw/gauche/Arms/Arm4/armback/armfront"]
+position = Vector2( 0.289917, 56.0881 )
+texture = ExtResource( 102 )
+
+[node name="eye" type="AnimatedSprite" parent="Node2D/Traw/gauche/Arms/Arm4/armback/armfront/gun"]
+frames = SubResource( 6 )
+
+[node name="soldier" type="KinematicBody2D" parent="Node2D/Traw/gauche/Arms/Arm4/armback/armfront/gun"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 105 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Traw/gauche/Arms/Arm4/armback/armfront/gun/soldier"]
+polygon = PoolVector2Array( -2.35156, 13.9388, -5.15173, 10.0464, -8.44812, 8.59439, -14.1862, 4.12924, -14.5284, 1.00555, -12.4464, -3.94644, -6.58203, -6.71231, -6.39233, -9.94815, -3.35742, -12.9332, -1.26221, -13.94, 2.48083, -13.799, 4.34497, -12.5612, 6.49426, -9.84085, 6.61072, -5.72998, 13.2742, -3.32205, 14.6621, 3.62402, 13.7148, 5.35367, 10.4423, 7.5842, 5.33313, 10.1485, 3.13428, 14.1634 )
+
+[node name="Hit" type="Timer" parent="Node2D/Traw/gauche/Arms/Arm4/armback/armfront/gun/soldier"]
+
+[node name="coude" type="AnimatedSprite" parent="Node2D/Traw/gauche/Arms/Arm4/armback"]
+position = Vector2( -60.6091, 0.445618 )
+frames = SubResource( 4 )
+frame = 4
+
+[node name="side1" type="AnimatedSprite" parent="Node2D/Traw/gauche"]
+frames = SubResource( 7 )
+frame = 1
+
+[node name="droite" type="Node2D" parent="Node2D/Traw"]
+position = Vector2( 45, -8 )
+scale = Vector2( -1, 1 )
+
+[node name="Arms" type="Node2D" parent="Node2D/Traw/droite"]
+position = Vector2( 45, 8 )
+
+[node name="Arm1" type="Node2D" parent="Node2D/Traw/droite/Arms"]
+editor/display_folded = true
+position = Vector2( -17.6344, -49.6591 )
+rotation = 1.14357
+
+[node name="armback" type="Sprite" parent="Node2D/Traw/droite/Arms/Arm1"]
+texture = ExtResource( 83 )
+offset = Vector2( -32.1143, 0.299683 )
+
+[node name="armfront" type="Sprite" parent="Node2D/Traw/droite/Arms/Arm1/armback"]
+position = Vector2( -57.5944, -0.796936 )
+rotation = 0.587121
+texture = ExtResource( 84 )
+offset = Vector2( 0.236816, 21.1972 )
+
+[node name="gun" type="Sprite" parent="Node2D/Traw/droite/Arms/Arm1/armback/armfront"]
+position = Vector2( -2.81903, 58.3054 )
+texture = ExtResource( 85 )
+
+[node name="screen" type="AnimatedSprite" parent="Node2D/Traw/droite/Arms/Arm1/armback/armfront/gun"]
+position = Vector2( -0.0238469, 0.00870865 )
+scale = Vector2( 0.109103, 0.042059 )
+frames = SubResource( 3 )
+frame = 3
+playing = true
+
+[node name="coude" type="AnimatedSprite" parent="Node2D/Traw/droite/Arms/Arm1/armback"]
+position = Vector2( -60.6091, 0.445618 )
+frames = SubResource( 4 )
+frame = 3
+
+[node name="Arm2" type="Node2D" parent="Node2D/Traw/droite/Arms"]
+position = Vector2( -38.4645, -25.9895 )
+rotation = 0.861345
+
+[node name="armback" type="Sprite" parent="Node2D/Traw/droite/Arms/Arm2"]
+rotation = 0.0420525
+texture = ExtResource( 83 )
+offset = Vector2( -32.1143, 0.299683 )
+
+[node name="armfront" type="Sprite" parent="Node2D/Traw/droite/Arms/Arm2/armback"]
+position = Vector2( -57.5944, -0.796936 )
+rotation = -1.09956
+texture = ExtResource( 84 )
+offset = Vector2( 0.236816, 21.1972 )
+
+[node name="gun" type="Sprite" parent="Node2D/Traw/droite/Arms/Arm2/armback/armfront"]
+position = Vector2( -0.0772705, 50.8578 )
+rotation = 1.5708
+texture = ExtResource( 93 )
+
+[node name="LASER" type="AnimatedSprite" parent="Node2D/Traw/droite/Arms/Arm2/armback/armfront/gun"]
+visible = false
+position = Vector2( 10.991, 0.258545 )
+scale = Vector2( 61.3244, 0.373697 )
+frames = SubResource( 5 )
+animation = "LASER"
+frame = 3
+playing = true
+offset = Vector2( 16.0003, -0.571777 )
+
+[node name="MEGALASER" type="Area2D" parent="Node2D/Traw/droite/Arms/Arm2/armback/armfront/gun/LASER"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Traw/droite/Arms/Arm2/armback/armfront/gun/LASER/MEGALASER"]
+polygon = PoolVector2Array( 0.000703812, -8.75879, -3.8147e-05, 7.37598, 32.0004, 7.45532, 31.9997, -8.68018 )
+disabled = true
+
+[node name="coude" type="AnimatedSprite" parent="Node2D/Traw/droite/Arms/Arm2/armback"]
+position = Vector2( -60.6091, 0.445618 )
+frames = SubResource( 4 )
+frame = 4
+
+[node name="Arm3" type="Node2D" parent="Node2D/Traw/droite/Arms"]
+editor/display_folded = true
+position = Vector2( -46.5085, -8.20782 )
+rotation = 0.169385
+
+[node name="armback" type="Sprite" parent="Node2D/Traw/droite/Arms/Arm3"]
+rotation = 0.613891
+texture = ExtResource( 83 )
+offset = Vector2( -32.1143, 0.299683 )
+
+[node name="armfront" type="Sprite" parent="Node2D/Traw/droite/Arms/Arm3/armback"]
+position = Vector2( -57.5944, -0.796936 )
+rotation = -1.09956
+texture = ExtResource( 84 )
+offset = Vector2( 0.236816, 21.1972 )
+
+[node name="gun" type="Sprite" parent="Node2D/Traw/droite/Arms/Arm3/armback/armfront"]
+position = Vector2( 0.229248, 53.6935 )
+rotation = 1.5708
+texture = ExtResource( 101 )
+
+[node name="pos0" type="Position2D" parent="Node2D/Traw/droite/Arms/Arm3/armback/armfront"]
+position = Vector2( -6.32623, 75.806 )
+
+[node name="pos1" type="Position2D" parent="Node2D/Traw/droite/Arms/Arm3/armback/armfront"]
+position = Vector2( -3.69989, 68.1783 )
+
+[node name="pos2" type="Position2D" parent="Node2D/Traw/droite/Arms/Arm3/armback/armfront"]
+position = Vector2( -0.756897, 68.2039 )
+
+[node name="pos3" type="Position2D" parent="Node2D/Traw/droite/Arms/Arm3/armback/armfront"]
+position = Vector2( 2.24976, 68.2091 )
+
+[node name="pos4" type="Position2D" parent="Node2D/Traw/droite/Arms/Arm3/armback/armfront"]
+position = Vector2( 5.2095, 68.1765 )
+
+[node name="coude" type="AnimatedSprite" parent="Node2D/Traw/droite/Arms/Arm3/armback"]
+position = Vector2( -60.6091, 0.445618 )
+frames = SubResource( 4 )
+frame = 4
+
+[node name="Arm4" type="Node2D" parent="Node2D/Traw/droite/Arms"]
+editor/display_folded = true
+position = Vector2( -57.9396, 15.501 )
+rotation = 0.63879
+
+[node name="armback" type="Sprite" parent="Node2D/Traw/droite/Arms/Arm4"]
+texture = ExtResource( 83 )
+offset = Vector2( -32.1143, 0.299683 )
+
+[node name="armfront" type="Sprite" parent="Node2D/Traw/droite/Arms/Arm4/armback"]
+position = Vector2( -57.5944, -0.796936 )
+rotation = -1.89892
+texture = ExtResource( 84 )
+offset = Vector2( 0.236816, 21.1972 )
+
+[node name="gun" type="Sprite" parent="Node2D/Traw/droite/Arms/Arm4/armback/armfront"]
+position = Vector2( 0.289917, 56.0881 )
+texture = ExtResource( 102 )
+
+[node name="eye" type="AnimatedSprite" parent="Node2D/Traw/droite/Arms/Arm4/armback/armfront/gun"]
+frames = SubResource( 6 )
+
+[node name="soldier" type="KinematicBody2D" parent="Node2D/Traw/droite/Arms/Arm4/armback/armfront/gun"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 105 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Traw/droite/Arms/Arm4/armback/armfront/gun/soldier"]
+polygon = PoolVector2Array( -2.35156, 13.9388, -5.15173, 10.0464, -8.44812, 8.59439, -14.1862, 4.12924, -14.5284, 1.00555, -12.4464, -3.94644, -6.58203, -6.71231, -6.39233, -9.94815, -3.35742, -12.9332, -1.26221, -13.94, 2.48083, -13.799, 4.34497, -12.5612, 6.49426, -9.84085, 6.61072, -5.72998, 13.2742, -3.32205, 14.6621, 3.62402, 13.7148, 5.35367, 10.4423, 7.5842, 5.33313, 10.1485, 3.13428, 14.1634 )
+
+[node name="Hit" type="Timer" parent="Node2D/Traw/droite/Arms/Arm4/armback/armfront/gun/soldier"]
+
+[node name="coude" type="AnimatedSprite" parent="Node2D/Traw/droite/Arms/Arm4/armback"]
+position = Vector2( -60.6091, 0.445618 )
+frames = SubResource( 4 )
+frame = 4
+
+[node name="side1" type="AnimatedSprite" parent="Node2D/Traw/droite"]
+frames = SubResource( 7 )
+frame = 1
+
+[node name="center" type="AnimatedSprite" parent="Node2D/Traw"]
+position = Vector2( 0, 26.82 )
+frames = SubResource( 8 )
+frame = 2
+
+[node name="Head" type="AnimatedSprite" parent="Node2D/Traw"]
+position = Vector2( 0, 57.5944 )
+frames = SubResource( 9 )
+
+[node name="visee" type="Position2D" parent="Node2D/Traw"]
+position = Vector2( 0, 137 )
+
+[node name="Olga" type="Node2D" parent="Node2D"]
+editor/display_folded = true
+visible = false
+position = Vector2( 1424.94, 856.772 )
+z_index = 2
+
+[node name="Tentacle3" parent="Node2D/Olga" instance=ExtResource( 132 )]
+position = Vector2( -64, 29 )
+
+[node name="Tentacle4" parent="Node2D/Olga" instance=ExtResource( 132 )]
+position = Vector2( 64, 29 )
+
+[node name="soldier" parent="Node2D/Olga" instance=ExtResource( 133 )]
+position = Vector2( -64, 29 )
+
+[node name="soldier2" parent="Node2D/Olga" instance=ExtResource( 133 )]
+position = Vector2( 64, 29 )
+rotation = -3.1357
+
+[node name="solposg" type="Position2D" parent="Node2D/Olga"]
+position = Vector2( -64, 29 )
+
+[node name="solposd" type="Position2D" parent="Node2D/Olga"]
+position = Vector2( 64, 29 )
+
+[node name="gauche" type="Node2D" parent="Node2D/Olga"]
+editor/display_folded = true
+
+[node name="Arm1" type="Node2D" parent="Node2D/Olga/gauche"]
+editor/display_folded = true
+rotation = 0.0160133
+
+[node name="coude" type="AnimatedSprite" parent="Node2D/Olga/gauche/Arm1"]
+position = Vector2( -38.1953, -81.697 )
+rotation = 1.03581
+frames = SubResource( 10 )
+
+[node name="Arm2" type="Node2D" parent="Node2D/Olga/gauche"]
+editor/display_folded = true
+position = Vector2( -45.1267, 25.52 )
+
+[node name="coude" type="AnimatedSprite" parent="Node2D/Olga/gauche/Arm2"]
+position = Vector2( -41.3928, -98.7507 )
+rotation = 0.703378
+frames = SubResource( 10 )
+
+[node name="Arm3" type="Node2D" parent="Node2D/Olga/gauche"]
+editor/display_folded = true
+position = Vector2( -45.1267, 25.52 )
+
+[node name="coude" type="AnimatedSprite" parent="Node2D/Olga/gauche/Arm3"]
+position = Vector2( -44.9283, -78.2445 )
+rotation = 0.495017
+frames = SubResource( 10 )
+
+[node name="Arm4" type="Node2D" parent="Node2D/Olga/gauche"]
+editor/display_folded = true
+position = Vector2( -45.1267, 25.52 )
+
+[node name="coude" type="AnimatedSprite" parent="Node2D/Olga/gauche/Arm4"]
+position = Vector2( -65.7695, -41.0281 )
+rotation = 0.0127729
+frames = SubResource( 10 )
+
+[node name="droite" type="Node2D" parent="Node2D/Olga"]
+editor/display_folded = true
+scale = Vector2( -1, 1 )
+
+[node name="Arm1" type="Node2D" parent="Node2D/Olga/droite"]
+
+[node name="coude" type="AnimatedSprite" parent="Node2D/Olga/droite/Arm1"]
+position = Vector2( -38.1953, -81.697 )
+rotation = 1.03581
+frames = SubResource( 10 )
+
+[node name="Arm2" type="Node2D" parent="Node2D/Olga/droite"]
+position = Vector2( -45.1267, 25.52 )
+
+[node name="coude" type="AnimatedSprite" parent="Node2D/Olga/droite/Arm2"]
+position = Vector2( -41.3928, -98.7507 )
+rotation = 0.703378
+frames = SubResource( 10 )
+
+[node name="Arm3" type="Node2D" parent="Node2D/Olga/droite"]
+position = Vector2( -45.1267, 25.52 )
+
+[node name="coude" type="AnimatedSprite" parent="Node2D/Olga/droite/Arm3"]
+position = Vector2( -44.9283, -78.2445 )
+rotation = 0.495017
+frames = SubResource( 10 )
+
+[node name="Arm4" type="Node2D" parent="Node2D/Olga/droite"]
+position = Vector2( -45.1267, 25.52 )
+
+[node name="coude" type="AnimatedSprite" parent="Node2D/Olga/droite/Arm4"]
+position = Vector2( -65.7695, -41.0281 )
+rotation = 0.0127729
+frames = SubResource( 10 )
+
+[node name="Sides" type="AnimatedSprite" parent="Node2D/Olga"]
+frames = SubResource( 11 )
+playing = true
+
+[node name="center" type="AnimatedSprite" parent="Node2D/Olga"]
+position = Vector2( -0.138916, 27.2437 )
+frames = SubResource( 12 )
+frame = 3
+playing = true
+
+[node name="Head" type="AnimatedSprite" parent="Node2D/Olga"]
+position = Vector2( -4.18469, 60.5078 )
+frames = SubResource( 13 )
+playing = true
+
+[node name="LASER1" type="AnimatedSprite" parent="Node2D/Olga/Head"]
+visible = false
+position = Vector2( 3.8042, -0.314941 )
+rotation = 1.52456
+scale = Vector2( 1335.06, 0.428044 )
+frames = SubResource( 14 )
+animation = "LASER"
+playing = true
+offset = Vector2( 1.00003, 0.852051 )
+
+[node name="MEGALASER" type="Area2D" parent="Node2D/Olga/Head/LASER1"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Olga/Head/LASER1/MEGALASER"]
+scale = Vector2( 1.0596, 1.04459 )
+polygon = PoolVector2Array( 0.00364846, 8.35132, -0.000213563, 8.12891, -0.00105834, -0.794922, 0.00320643, -5.88525, 1.88756, -5.84351, 1.88752, 8.479 )
+disabled = true
+
+[node name="LASER2" type="AnimatedSprite" parent="Node2D/Olga/Head"]
+visible = false
+position = Vector2( -12.855, 15.1824 )
+rotation = 1.52456
+scale = Vector2( 1335.06, 0.589704 )
+frames = SubResource( 14 )
+animation = "LASER"
+playing = true
+offset = Vector2( 1.00003, 0.852051 )
+
+[node name="MEGALASER" type="Area2D" parent="Node2D/Olga/Head/LASER2"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Olga/Head/LASER2/MEGALASER"]
+scale = Vector2( 1.0596, 1.04459 )
+polygon = PoolVector2Array( -0.000109375, 7.90234, -7.87973e-05, -4.9939, 0.00315315, -6.09863, 1.88755, -5.89453, 1.88753, 8.36841, -0.000105381, 8.56104 )
+disabled = true
+
+[node name="LASER3" type="AnimatedSprite" parent="Node2D/Olga/Head"]
+visible = false
+position = Vector2( 22.9818, 5.10962 )
+rotation = 1.52456
+scale = Vector2( 1335.06, 0.66779 )
+frames = SubResource( 14 )
+animation = "LASER"
+playing = true
+offset = Vector2( 1.00003, 0.852051 )
+
+[node name="MEGALASER" type="Area2D" parent="Node2D/Olga/Head/LASER3"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/Olga/Head/LASER3/MEGALASER"]
+scale = Vector2( 1.0596, 1.04459 )
+polygon = PoolVector2Array( 0.00552452, 8.38208, 0.000607491, 7.80847, -0.00179178, -0.389038, 0.00484818, -5.74561, 1.88759, -5.89758, 1.88755, 8.38428 )
+disabled = true
+
+[node name="las1" type="Position2D" parent="Node2D/Olga"]
+position = Vector2( 200, 190 )
+
+[node name="las2" type="Position2D" parent="Node2D/Olga"]
+position = Vector2( 0, 190 )
+
+[node name="las3" type="Position2D" parent="Node2D/Olga"]
+position = Vector2( -200, 190 )
+
+[node name="PNJ" type="Node2D" parent="Node2D"]
+editor/display_folded = true
+position = Vector2( 1000, 1000 )
+
+[node name="01Tog0" parent="Node2D/PNJ" instance=ExtResource( 150 )]
+position = Vector2( 1424, 1011 )
+animation = "01Tog"
+
+[node name="01Doubliks0" parent="Node2D/PNJ" instance=ExtResource( 150 )]
+position = Vector2( 1386.14, 989.116 )
+animation = "01Doubliks"
+frame = 1
+
+[node name="01Progfer0" parent="Node2D/PNJ" instance=ExtResource( 150 )]
+position = Vector2( 1466.71, 989.361 )
+animation = "01Progfer"
+
+[node name="05Olga0" parent="Node2D/PNJ" instance=ExtResource( 150 )]
+position = Vector2( 1423, 1350 )
+scale = Vector2( 1.1, 1.1 )
+animation = "05Olga"
+frame = 3
+offset = Vector2( 1, 1 )
+
+[node name="PNJ2" type="Node2D" parent="Node2D"]
+editor/display_folded = true
+position = Vector2( 1000, 1000 )
+
+[node name="00OlgaEnd0" parent="Node2D/PNJ2" instance=ExtResource( 150 )]
+position = Vector2( 1423.09, 975.444 )
+scale = Vector2( 1.1, 1.1 )
+animation = "00OlgaEnd"
+offset = Vector2( 1, 1 )
+
+[node name="01Tog0" parent="Node2D/PNJ2" instance=ExtResource( 150 )]
+position = Vector2( 1422.93, 993.389 )
+animation = "01Tog"
+
+[node name="01Doubliks0" parent="Node2D/PNJ2" instance=ExtResource( 150 )]
+position = Vector2( 1400.66, 996.758 )
+animation = "01Doubliks"
+frame = 1
+
+[node name="01Progfer0" parent="Node2D/PNJ2" instance=ExtResource( 150 )]
+position = Vector2( 1423.05, 1025.75 )
+animation = "01Progfer"
+
+[node name="player" parent="Node2D" instance=ExtResource( 151 )]
+position = Vector2( 1422.99, 1343.23 )
+
+[node name="charge" type="AnimatedSprite" parent="Node2D"]
+visible = false
+position = Vector2( 1424.61, 971.508 )
+scale = Vector2( 1.57276, -1.0813 )
+frames = SubResource( 15 )
+frame = 1
+playing = true
+
+[node name="walls" type="StaticBody2D" parent="Node2D"]
+visible = false
+collision_mask = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/walls"]
+polygon = PoolVector2Array( 1369.24, 1325.4, 1381.49, 1352.24, 1380.38, 1370.07, 1375.1, 1381.39, 1366.94, 1387.2, 1367.29, 1428.41, 1034.25, 1426.05, 1023.02, 677.279, 1358.73, 511.447, 1686.34, 612.564, 1763.19, 1045.34, 1726.79, 1409.36, 1478.19, 1432.65, 1483.4, 1387.47, 1475.16, 1381.41, 1470.62, 1374.18, 1468.81, 1360.2, 1468.97, 1352.69, 1477.28, 1331.01, 1484.01, 1321.26, 1488.89, 1318.23, 1495.95, 1315.71, 1505.88, 1315.09, 1543.35, 1314.15, 1558.19, 1312.2, 1594.95, 1302.1, 1602.96, 1298.76, 1610.92, 1295.44, 1617.06, 1289.9, 1621.79, 1284.67, 1628.16, 1271.36, 1628.54, 1265.24, 1631.7, 1236.21, 1633.65, 1217.09, 1636.74, 1182.44, 1638.09, 1160.75, 1638.7, 1109.32, 1639.55, 1097.25, 1641.43, 1079.29, 1644.03, 1063.19, 1643.61, 1057.01, 1641.67, 1049.09, 1639.74, 1044.15, 1632.67, 1039.09, 1622.52, 1035.15, 1608.57, 1030.91, 1596.5, 1028.25, 1587.4, 1025.21, 1573.29, 1020.05, 1560.5, 1015.29, 1550.14, 1009.81, 1543.54, 1005.22, 1537.71, 1000.24, 1533.59, 996.131, 1530.63, 992.305, 1525.53, 984.997, 1522.65, 979.075, 1519.61, 972.063, 1515.58, 960.087, 1514.51, 958.216, 1512.57, 961.156, 1505.63, 963.093, 1478.43, 966.06, 1371.59, 966.212, 1349.59, 964.313, 1342.46, 963.098, 1339.57, 961.913, 1337.58, 961.025, 1334.91, 958.139, 1332.69, 965.91, 1325.35, 982.806, 1316.36, 996.367, 1307.5, 1004.22, 1301.46, 1009.15, 1287.57, 1016.3, 1253.51, 1027.91, 1227.63, 1034.9, 1217.54, 1039.08, 1212.63, 1043.08, 1209.81, 1045.89, 1206.37, 1057.18, 1208.27, 1079.36, 1211.39, 1109.49, 1212.24, 1162, 1216.55, 1216.78, 1220.25, 1256.13, 1221.25, 1266.36, 1225.58, 1278.96, 1232.82, 1289.89, 1241.58, 1297.24, 1262.83, 1304.92, 1281.35, 1309.6, 1306.9, 1314.29, 1353.51, 1316.28, 1360.87, 1317.72, 1366.78, 1321.19 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/walls"]
+position = Vector2( 1422.8, 1387.46 )
+shape = SubResource( 16 )
+
+[node name="solpos" type="Position2D" parent="Node2D"]
+position = Vector2( 1546.09, 1199 )
+
+[node name="elecpos" type="Position2D" parent="Node2D"]
+position = Vector2( 1505, 905 )
+
+[node name="smokpos" type="Position2D" parent="Node2D"]
+position = Vector2( 1488, 885 )
+
+[node name="BLACK" type="Sprite" parent="Node2D"]
+visible = false
+position = Vector2( 1419.39, 940.971 )
+scale = Vector2( 135.06, 94.4708 )
+z_index = 10
+texture = ExtResource( 156 )
+
+[node name="Hurle" type="AudioStreamPlayer2D" parent="Node2D"]
+position = Vector2( 1425.22, 946.244 )
+stream = ExtResource( 157 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 158 )]
+
+[node name="mouse" parent="CanvasLayer" instance=ExtResource( 159 )]
+
+[node name="ALERTALERTA" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 1424.59, 856.833 )
+stream = ExtResource( 160 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Bras" type="Timer" parent="."]
+
+[node name="Modes" type="Timer" parent="."]
+
+[node name="Mitr" type="Timer" parent="."]
+
+[node name="Spawn" type="Timer" parent="."]
+
+[node name="Elec" type="Timer" parent="."]
+
+[node name="Smok" type="Timer" parent="."]
+
+[node name="Marche" type="Timer" parent="."]
+
+[node name="Charge" type="Timer" parent="."]
+
+[node name="Trembl" type="Timer" parent="."]
+
+[node name="Pics" type="Timer" parent="."]
+
+[node name="Modos" type="Timer" parent="."]
+
+[node name="Poison" type="Timer" parent="."]
+
+[node name="Solturn" type="Timer" parent="."]
+
+[node name="Visee" type="Timer" parent="."]
+[connection signal="body_entered" from="Node2D/Traw/gauche/Arms/Arm2/armback/armfront/gun/LASER/MEGALASER" to="." method="_on_MEGALASER_body_entered"]
+[connection signal="timeout" from="Node2D/Traw/gauche/Arms/Arm4/armback/armfront/gun/soldier/Hit" to="Node2D/Traw/gauche/Arms/Arm4/armback/armfront/gun/soldier" method="_on_Hit_timeout"]
+[connection signal="body_entered" from="Node2D/Traw/droite/Arms/Arm2/armback/armfront/gun/LASER/MEGALASER" to="." method="_on_MEGALASER_body_entered"]
+[connection signal="timeout" from="Node2D/Traw/droite/Arms/Arm4/armback/armfront/gun/soldier/Hit" to="Node2D/Traw/droite/Arms/Arm4/armback/armfront/gun/soldier" method="_on_Hit_timeout"]
+[connection signal="body_entered" from="Node2D/Olga/Head/LASER1/MEGALASER" to="." method="_on_MEGALASER_body_entered"]
+[connection signal="body_entered" from="Node2D/Olga/Head/LASER2/MEGALASER" to="." method="_on_MEGALASER_body_entered"]
+[connection signal="body_entered" from="Node2D/Olga/Head/LASER3/MEGALASER" to="." method="_on_MEGALASER_body_entered"]
+[connection signal="finished" from="ALERTALERTA" to="." method="_on_ALERTALERTA_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Bras" to="." method="_on_Bras_timeout"]
+[connection signal="timeout" from="Modes" to="." method="_on_Modes_timeout"]
+[connection signal="timeout" from="Mitr" to="." method="_on_Mitr_timeout"]
+[connection signal="timeout" from="Spawn" to="." method="_on_Spawn_timeout"]
+[connection signal="timeout" from="Elec" to="." method="_on_Elec_timeout"]
+[connection signal="timeout" from="Smok" to="." method="_on_Smok_timeout"]
+[connection signal="timeout" from="Marche" to="." method="_on_Marche_timeout"]
+[connection signal="timeout" from="Charge" to="." method="_on_Charge_timeout"]
+[connection signal="timeout" from="Trembl" to="." method="_on_Trembl_timeout"]
+[connection signal="timeout" from="Pics" to="." method="_on_Pics_timeout"]
+[connection signal="timeout" from="Modos" to="." method="_on_Modos_timeout"]
+[connection signal="timeout" from="Poison" to="." method="_on_Poison_timeout"]
+[connection signal="timeout" from="Solturn" to="." method="_on_Solturn_timeout"]
+[connection signal="timeout" from="Visee" to="." method="_on_Visee_timeout"]

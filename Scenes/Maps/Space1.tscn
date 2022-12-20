@@ -1,0 +1,299 @@
+[gd_scene load_steps=36 format=2]
+
+[ext_resource path="res://Scripts/Maps/Space1.gd" type="Script" id=1]
+[ext_resource path="res://Backgrounds/background8.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Cinematics/Begin/obj0101.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/GUI/MenuStars/Vulav.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/GUI/MenuStars/VulavFront.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/GUI/MenuStars/Beltfront.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Props/Special/Ol_0.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Props/Special/Ol_1.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Props/Special/Ol_1528_0.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Props/Special/Ol_1528_1.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Props/Special/Ol_app_0.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Props/Special/Ol_app_1.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Props/Special/Ol_app_2.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Props/Special/Ol_app_3.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Props/Special/Ol_app_4.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Props/Special/Ol_app_5.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Props/Special/Ol_1529_0.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Props/Special/Ol_1529_1.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Props/Special/Ol_1526_0.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Props/Special/Ol_1526_1.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Props/Special/Ol_1530_0.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Props/Special/Ol_1530_1.png" type="Texture" id=22]
+[ext_resource path="res://Scripts/Entities/Vaisseaux.gd" type="Script" id=23]
+[ext_resource path="res://Scenes/Entities/hsoldier.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Scenes/Entities/VaisseauChloro.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Scenes/Player/player.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Scenes/Player/GUICanvas.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Scenes/Player/mouse.tscn" type="PackedScene" id=28]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 167.769, 10 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 10, 121.672 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "0",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "1528",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "dapp",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "app",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "1529",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "1526",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "1530",
+"speed": 20.0
+} ]
+
+[node name="Space1" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Fond" type="Sprite" parent="."]
+position = Vector2( 136, 193 )
+scale = Vector2( 4, 2.5 )
+texture = ExtResource( 2 )
+
+[node name="Fond2" type="Sprite" parent="."]
+position = Vector2( 648, 193 )
+scale = Vector2( 4, 2.5 )
+texture = ExtResource( 2 )
+
+[node name="Fond3" type="Sprite" parent="."]
+position = Vector2( -375, 193 )
+scale = Vector2( 4, 2.5 )
+texture = ExtResource( 2 )
+
+[node name="ObjetsSpatiaux" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Luminax" type="AnimatedSprite" parent="ObjetsSpatiaux"]
+position = Vector2( 763.751, -23.2695 )
+frames = SubResource( 1 )
+
+[node name="Vulav" type="AnimatedSprite" parent="ObjetsSpatiaux"]
+position = Vector2( 823.53, -28.5872 )
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 2 )
+
+[node name="VulavFront" type="AnimatedSprite" parent="ObjetsSpatiaux"]
+visible = false
+position = Vector2( 43.1843, 768.124 )
+frames = SubResource( 3 )
+
+[node name="Belt" type="AnimatedSprite" parent="ObjetsSpatiaux"]
+visible = false
+position = Vector2( 90.1487, 1411.92 )
+scale = Vector2( 2.5, 2.5 )
+frames = SubResource( 4 )
+
+[node name="null" type="Node2D" parent="ObjetsSpatiaux"]
+
+[node name="walls" type="StaticBody2D" parent="."]
+editor/display_folded = true
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls"]
+position = Vector2( 40.8849, 307.459 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="walls"]
+position = Vector2( 44.0582, 64.8566 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="walls"]
+position = Vector2( -132.491, 185.927 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="walls"]
+position = Vector2( 214.975, 182.804 )
+shape = SubResource( 6 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Timer2" type="Timer" parent="."]
+
+[node name="Timer3" type="Timer" parent="."]
+
+[node name="Timer4" type="Timer" parent="."]
+
+[node name="Timer5" type="Timer" parent="."]
+
+[node name="Ol" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.623529 )
+position = Vector2( 98.6353, 176.69 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 7 )
+playing = true
+
+[node name="Vaisseaux" type="Node2D" parent="."]
+visible = false
+position = Vector2( 42.0571, 183.69 )
+script = ExtResource( 23 )
+
+[node name="hsoldier1" parent="Vaisseaux" instance=ExtResource( 24 )]
+position = Vector2( -0.255669, -538.897 )
+
+[node name="hsoldier2" parent="Vaisseaux" instance=ExtResource( 24 )]
+position = Vector2( 269.823, -466.829 )
+
+[node name="hsoldier3" parent="Vaisseaux" instance=ExtResource( 24 )]
+position = Vector2( 467.811, -269.728 )
+
+[node name="hsoldier4" parent="Vaisseaux" instance=ExtResource( 24 )]
+position = Vector2( 540.584, -0.212723 )
+
+[node name="hsoldier5" parent="Vaisseaux" instance=ExtResource( 24 )]
+position = Vector2( 468.667, 269.471 )
+
+[node name="hsoldier6" parent="Vaisseaux" instance=ExtResource( 24 )]
+position = Vector2( 271.101, 467.672 )
+
+[node name="hsoldier7" parent="Vaisseaux" instance=ExtResource( 24 )]
+position = Vector2( 0.40271, 540.792 )
+
+[node name="hsoldier8" parent="Vaisseaux" instance=ExtResource( 24 )]
+position = Vector2( -271.893, 467.283 )
+
+[node name="hsoldier9" parent="Vaisseaux" instance=ExtResource( 24 )]
+position = Vector2( -467.681, 270.442 )
+
+[node name="hsoldier10" parent="Vaisseaux" instance=ExtResource( 24 )]
+position = Vector2( -540.159, 1.06651 )
+
+[node name="hsoldier11" parent="Vaisseaux" instance=ExtResource( 24 )]
+position = Vector2( -467.796, -270.435 )
+
+[node name="hsoldier12" parent="Vaisseaux" instance=ExtResource( 24 )]
+position = Vector2( -270.619, -467.212 )
+
+[node name="Timer" type="Timer" parent="Vaisseaux"]
+
+[node name="SHOOT" type="Timer" parent="Vaisseaux"]
+
+[node name="TURN" type="Timer" parent="Vaisseaux"]
+
+[node name="Position2D" type="Position2D" parent="Vaisseaux"]
+
+[node name="chloro" type="Node2D" parent="."]
+position = Vector2( -157.652, -215.17 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="VaisseauChloro3" parent="chloro" instance=ExtResource( 25 )]
+position = Vector2( 893.542, 217.255 )
+
+[node name="VaisseauChloro" parent="chloro" instance=ExtResource( 25 )]
+position = Vector2( 712.102, 237.99 )
+
+[node name="VaisseauChloro2" parent="chloro" instance=ExtResource( 25 )]
+position = Vector2( 832.454, 275.085 )
+
+[node name="player" parent="." instance=ExtResource( 26 )]
+position = Vector2( 81, 188 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 27 )]
+editor/display_folded = true
+
+[node name="mouse" parent="CanvasLayer" instance=ExtResource( 28 )]
+position = Vector2( 47.5361, -50.7215 )
+
+[node name="PosAst" type="Position2D" parent="."]
+position = Vector2( 725.266, 514.115 )
+
+[node name="PosWasp" type="Position2D" parent="."]
+position = Vector2( 724.035, 513.594 )
+
+[node name="PosSol" type="Position2D" parent="."]
+position = Vector2( 125.709, 513.526 )
+
+[node name="SCIN" type="Timer" parent="."]
+
+[node name="SPACEOBJ" type="Timer" parent="."]
+
+[node name="Cauchemar" type="Position2D" parent="."]
+position = Vector2( 1000, 194 )
+scale = Vector2( 1.2, 1.2 )
+
+[node name="DIALOS" type="Timer" parent="."]
+
+[node name="BOSSEND" type="Timer" parent="."]
+
+[node name="CHLORO" type="Timer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
+[connection signal="timeout" from="Timer3" to="." method="_on_Timer3_timeout"]
+[connection signal="timeout" from="Timer4" to="." method="_on_Timer4_timeout"]
+[connection signal="timeout" from="Timer5" to="." method="_on_Timer5_timeout"]
+[connection signal="animation_finished" from="Ol" to="." method="_on_Ol_animation_finished"]
+[connection signal="timeout" from="Vaisseaux/Timer" to="Vaisseaux" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Vaisseaux/SHOOT" to="Vaisseaux" method="_on_SHOOT_timeout"]
+[connection signal="timeout" from="Vaisseaux/TURN" to="Vaisseaux" method="_on_TURN_timeout"]
+[connection signal="timeout" from="SCIN" to="." method="_on_SCIN_timeout"]
+[connection signal="timeout" from="SPACEOBJ" to="." method="_on_SPACEOBJ_timeout"]
+[connection signal="timeout" from="DIALOS" to="." method="_on_DIALOS_timeout"]
+[connection signal="timeout" from="BOSSEND" to="." method="_on_BOSSEND_timeout"]
+[connection signal="timeout" from="CHLORO" to="." method="_on_CHLORO_timeout"]

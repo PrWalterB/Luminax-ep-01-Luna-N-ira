@@ -1,0 +1,651 @@
+[gd_scene load_steps=57 format=2]
+
+[ext_resource path="res://Scripts/Maps/MaisonProgfer.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Cinematics/Begin/back1.png" type="Texture" id=2]
+[ext_resource path="res://Backgrounds/background12.png" type="Texture" id=3]
+[ext_resource path="res://Backgrounds/backprog1.png" type="Texture" id=4]
+[ext_resource path="res://Backgrounds/backprog2.png" type="Texture" id=5]
+[ext_resource path="res://Tiles/tileset01.tres" type="TileSet" id=6]
+[ext_resource path="res://Sprites/Props/sprite142_0.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Props/sprite142_3.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Other/sprite264_0.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Mobs/toskfer_1.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Mobs/toskfer.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Mobs/toskfer_2.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Other/shadow_0.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Characters/Progferspr/pfacem_5.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Characters/Progferspr/cara0.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Characters/Progferspr/cara1.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Characters/Progferspr/cara2.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Characters/Progferspr/stress0.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Characters/Progferspr/stress1.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Characters/Progferspr/stress2.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/sprite0.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/sprite1.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/sprite3.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/sprite4.png" type="Texture" id=24]
+[ext_resource path="res://Scenes/Player/player.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Scenes/Maps/dialogpiq.gd" type="Script" id=26]
+[ext_resource path="res://Sons/DecolVaisseau.wav" type="AudioStream" id=27]
+[ext_resource path="res://Scenes/Maps/dialogpiq.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Scenes/Entities/Fantomis.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Scenes/Player/GUICanvas.tscn" type="PackedScene" id=30]
+[ext_resource path="res://Scenes/Player/mouse.tscn" type="PackedScene" id=31]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 24.9952, 10.9555 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16.268, 14.5563 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 46.7542, 19.5881 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 18.25, 12.9002 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 56.1192, 15.976 )
+
+[sub_resource type="CapsuleShape2D" id=6]
+
+[sub_resource type="CapsuleShape2D" id=7]
+radius = 6.41055
+height = 28.1574
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "demarrage",
+"speed": 15.0
+} ]
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "cara",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "stress",
+"speed": 8.0
+} ]
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "default",
+"speed": 6.0
+} ]
+
+[sub_resource type="CircleShape2D" id=12]
+radius = 36.1918
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 15.5469, 6.95809 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 27.3285, 12.5324 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 48.0901, 21.2574 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 11.1721, 18.5627 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 57.8149, 17.9485 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 16.0931, 100.508 )
+
+[sub_resource type="RectangleShape2D" id=19]
+
+[sub_resource type="CircleShape2D" id=20]
+radius = 23.624
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 42.0378, 38.143 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 19.9845, 14.5624 )
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 43.1615, 13.8019 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 62.2669, 13.6518 )
+
+[sub_resource type="RectangleShape2D" id=25]
+
+[node name="MaisonProgfer" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="fd" type="Sprite" parent="Node2D"]
+position = Vector2( 110.29, 13.9274 )
+scale = Vector2( 8.04879, 8.58576 )
+z_index = -10
+texture = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Node2D"]
+z_index = -10
+texture = ExtResource( 3 )
+
+[node name="backs" type="Node2D" parent="Node2D"]
+editor/display_folded = true
+
+[node name="Sprite2" type="Sprite" parent="Node2D/backs"]
+position = Vector2( -153.396, -359.8 )
+texture = ExtResource( 4 )
+
+[node name="Sprite3" type="Sprite" parent="Node2D/backs"]
+position = Vector2( -309.344, -356.873 )
+texture = ExtResource( 4 )
+
+[node name="Sprite5" type="Sprite" parent="Node2D/backs"]
+position = Vector2( -159.763, 264.868 )
+texture = ExtResource( 4 )
+
+[node name="Sprite4" type="Sprite" parent="Node2D/backs"]
+position = Vector2( -322.037, 265.107 )
+texture = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="Node2D/backs"]
+position = Vector2( 183.716, -356.394 )
+texture = ExtResource( 5 )
+
+[node name="Sprite6" type="Sprite" parent="Node2D/backs"]
+position = Vector2( 339.949, -356.394 )
+texture = ExtResource( 5 )
+
+[node name="Sprite7" type="Sprite" parent="Node2D/backs"]
+position = Vector2( 178.963, 260.882 )
+texture = ExtResource( 5 )
+
+[node name="Sprite8" type="Sprite" parent="Node2D/backs"]
+position = Vector2( 343.964, 255.882 )
+texture = ExtResource( 5 )
+
+[node name="TileMap" type="TileMap" parent="Node2D"]
+z_index = 2
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 1, 1 )
+format = 1
+tile_data = PoolIntArray( -6094803, 34, 0, -5832738, 33, 0, -4587639, 35, 0, 177, 32, 0, 589608, 30, 0, 589672, 31, 0, 2424701, 29, 0, 2424708, 28, 0, 2424733, 28, 0, 2424757, 28, 0, 2424781, 28, 0, 2424805, 28, 0, 2424828, 29, 0, 2359338, 29, 0, 2359345, 28, 0, 2359369, 28, 0, 2359393, 28, 0, 2359417, 28, 0, 2359442, 28, 0, 2359465, 29, 0 )
+
+[node name="walls" type="StaticBody2D" parent="Node2D"]
+editor/display_folded = true
+visible = false
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/walls"]
+position = Vector2( -101.956, -32.0619 )
+shape = SubResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/walls"]
+polygon = PoolVector2Array( -131.368, -8.44594, -131.265, -217.559, 14.2655, -217.369, 14.2381, -184.673, 32.7391, -184.588, 32.7391, -217.838, 177.45, -217.444, 177.271, -16.4256, 382.837, -16.3056, 399.747, -11.3003, 413.004, -4.80703, 421.932, 0.874596, 429.974, 7.04793, 437.034, 14.1082, 440.714, 18.6825, 445.885, 25.7428, 450.459, 33.3998, 453.9, 39.8738, 456.531, 46.5988, 459.653, 56.8438, 461.516, 62.4325, 460.237, 79.289, 456.638, 94.068, 450.213, 108.076, 443.658, 118.1, 434.508, 129.336, 428.037, 135.563, 417.782, 143.499, 406.306, 149.969, 183.731, 149.563, 183.676, 33.6174, 194.651, 33.2852, 194.938, 11.0069, 183.55, 11.0839, 177.163, 11.0839, 177.715, 44.7714, 42.4274, 44.4875, 42.4621, 26.5132, 40.039, 26.4234, 40.4364, 68.0778, 177.401, 68.5059, 177.311, 154.878, -131.344, 154.739, -131.358, 67.7602, 5.72297, 68.0711, 5.86006, 26.8118, 3.21705, 26.7266, 3.04654, 36.1902, 3.00531, 44.4855, -131.359, 43.6697, -130.882, 18.9198, -215.65, 18.8587, -215.218, 41.0152, -206.18, 41.2411, -264.205, 98.6672, -208.125, 98.6561, -206.408, 41.7766, -193.101, 41.5619, -192.886, 98.4414, -136.119, 97.3208, -136.119, 113.359, -193.078, 113.059, -191.604, 158.194, -208.097, 157.968, -207.734, 112.92, -264.09, 112.433, -219.015, 158.419, -346.252, 157.885, -346.252, 93.4934, -412.208, 93.4571, -414.348, 79.6631, -413.635, 65.1555, -408.64, 52.3128, -404.597, 42.7997, -395.313, 28.1596, -387.584, 19.6943, -382.063, 14.5415, -380.959, 16.7499, -374.702, 23.7429, -368.077, 16.9339, -364.396, 20.4304, -348.018, 7.73254, -348.018, -5.70144, -335.32, -8.46185, -132.308, -8.19337, -377.225, -373.337, -723.77, -199.04, -520.764, 395.623, 490.162, 327.954, 664.46, -96.5116, 447.1, -393.843, -260.343, -451.259 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/walls"]
+position = Vector2( -16.8239, -33.6477 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/walls"]
+position = Vector2( 62.3994, -36.4197 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Node2D/walls"]
+position = Vector2( 117.83, -149.64 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Node2D/walls"]
+position = Vector2( 397.631, 17.5637 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Node2D/walls"]
+position = Vector2( -66.0232, -191.884 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Node2D/walls"]
+position = Vector2( 221.674, 44.5094 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Node2D/walls"]
+position = Vector2( 272.134, 68.6526 )
+shape = SubResource( 7 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Node2D/walls"]
+polygon = PoolVector2Array( 197.732, 93.8669, 208.96, 89.1322, 225.193, 97.1135, 229.386, 112.535, 228.169, 115.376, 217.617, 119.028, 205.037, 119.164, 197.461, 114.294, 195.567, 102.525 )
+
+[node name="vaisseau" type="AnimatedSprite" parent="Node2D"]
+position = Vector2( -66.4185, -233.604 )
+frames = SubResource( 8 )
+playing = true
+
+[node name="Sprite" type="Sprite" parent="Node2D/vaisseau"]
+position = Vector2( 0.59874, 4.49055 )
+scale = Vector2( 1.00936, 1.07016 )
+z_index = -10
+texture = ExtResource( 9 )
+
+[node name="Toskfer" type="AnimatedSprite" parent="Node2D"]
+position = Vector2( 213.176, 105.209 )
+frames = SubResource( 9 )
+frame = 2
+playing = true
+
+[node name="Ombre" type="Sprite" parent="Node2D"]
+position = Vector2( 270.702, 87.1918 )
+texture = ExtResource( 13 )
+
+[node name="Ombre2" type="Sprite" parent="Node2D"]
+position = Vector2( 220.994, 65.1565 )
+scale = Vector2( 1.37473, 1 )
+texture = ExtResource( 13 )
+
+[node name="Progfer" type="AnimatedSprite" parent="Node2D"]
+position = Vector2( 221.56, 43.0082 )
+frames = SubResource( 10 )
+playing = true
+
+[node name="Doublix" type="AnimatedSprite" parent="Node2D"]
+position = Vector2( 269.677, 61.0786 )
+frames = SubResource( 11 )
+frame = 1
+playing = true
+
+[node name="player" parent="Node2D" instance=ExtResource( 25 )]
+position = Vector2( -71, -178 )
+
+[node name="dials" type="Node2D" parent="Node2D"]
+
+[node name="1coussindial" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( 239, 82 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/1coussindial"]
+shape = SubResource( 12 )
+
+[node name="0000100" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( -17, -24 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0000100"]
+shape = SubResource( 13 )
+
+[node name="0000100bis" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( -17, -43 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0000100bis"]
+shape = SubResource( 13 )
+
+[node name="0000102" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( 62, -47 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0000102"]
+shape = SubResource( 13 )
+
+[node name="0000100bisbis" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( 63, -27 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0000100bisbis"]
+shape = SubResource( 13 )
+
+[node name="0000105" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( -101.439, -31.1535 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0000105"]
+shape = SubResource( 14 )
+
+[node name="0000108" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( 118, -149 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0000108"]
+shape = SubResource( 15 )
+
+[node name="0000110" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( 23, -200 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0000110"]
+shape = SubResource( 16 )
+
+[node name="2shiprogdial" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( -66, -191 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/2shiprogdial"]
+shape = SubResource( 17 )
+
+[node name="Decol" type="AudioStreamPlayer2D" parent="Node2D/dials/2shiprogdial"]
+stream = ExtResource( 27 )
+
+[node name="0000114" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( 23, -76 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0000114"]
+shape = SubResource( 18 )
+
+[node name="0000116" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( -60.5137, 60.7812 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0000116"]
+shape = SubResource( 19 )
+
+[node name="0000118" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( -19.3055, 60.4406 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0000118"]
+shape = SubResource( 19 )
+
+[node name="0000120" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( 58.1571, 61.6544 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0000120"]
+shape = SubResource( 19 )
+
+[node name="0000122" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( 93.9162, 61.3139 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0000122"]
+shape = SubResource( 19 )
+
+[node name="0000124" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( -368.447, 2.47434 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0000124"]
+shape = SubResource( 20 )
+
+[node name="0000126" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( -385.595, 128.438 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0000126"]
+shape = SubResource( 21 )
+
+[node name="0000128" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( -200.607, 105.474 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Node2D/dials/0000128"]
+polygon = PoolVector2Array( -6.67726, -66.5387, -67.9952, -6.38872, -68.2872, 4.12293, -68.3296, 6.77309, -20.0824, 53.8798, 17.2566, 54.3555, 64.1087, 8.2169, 64.2138, -14.8146, 7.32213, -67.1352 )
+
+[node name="0000130" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( 397.409, 17.9204 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0000130"]
+shape = SubResource( 22 )
+
+[node name="0000132" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( -287.825, -20.0277 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0000132"]
+shape = SubResource( 23 )
+
+[node name="0000134" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( 326.708, -26.9063 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0000134"]
+shape = SubResource( 24 )
+
+[node name="0000153" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( 221.393, 61.8211 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0000153"]
+shape = SubResource( 25 )
+
+[node name="0000156" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( 267.819, 81.0925 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0000156"]
+shape = SubResource( 25 )
+
+[node name="0001384" type="Area2D" parent="Node2D/dials"]
+editor/display_folded = true
+position = Vector2( -101.623, -36.1222 )
+scale = Vector2( 0.867988, 1.14334 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/dials/0001384"]
+shape = SubResource( 14 )
+
+[node name="0001430" parent="Node2D/dials" instance=ExtResource( 28 )]
+position = Vector2( 211.968, 105.973 )
+scale = Vector2( 0.652674, 1.88146 )
+
+[node name="13883rock" parent="Node2D" instance=ExtResource( 29 )]
+visible = false
+position = Vector2( -104.617, -73.1565 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 30 )]
+
+[node name="mouse" parent="CanvasLayer" instance=ExtResource( 31 )]
+position = Vector2( 176.022, -82.9176 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Charge" type="Timer" parent="."]
+[connection signal="body_entered" from="Node2D/dials/1coussindial" to="Node2D/dials/1coussindial" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/1coussindial" to="Node2D/dials/1coussindial" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000100" to="Node2D/dials/0000100" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000100" to="Node2D/dials/0000100" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000100bis" to="Node2D/dials/0000100bis" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000100bis" to="Node2D/dials/0000100bis" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000102" to="Node2D/dials/0000102" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000102" to="Node2D/dials/0000102" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000100bisbis" to="Node2D/dials/0000100bisbis" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000100bisbis" to="Node2D/dials/0000100bisbis" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000105" to="Node2D/dials/0000105" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000105" to="Node2D/dials/0000105" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000108" to="Node2D/dials/0000108" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000108" to="Node2D/dials/0000108" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000110" to="Node2D/dials/0000110" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000110" to="Node2D/dials/0000110" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/2shiprogdial" to="Node2D/dials/2shiprogdial" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/2shiprogdial" to="Node2D/dials/2shiprogdial" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000114" to="Node2D/dials/0000114" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000114" to="Node2D/dials/0000114" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000116" to="Node2D/dials/0000116" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000116" to="Node2D/dials/0000116" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000118" to="Node2D/dials/0000118" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000118" to="Node2D/dials/0000118" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000120" to="Node2D/dials/0000120" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000120" to="Node2D/dials/0000120" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000122" to="Node2D/dials/0000122" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000122" to="Node2D/dials/0000122" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000124" to="Node2D/dials/0000124" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000124" to="Node2D/dials/0000124" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000126" to="Node2D/dials/0000126" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000126" to="Node2D/dials/0000126" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000128" to="Node2D/dials/0000128" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000128" to="Node2D/dials/0000128" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000130" to="Node2D/dials/0000130" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000130" to="Node2D/dials/0000130" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000132" to="Node2D/dials/0000132" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000132" to="Node2D/dials/0000132" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000134" to="Node2D/dials/0000134" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000134" to="Node2D/dials/0000134" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000153" to="Node2D/dials/0000153" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000153" to="Node2D/dials/0000153" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0000156" to="Node2D/dials/0000156" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0000156" to="Node2D/dials/0000156" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Node2D/dials/0001384" to="Node2D/dials/0001384" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="Node2D/dials/0001384" to="Node2D/dials/0001384" method="_on_dialogpiq_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Charge" to="." method="_on_Charge_timeout"]

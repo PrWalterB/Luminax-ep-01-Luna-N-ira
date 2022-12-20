@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/Maps/CacheBunker.gd" type="Script" id=1]
+[ext_resource path="res://Backgrounds/sprite156_0.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/Bunker/bunkersallecache.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Player/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Tiles/Bunker/bunkersallecachefd.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Maps/dialogpiq.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Other/Transition.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Player/GUICanvas.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Player/mouse.tscn" type="PackedScene" id=9]
+
+[node name="CacheBunker" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="fd" type="Sprite" parent="Node2D"]
+position = Vector2( 522.643, 290.88 )
+scale = Vector2( 15.1917, 10.4414 )
+z_index = -10
+texture = ExtResource( 2 )
+
+[node name="room" type="Sprite" parent="Node2D"]
+position = Vector2( 521.581, 274.79 )
+scale = Vector2( 0.7, 0.7 )
+z_index = -10
+texture = ExtResource( 3 )
+
+[node name="player" parent="Node2D" instance=ExtResource( 4 )]
+position = Vector2( 524, 326 )
+
+[node name="dark" type="Sprite" parent="Node2D"]
+modulate = Color( 1, 1, 1, 0.627451 )
+position = Vector2( 528.416, 313.355 )
+scale = Vector2( 15.1116, 15.3193 )
+z_index = 10
+texture = ExtResource( 2 )
+
+[node name="roomwall" type="Sprite" parent="Node2D"]
+position = Vector2( 521.581, 274.79 )
+scale = Vector2( 0.7, 0.7 )
+z_index = 10
+texture = ExtResource( 5 )
+
+[node name="walls" type="StaticBody2D" parent="Node2D"]
+visible = false
+collision_mask = 7
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/walls"]
+position = Vector2( 156.479, 82.1229 )
+scale = Vector2( 0.7, 0.7 )
+polygon = PoolVector2Array( 463.313, 425.093, 463.765, 377.195, 465.967, 300.238, 432.958, 299.406, 434.083, 237.852, 481.349, 239.401, 479.218, 259.354, 481.349, 259.741, 494.715, 259.935, 560.028, 258.278, 576.138, 256.949, 575.639, 247.648, 574.477, 239.842, 608.192, 239.51, 617.42, 391.469, 618.65, 439.354, 617.032, 424.796, 466.265, 425.119, 467.05, 470.4, 721.65, 471.35, 708.35, 121.75, 359.7, 115.1, 345.45, 466.6, 457.55, 469.45 )
+
+[node name="dials" type="Node2D" parent="Node2D"]
+
+[node name="0001434" parent="Node2D/dials" instance=ExtResource( 6 )]
+position = Vector2( 524.977, 261.603 )
+
+[node name="0001445" parent="Node2D/dials" instance=ExtResource( 6 )]
+position = Vector2( 470.243, 305.635 )
+rotation = -1.56697
+scale = Vector2( 0.636641, 1.62473 )
+
+[node name="0607-933Bunker" parent="Node2D" instance=ExtResource( 7 )]
+position = Vector2( 523.679, 376.691 )
+scale = Vector2( 13.6, 1 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 8 )]
+
+[node name="mouse" parent="CanvasLayer" instance=ExtResource( 9 )]
+[connection signal="body_entered" from="Node2D/0607-933Bunker" to="." method="_on_06070933Bunker_body_entered"]

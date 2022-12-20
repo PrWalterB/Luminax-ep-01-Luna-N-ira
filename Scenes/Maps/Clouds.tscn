@@ -1,0 +1,74 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Scripts/Maps/Clouds.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Cinematics/Vaisseau/background9.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Cinematics/Vaisseau/sprite157_0.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Cinematics/Vaisseau/sprite157_1.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Cinematics/Vaisseau/sprite157_2.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Cinematics/Vaisseau/sprite157_3.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Cinematics/Vaisseau/sprite169_0.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Cinematics/Vaisseau/sprite169_1.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Cinematics/Vaisseau/sprite169_2.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Cinematics/Vaisseau/sprite169_3.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Props/vaisseau.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Props/vaisseau_1.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Props/vaisseau_2.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Props/vaisseau_3.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Props/vaisseau_4.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Cinematics/Vaisseau/sprite158_0.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Cinematics/Vaisseau/sprite160_0.png" type="Texture" id=17]
+[ext_resource path="res://Sons/Ambiance_Sky.wav" type="AudioStream" id=18]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "ascend0",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "descend0",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "ascend1",
+"speed": 35.0
+} ]
+
+[node name="Clouds" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Ciel" type="Sprite" parent="."]
+position = Vector2( 521.2, 299.507 )
+scale = Vector2( 3.54177, 3.0065 )
+texture = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 536.41, 114.659 )
+scale = Vector2( 3.44017, 2.88097 )
+frames = SubResource( 1 )
+animation = "ascend1"
+frame = 4
+playing = true
+
+[node name="Nuages" type="Sprite" parent="."]
+position = Vector2( 521, -420 )
+scale = Vector2( 3.538, 3 )
+texture = ExtResource( 16 )
+
+[node name="Nuages2" type="Sprite" parent="."]
+position = Vector2( 521, 303 )
+scale = Vector2( 3.5358, 3 )
+texture = ExtResource( 17 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Timer2" type="Timer" parent="."]
+
+[node name="Ambiance" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
+[connection signal="finished" from="Ambiance" to="." method="_on_Ambiance_finished"]

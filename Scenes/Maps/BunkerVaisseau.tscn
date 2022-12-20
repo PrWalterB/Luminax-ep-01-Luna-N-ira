@@ -1,0 +1,170 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scripts/Maps/BunkerVaisseau.gd" type="Script" id=1]
+[ext_resource path="res://Backgrounds/Sans titre.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/Bunker/Bunker salle vaisseau.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Props/vaisseau.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Characters/PNJ.tres" type="SpriteFrames" id=5]
+[ext_resource path="res://Sprites/Other/shadow_0.png" type="Texture" id=6]
+[ext_resource path="res://Sons/Appel.wav" type="AudioStream" id=7]
+[ext_resource path="res://Scenes/Player/player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sons/Boss1organ.wav" type="AudioStream" id=9]
+[ext_resource path="res://Scenes/Maps/dialogpiq.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Entities/Fantomis.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Player/GUICanvas.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Player/mouse.tscn" type="PackedScene" id=13]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="BunkerVaisseau" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="back" type="Sprite" parent="Node2D"]
+position = Vector2( 19.2092, 7.07099 )
+scale = Vector2( 7.29098, 5.30702 )
+z_index = -10
+texture = ExtResource( 2 )
+
+[node name="BACKS" type="Node2D" parent="Node2D"]
+z_index = -10
+
+[node name="Salle" type="Sprite" parent="Node2D/BACKS"]
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 3 )
+
+[node name="vaisseau" type="AnimatedSprite" parent="Node2D"]
+scale = Vector2( 1.5, 1.5 )
+frames = SubResource( 1 )
+
+[node name="Progfer" type="AnimatedSprite" parent="Node2D"]
+position = Vector2( -85.5963, 45.9494 )
+frames = ExtResource( 5 )
+animation = "02Progfer"
+
+[node name="Sprite" type="Sprite" parent="Node2D/Progfer"]
+position = Vector2( 0.120372, 22.0081 )
+scale = Vector2( 1.52206, 1 )
+z_index = -2
+texture = ExtResource( 6 )
+
+[node name="Doubliks" type="AnimatedSprite" parent="Node2D"]
+position = Vector2( 104.1, 36.4767 )
+frames = ExtResource( 5 )
+animation = "00Doubliks"
+frame = 3
+playing = true
+
+[node name="Sprite" type="Sprite" parent="Node2D/Doubliks"]
+position = Vector2( 1.00187, 26.9259 )
+scale = Vector2( 1.14512, 1 )
+z_index = -2
+texture = ExtResource( 6 )
+
+[node name="Tog" type="AnimatedSprite" parent="Node2D"]
+position = Vector2( -19.1739, 35.5112 )
+frames = ExtResource( 5 )
+animation = "00Tog"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Node2D/Tog"]
+position = Vector2( 0.58707, 14.2782 )
+scale = Vector2( 0.959367, 1 )
+z_index = -2
+texture = ExtResource( 6 )
+
+[node name="Dring" type="AudioStreamPlayer2D" parent="Node2D/Tog"]
+stream = ExtResource( 7 )
+
+[node name="Timer" type="Timer" parent="Node2D/Tog"]
+
+[node name="OlHolo" type="AnimatedSprite" parent="Node2D"]
+visible = false
+position = Vector2( 10.3818, -40.0113 )
+frames = ExtResource( 5 )
+animation = "00OlH"
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Node2D/OlHolo"]
+position = Vector2( 0.58707, 14.2782 )
+scale = Vector2( 0.959367, 1 )
+z_index = -2
+texture = ExtResource( 6 )
+
+[node name="player" parent="Node2D" instance=ExtResource( 8 )]
+position = Vector2( 0.384094, 71.7041 )
+
+[node name="walls" type="StaticBody2D" parent="Node2D"]
+collision_mask = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Node2D/walls"]
+polygon = PoolVector2Array( -142.346, -74.9909, -133.518, -74.9909, -133.518, -61.5456, -105.088, -61.4646, -105.007, -75.0719, 142.571, -74.9345, 142.501, 147, -142.485, 147.027, -142.531, -69.4581, -188.348, -68.186, -175.46, 192.436, 198.29, 188.141, 195.426, -169.857, -212.692, -165.561, -186.603, -72.5365 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Node2D/walls"]
+polygon = PoolVector2Array( -96.1455, 39.8015, -92.7445, 40.8082, -93.4947, 66.9215, -85.5422, 69.7763, -77.1819, 66.9215, -79.6289, 43.0641, -53.5284, 41.8406, -47.0033, 38.5781, -46.3916, 34.4999, -52.5089, 23.6926, -46.2726, 35.3283, -29.8623, 37.2309, -22.9419, 49.997, -14.7855, 50.4048, -9.36854, 38.5703, 1.89712, 36.5675, 13.4131, 36.3171, 27.9333, 35.3157, 40.2003, 31.8109, 42.9541, 30.5591, 51.0506, 25.9375, 42.8964, 32.799, 43.6919, 38.7655, 50.8517, 42.246, 93.7553, 41.6915, 92.6534, 54.4729, 96.3997, 62.9572, 109.181, 63.8387, 113.368, 53.922, 114.69, 39.3776, 113.258, 31.3342, 112.817, 23.6212, 91.6618, 23.7314, 89.7886, 29.3508, 81.3044, 26.7064, 72.2693, 26.9268, 71.7149, 22.1847, 50.9387, 9.07144, 67.8484, 8.66561, 71.3657, 4.06615, 65.5487, -2.15663, 4.5406, -31.7738, -11.9868, -30.7006, -33.4584, -21.4883, -68.8669, -1.93855, -73.8037, 4.5007, -70.1548, 10.5107, -54.7006, 9.43747, -74.8769, 22.9599, -90.1356, 27.6694, -97.0946, 34.8604 )
+
+[node name="Scream" type="AudioStreamPlayer2D" parent="Node2D"]
+position = Vector2( 71.5378, -75.0417 )
+stream = ExtResource( 9 )
+
+[node name="dials" type="Node2D" parent="Node2D"]
+
+[node name="0000548" parent="Node2D/dials" instance=ExtResource( 10 )]
+position = Vector2( 0.413193, -81.4545 )
+scale = Vector2( 3.52, 1 )
+
+[node name="0000550" parent="Node2D/dials" instance=ExtResource( 10 )]
+position = Vector2( 133.413, -81.4545 )
+scale = Vector2( 0.760001, 1 )
+
+[node name="0000552" parent="Node2D/dials" instance=ExtResource( 10 )]
+position = Vector2( -122.286, -66.964 )
+scale = Vector2( 0.760001, 1 )
+
+[node name="0000554" parent="Node2D/dials" instance=ExtResource( 10 )]
+position = Vector2( -19.8489, 43.988 )
+scale = Vector2( 0.320001, 0.92 )
+
+[node name="0000557" parent="Node2D/dials" instance=ExtResource( 10 )]
+position = Vector2( -81.6938, 58.2956 )
+scale = Vector2( 0.320001, 0.92 )
+
+[node name="0000559" parent="Node2D/dials" instance=ExtResource( 10 )]
+position = Vector2( 103.328, 60.7922 )
+scale = Vector2( 0.320001, 0.92 )
+
+[node name="2shipbunkdial" parent="Node2D/dials" instance=ExtResource( 10 )]
+position = Vector2( -0.227749, 35.5202 )
+scale = Vector2( 1.84, 0.92 )
+
+[node name="0001396" parent="Node2D/dials" instance=ExtResource( 10 )]
+position = Vector2( -109.442, -3.57421 )
+scale = Vector2( 0.446933, 1.04029 )
+
+[node name="13993water" parent="." instance=ExtResource( 11 )]
+visible = false
+position = Vector2( -109.38, -15.4479 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 12 )]
+
+[node name="mouse" parent="CanvasLayer" instance=ExtResource( 13 )]
+position = Vector2( -129.341, -103.064 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Charge" type="Timer" parent="."]
+[connection signal="timeout" from="Node2D/Tog/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="Node2D/OlHolo" to="." method="_on_OlHolo_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Charge" to="." method="_on_Charge_timeout"]

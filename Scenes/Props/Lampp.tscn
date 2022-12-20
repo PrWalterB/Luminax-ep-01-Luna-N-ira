@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Sprites/Props/Hydroplan/Lamp/sprite283_0.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Props/Hydroplan/Lamp/sprite281_0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Props/Hydroplan/Lamp/sprite282_0.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Maps/dialogpiq.gd" type="Script" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 23.6043
+
+[node name="Lampp" type="StaticBody2D"]
+collision_mask = 7
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( -0.124878, 4.96685 )
+z_index = -2
+frames = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+z_index = -2
+frames = SubResource( 2 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 0.00451612, 0.1586 )
+z_index = 2
+frames = SubResource( 3 )
+
+[node name="walls" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -16.0516, 28.0872, -7.24007, 17.0162, -5.6585, 9.33436, 5.41243, 9.33436, 7.21992, 16.5644, 16.2574, 26.9575, 16.2574, 30.3465, 12.6424, 31.2503, 1.11962, 43.6768, -0.687881, 43.225, -12.8885, 31.0243, -15.8257, 30.3465 )
+
+[node name="0000170" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0000170"]
+position = Vector2( -0.463287, 27.6287 )
+shape = SubResource( 4 )
+[connection signal="body_entered" from="0000170" to="0000170" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="0000170" to="0000170" method="_on_dialogpiq_body_exited"]

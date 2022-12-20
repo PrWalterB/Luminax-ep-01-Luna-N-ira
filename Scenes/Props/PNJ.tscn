@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Sprites/Characters/PNJ.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Scripts/Props/PNJ.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Other/shadow_0.png" type="Texture" id=3]
+
+[sub_resource type="CapsuleShape2D" id=1]
+height = 11.7256
+
+[sub_resource type="CapsuleShape2D" id=2]
+height = 19.139
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 13.8259
+height = 19.7858
+
+[node name="PNJ" type="AnimatedSprite"]
+frames = ExtResource( 1 )
+animation = "00Hsol"
+playing = true
+script = ExtResource( 2 )
+
+[node name="Default" type="Sprite" parent="."]
+position = Vector2( 0.581135, 13.6755 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="Doublix" type="Sprite" parent="."]
+position = Vector2( -0.815628, 26.6032 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="Stalor" type="Sprite" parent="."]
+position = Vector2( 0.0315083, 22.2829 )
+scale = Vector2( 1.3492, 1 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="walls" type="StaticBody2D" parent="."]
+collision_mask = 7
+
+[node name="Default" type="CollisionShape2D" parent="walls"]
+visible = false
+position = Vector2( 0.429283, -0.214642 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="Doublix" type="CollisionShape2D" parent="walls"]
+visible = false
+position = Vector2( -0.90374, 9.48932 )
+shape = SubResource( 2 )
+disabled = true
+
+[node name="Stalor" type="CollisionShape2D" parent="walls"]
+visible = false
+position = Vector2( 0, 3.12845 )
+shape = SubResource( 3 )
+disabled = true

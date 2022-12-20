@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Sprites/Props/Hydroplan/sprite287_0.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Props/Hydroplan/sprite286_0.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Maps/dialogpiq.gd" type="Script" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 12.2876
+
+[node name="Champsur" type="StaticBody2D"]
+collision_mask = 7
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( -0.124878, 4.96685 )
+z_index = -2
+frames = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+z_index = -2
+frames = SubResource( 2 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 0.00451612, 0.1586 )
+z_index = 2
+frames = SubResource( 3 )
+
+[node name="walls" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -1.06784, 31.3706, -4.0834, 12.5814, 2.99157, 12.9293 )
+
+[node name="0000166" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0000166"]
+position = Vector2( -0.951309, 25.9232 )
+shape = SubResource( 4 )
+[connection signal="body_entered" from="0000166" to="0000166" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="0000166" to="0000166" method="_on_dialogpiq_body_exited"]

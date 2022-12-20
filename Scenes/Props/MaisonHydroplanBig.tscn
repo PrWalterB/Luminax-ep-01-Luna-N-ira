@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Sprites/Props/Hydroplan/Maisons/sprite280_0.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Props/Hydroplan/Maisons/sprite278_0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Props/Hydroplan/Maisons/sprite279_0.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Maps/dialogpiq.tscn" type="PackedScene" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="MaisonHydroplan" type="StaticBody2D"]
+collision_mask = 7
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 168.714, 258.089 )
+scale = Vector2( 1.60184, 0.474742 )
+z_index = -2
+frames = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+z_index = -2
+frames = SubResource( 2 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 0.0185657, 1.01399 )
+z_index = 2
+frames = SubResource( 3 )
+
+[node name="walls" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2( 13.2502, -5.30011 )
+polygon = PoolVector2Array( -208.479, 360.876, -212.712, 399.706, -216.524, 418.956, -216.779, 431.148, -212.533, 443.778, -205.87, 453.822, -198.74, 460.951, -197, 461.647, -192.94, 465.938, -191.085, 465.938, -186.909, 470.113, -184.59, 470.809, -175.543, 475.913, -168.7, 479.624, -157.682, 484.031, -139.502, 491.101, -118.273, 496.473, -90.6493, 501.588, -56.48, 505.801, 15.6035, 506.017, 71.6629, 497.773, 103.968, 488.595, 129.606, 478.461, 148.286, 467.718, 157.686, 460.483, 165.269, 452.837, 168.528, 447.698, 171.597, 442.644, 173.588, 436.315, 175.18, 429.716, 174.971, 423.536, 169.905, 384.685, 167.124, 369.217, 165.598, 364.193 )
+
+[node name="0000240" parent="." instance=ExtResource( 4 )]
+position = Vector2( -6.29952, 498.866 )
+scale = Vector2( 1.4, 1 )

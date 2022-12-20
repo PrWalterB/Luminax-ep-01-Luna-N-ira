@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Sprites/Props/Hydroplan/Maisons/sprite275_0.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Props/Hydroplan/Maisons/sprite273_0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Props/Hydroplan/Maisons/sprite274_0.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Maps/dialogpiq.tscn" type="PackedScene" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="MaisonHydroplan" type="StaticBody2D"]
+collision_mask = 7
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 107.428, 135.517 )
+scale = Vector2( 1.60184, 0.474742 )
+z_index = -2
+frames = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+z_index = -2
+frames = SubResource( 2 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( -4.97646, -60.7399 )
+z_index = 2
+frames = SubResource( 3 )
+
+[node name="walls" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -132.487, 129.026, -133.494, 226.78, -126.163, 233.967, -116.27, 245.059, -99.782, 249.556, -65.1571, 253.154, 15.5444, 254.127, 44.3086, 250.282, 83.7526, 246.58, 107.41, 239.404, 122.556, 234.383, 116.401, 139.141, 114.86, 129.898 )
+
+[node name="0000240" parent="." instance=ExtResource( 4 )]
+position = Vector2( -1.97578, 249.813 )

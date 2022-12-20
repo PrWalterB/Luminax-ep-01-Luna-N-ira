@@ -1,0 +1,68 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Scripts/Props/Ooslik.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Props/Hydroplan/Ooslik/sprite285_2.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Props/Hydroplan/Ooslik/sprite285_4.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Props/Hydroplan/Ooslik/sprite285_6.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Props/Hydroplan/Ooslik/sprite285_11.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Props/Hydroplan/Ooslik/sprite285_14.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Props/Hydroplan/Ooslik/sprite285_17.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Props/Hydroplan/Ooslik/sprite285_20.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Props/Hydroplan/Ooslik/sprite285_21.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Props/Hydroplan/Ooslik/sprite285_dead0.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Props/Hydroplan/Ooslik/sprite285_dead1.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Props/Hydroplan/Ooslik/sprite285_dead2.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Props/Hydroplan/Ooslik/sprite285_dead.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/Maps/dialogpiq.gd" type="Script" id=14]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "dead",
+"speed": 15.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 13.7726, 19.093 )
+
+[node name="Ooslikprop" type="StaticBody2D"]
+collision_mask = 7
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+z_index = -2
+frames = SubResource( 1 )
+frame = 1
+playing = true
+
+[node name="walls" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -4.29277, 14.2482, -12.2605, -0.371431, -8.78665, -11.0017, 2.80847, -14.6678, 6.6451, -14.3268, 10.1407, -11.5985, 13.3805, -4.4368, 12.5279, 0.934475, 4.85467, 5.7942, 4.51364, 9.80133, 7.07138, 12.7001, 4.34312, 16.3662, -1.19867, 16.281 )
+
+[node name="0000168" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="0000168"]
+visible = false
+position = Vector2( 0.875969, 1.45995 )
+shape = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 40
+
+[node name="walls2" type="CollisionPolygon2D" parent="Area2D"]
+scale = Vector2( 1.1, 1.1 )
+polygon = PoolVector2Array( -4.29277, 14.2482, -12.2605, -0.371431, -8.78665, -11.0017, 2.80847, -14.6678, 6.6451, -14.3268, 10.1407, -11.5985, 13.3805, -4.4368, 12.5279, 0.934475, 4.85467, 5.7942, 4.51364, 9.80133, 7.07138, 12.7001, 4.34312, 16.3662, -1.19867, 16.281 )
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="body_entered" from="0000168" to="0000168" method="_on_dialogpiq_body_entered"]
+[connection signal="body_exited" from="0000168" to="0000168" method="_on_dialogpiq_body_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

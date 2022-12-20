@@ -1,0 +1,44 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Tiles/Bunker/proj_0.png" type="Texture" id=1]
+[ext_resource path="res://Tiles/Bunker/proj_1.png" type="Texture" id=2]
+[ext_resource path="res://Tiles/Bunker/proj_2.png" type="Texture" id=3]
+[ext_resource path="res://Tiles/Bunker/proj_3.png" type="Texture" id=4]
+[ext_resource path="res://Tiles/Bunker/proj_4.png" type="Texture" id=5]
+[ext_resource path="res://Tiles/Bunker/proj_5.png" type="Texture" id=6]
+[ext_resource path="res://Tiles/Bunker/proj_6.png" type="Texture" id=7]
+[ext_resource path="res://Tiles/Bunker/proj_7.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/Projectiles/Entities/bossproj1.gd" type="Script" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "att",
+"speed": 15.0
+} ]
+
+[node name="AnimatedSprite" type="AnimatedSprite"]
+z_index = -2
+frames = SubResource( 1 )
+animation = "att"
+frame = 3
+script = ExtResource( 9 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( -2.89061, -1.07271, -4.77998, -0.873828, -8.06152, 1.21443, -8.55873, 5.88814, -6.47047, 9.07024, -3.78557, 10.5619, -1.79676, 11.3574, 2.57863, 11.4568, 5.06465, 10.7607, 6.75514, 9.16968, 8.94284, 5.39093, 7.45123, 1.01554, 5.46241, -0.674947, 3.17528, -1.17215, 1.78311, -1.27159, -0.404589, -1.47047 )
+disabled = true
+
+[node name="Timer" type="Timer" parent="."]
+[connection signal="animation_finished" from="." to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

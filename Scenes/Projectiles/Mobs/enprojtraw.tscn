@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/Projectiles/Entities/enprojtraw.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Mobs/Traw/base.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Mobs/Traw/particle0.png" type="Texture" id=3]
+[ext_resource path="res://Sons/proj_vai_begin.wav" type="AudioStream" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "send",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "explode",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7.72364, 0.309024 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 7.96966, 0.560256 )
+
+[node name="enproj" type="KinematicBody2D"]
+position = Vector2( -15.9881, 0.339371 )
+scale = Vector2( -1, -1 )
+collision_layer = 32
+collision_mask = 4
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -15.9626, -0.0317779 )
+frames = SubResource( 1 )
+animation = "send"
+offset = Vector2( 7.96755, -0.0568671 )
+
+[node name="veg" type="CollisionShape2D" parent="."]
+position = Vector2( -8.08546, 0.390079 )
+shape = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="boulpos" type="Position2D" parent="."]
+position = Vector2( -16.0218, 0.313414 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( -0.0340309, 0.0680628 )
+collision_layer = 32
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -8.00588, 0.368558 )
+shape = SubResource( 3 )
+
+[node name="Son" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+
+[node name="Timer2" type="Timer" parent="."]
+
+[node name="Timer3" type="Timer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
+[connection signal="timeout" from="Timer3" to="." method="_on_Timer3_timeout"]

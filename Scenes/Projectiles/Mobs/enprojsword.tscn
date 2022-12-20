@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Projectiles/Entities/enprojsword.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Mobs/Ecyleam/Sword_0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Mobs/Ecyleam/Sword_1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Mobs/Ecyleam/Sword_2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Mobs/Ecyleam/Sword_3.png" type="Texture" id=5]
+[ext_resource path="res://Sons/swordapp.wav" type="AudioStream" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7.73247, 0.309024 )
+
+[node name="enproj" type="KinematicBody2D"]
+position = Vector2( 0.109709, 0.0688193 )
+collision_layer = 32
+collision_mask = 4
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -0.100077, -0.236309 )
+frames = SubResource( 1 )
+frame = 4
+playing = true
+offset = Vector2( 0.23869, -2.56356 )
+
+[node name="veg" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -8.08546, 0.390079 )
+shape = SubResource( 2 )
+disabled = true
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="boulpos" type="Position2D" parent="."]
+position = Vector2( -16.0218, 0.313414 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 8.39974, -2.77985 )
+collision_layer = 32
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2( -8.00588, 0.368558 )
+polygon = PoolVector2Array( -16.6114, -0.0264572, -17.6531, 4.20955, -16.1253, 6.15394, 15.61, 6.0845, 26.886, 5.00222, 31.5796, -2.23059, 9.61015, -1.99707, -16.1105, -0.865843 )
+
+[node name="Son" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+
+[node name="Timer2" type="Timer" parent="."]
+
+[node name="TRANS" type="Timer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
+[connection signal="timeout" from="TRANS" to="." method="_on_TRANS_timeout"]

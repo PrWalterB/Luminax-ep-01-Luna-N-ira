@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=2]
+
+[ext_resource path="res://Sprites/GUI/Theme/SliderV.png" type="Texture" id=1]
+
+[resource]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 16, 32 )
+margin_left = 16.0041
+margin_right = 16.1615
+margin_top = 8.15627
+margin_bottom = 7.95237

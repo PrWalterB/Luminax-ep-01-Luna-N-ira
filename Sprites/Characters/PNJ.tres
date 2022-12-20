@@ -1,0 +1,665 @@
+[gd_resource type="SpriteFrames" load_steps=191 format=2]
+
+[ext_resource path="res://Sprites/Characters/Togspr/togback_0.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/PNJ/Mumbo.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/PNJ/president_end.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Characters/Togspr/togbackm_0.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Characters/Togspr/togbackm_3.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Characters/Togspr/togbackm_6.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Characters/Vegetspr/tgface_0.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LSalty.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LEposhina.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LEposhina_1.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LEposhina_2.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LEposhina_3.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/Xilhice.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Characters/Vegetspr/tgturnlm_0.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Characters/Vegetspr/tgturnl_0.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Characters/Vegetspr/tgturnlm_8.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/PNJ/hfsolfaceSANS.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LNapolo.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Mobs/HSoldier/hsoll_0.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Characters/Progferspr/cara0.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Characters/Progferspr/cara1.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Characters/Progferspr/cara2.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LLaChose.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LSimilarity.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Characters/Progferspr/stress0.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Characters/Progferspr/stress1.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Characters/Progferspr/stress2.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LAndriae_0.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LAndriae_1.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LAndriae_2.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LAndriae_3.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/Characters/TheVoid/LBrumen_0.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/Characters/TheVoid/LBrumen_1.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/Characters/TheVoid/LBrumen_2.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/Characters/TheVoid/LBrumen_3.png" type="Texture" id=35]
+[ext_resource path="res://Sprites/PNJ/Grian.png" type="Texture" id=36]
+[ext_resource path="res://Sprites/Characters/Progferspr/pturnl_0.png" type="Texture" id=37]
+[ext_resource path="res://Sprites/Characters/TheVoid/LProdige.png" type="Texture" id=38]
+[ext_resource path="res://Sprites/Characters/Progferspr/pback_0.png" type="Texture" id=39]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LKwykart.png" type="Texture" id=40]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/sprite330_0.png" type="Texture" id=41]
+[ext_resource path="res://Sprites/PNJ/milkdude.png" type="Texture" id=42]
+[ext_resource path="res://Sprites/PNJ/milkdude_1.png" type="Texture" id=43]
+[ext_resource path="res://Sprites/PNJ/milkdude_2.png" type="Texture" id=44]
+[ext_resource path="res://Sprites/PNJ/milkdude_3.png" type="Texture" id=45]
+[ext_resource path="res://Sprites/PNJ/presidentholobug_0.png" type="Texture" id=46]
+[ext_resource path="res://Sprites/PNJ/presidentholobug_1.png" type="Texture" id=47]
+[ext_resource path="res://Sprites/PNJ/presidentholobug_2.png" type="Texture" id=48]
+[ext_resource path="res://Sprites/PNJ/presidentholobug_3.png" type="Texture" id=49]
+[ext_resource path="res://Sprites/PNJ/presidentholobug_4.png" type="Texture" id=50]
+[ext_resource path="res://Sprites/PNJ/presidentholobug_5.png" type="Texture" id=51]
+[ext_resource path="res://Sprites/PNJ/president_back.png" type="Texture" id=52]
+[ext_resource path="res://Sprites/Characters/TheVoid/LGips.png" type="Texture" id=53]
+[ext_resource path="res://Sprites/Characters/Progferspr/pnu_1.png" type="Texture" id=54]
+[ext_resource path="res://Sprites/Characters/Progferspr/pnu_3.png" type="Texture" id=55]
+[ext_resource path="res://Sprites/Characters/Progferspr/pnu_5.png" type="Texture" id=56]
+[ext_resource path="res://Sprites/Mobs/HSoldier/hsolbak_0.png" type="Texture" id=57]
+[ext_resource path="res://Sprites/PNJ/Cygien.png" type="Texture" id=58]
+[ext_resource path="res://Sprites/PNJ/hsolleftSANS.png" type="Texture" id=59]
+[ext_resource path="res://Sprites/PNJ/hfsolbackSANS.png" type="Texture" id=60]
+[ext_resource path="res://Sprites/Characters/TheVoid/LKrue_0.png" type="Texture" id=61]
+[ext_resource path="res://Sprites/Characters/TheVoid/LKrue_1.png" type="Texture" id=62]
+[ext_resource path="res://Sprites/Characters/TheVoid/LKrue_2.png" type="Texture" id=63]
+[ext_resource path="res://Sprites/Characters/TheVoid/LKrue_3.png" type="Texture" id=64]
+[ext_resource path="res://Sprites/Characters/Togspr/toglm_0.png" type="Texture" id=65]
+[ext_resource path="res://Sprites/Characters/Togspr/toglm_3.png" type="Texture" id=66]
+[ext_resource path="res://Sprites/Characters/Togspr/toglm_6.png" type="Texture" id=67]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LKura_0.png" type="Texture" id=68]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LKura_1.png" type="Texture" id=69]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LKura_2.png" type="Texture" id=70]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LKura_3.png" type="Texture" id=71]
+[ext_resource path="res://Sprites/Characters/TheVoid/LAlvara.png" type="Texture" id=72]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbback_0.png" type="Texture" id=73]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbback_3.png" type="Texture" id=74]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbback_6.png" type="Texture" id=75]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbback_9.png" type="Texture" id=76]
+[ext_resource path="res://Sprites/Characters/Vegetspr/tgback_0.png" type="Texture" id=77]
+[ext_resource path="res://Sprites/PNJ/presidentholo.png" type="Texture" id=78]
+[ext_resource path="res://Sprites/PNJ/presidentholo_1.png" type="Texture" id=79]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbr_0.png" type="Texture" id=80]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbr_3.png" type="Texture" id=81]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbr_6.png" type="Texture" id=82]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbr_9.png" type="Texture" id=83]
+[ext_resource path="res://Sprites/Characters/Progferspr/pturnrm_0.png" type="Texture" id=84]
+[ext_resource path="res://Sprites/Characters/Progferspr/pturnrm_5.png" type="Texture" id=85]
+[ext_resource path="res://Sprites/Characters/Progferspr/pturnrm_10.png" type="Texture" id=86]
+[ext_resource path="res://Sprites/Characters/Progferspr/pturnr_0.png" type="Texture" id=87]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LJigok.png" type="Texture" id=88]
+[ext_resource path="res://Sprites/PNJ/soldatchloro_2_0.png" type="Texture" id=89]
+[ext_resource path="res://Sprites/PNJ/soldatchloro_2_1.png" type="Texture" id=90]
+[ext_resource path="res://Sprites/PNJ/zick.png" type="Texture" id=91]
+[ext_resource path="res://Sprites/PNJ/Scar.png" type="Texture" id=92]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LZeikio_0.png" type="Texture" id=93]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LZeikio_1.png" type="Texture" id=94]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LZeikio_2.png" type="Texture" id=95]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LZeikio_3.png" type="Texture" id=96]
+[ext_resource path="res://Sprites/PNJ/presidentholoapp_5.png" type="Texture" id=97]
+[ext_resource path="res://Sprites/PNJ/presidentholoapp_4.png" type="Texture" id=98]
+[ext_resource path="res://Sprites/PNJ/presidentholoapp_3.png" type="Texture" id=99]
+[ext_resource path="res://Sprites/PNJ/presidentholoapp_2.png" type="Texture" id=100]
+[ext_resource path="res://Sprites/PNJ/presidentholoapp_1.png" type="Texture" id=101]
+[ext_resource path="res://Sprites/PNJ/presidentholoapp_0.png" type="Texture" id=102]
+[ext_resource path="res://Sprites/Characters/Togspr/togface_0.png" type="Texture" id=103]
+[ext_resource path="res://Sprites/Characters/Vegetspr/tgbackm_11.png" type="Texture" id=104]
+[ext_resource path="res://Sprites/Characters/Vegetspr/tgbackm_0.png" type="Texture" id=105]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/sprite211_0.png" type="Texture" id=106]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/sprite211_3.png" type="Texture" id=107]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/sprite211_6.png" type="Texture" id=108]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/sprite211_9.png" type="Texture" id=109]
+[ext_resource path="res://Sprites/Characters/Vegetspr/tgfacem_8.png" type="Texture" id=110]
+[ext_resource path="res://Sprites/Characters/Vegetspr/tgfacem_0.png" type="Texture" id=111]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dblm_0.png" type="Texture" id=112]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dblm_3.png" type="Texture" id=113]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dblm_6.png" type="Texture" id=114]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dblm_9.png" type="Texture" id=115]
+[ext_resource path="res://Sprites/Characters/Progferspr/pbackm_0.png" type="Texture" id=116]
+[ext_resource path="res://Sprites/Characters/Progferspr/pbackm_10.png" type="Texture" id=117]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbbackm_0.png" type="Texture" id=118]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbbackm_3.png" type="Texture" id=119]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbbackm_6.png" type="Texture" id=120]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbbackm_9.png" type="Texture" id=121]
+[ext_resource path="res://Sprites/Characters/Progferspr/pfacem_0.png" type="Texture" id=122]
+[ext_resource path="res://Sprites/Characters/Progferspr/pfacem_5.png" type="Texture" id=123]
+[ext_resource path="res://Sprites/Characters/Progferspr/pfacem_10.png" type="Texture" id=124]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbrm_0.png" type="Texture" id=125]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbrm_3.png" type="Texture" id=126]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbrm_6.png" type="Texture" id=127]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbrm_9.png" type="Texture" id=128]
+[ext_resource path="res://Sprites/Characters/TheVoid/LVeos.png" type="Texture" id=129]
+[ext_resource path="res://Sprites/Characters/TheVoid/LVeos_1.png" type="Texture" id=130]
+[ext_resource path="res://Sprites/Characters/TheVoid/LVeos_2.png" type="Texture" id=131]
+[ext_resource path="res://Sprites/Characters/TheVoid/LVeos_3.png" type="Texture" id=132]
+[ext_resource path="res://Sprites/PNJ/hsolbackSANS.png" type="Texture" id=133]
+[ext_resource path="res://Sprites/Characters/Togspr/togr_0.png" type="Texture" id=134]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/sprite0.png" type="Texture" id=135]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/sprite1.png" type="Texture" id=136]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/sprite3.png" type="Texture" id=137]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/sprite4.png" type="Texture" id=138]
+[ext_resource path="res://Sprites/Characters/Progferspr/pturnlm_0.png" type="Texture" id=139]
+[ext_resource path="res://Sprites/Characters/Progferspr/pturnlm_5.png" type="Texture" id=140]
+[ext_resource path="res://Sprites/Characters/Progferspr/pturnlm_10.png" type="Texture" id=141]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LElectrotinette.png" type="Texture" id=142]
+[ext_resource path="res://Sprites/PNJ/hsolrightSANS.png" type="Texture" id=143]
+[ext_resource path="res://Sprites/PNJ/president_back_walk_0.png" type="Texture" id=144]
+[ext_resource path="res://Sprites/PNJ/president_back_walk_1.png" type="Texture" id=145]
+[ext_resource path="res://Sprites/PNJ/president_back_walk_2.png" type="Texture" id=146]
+[ext_resource path="res://Sprites/PNJ/general.png" type="Texture" id=147]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbfacem_1.png" type="Texture" id=148]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbfacem_3.png" type="Texture" id=149]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbfacem_6.png" type="Texture" id=150]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbfacem_9.png" type="Texture" id=151]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LStartio.png" type="Texture" id=152]
+[ext_resource path="res://Sprites/Characters/Vegetspr/tgturnr_0.png" type="Texture" id=153]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LFunina.png" type="Texture" id=154]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LSkyder.png" type="Texture" id=155]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbface_0.png" type="Texture" id=156]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbface_3.png" type="Texture" id=157]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbface_9.png" type="Texture" id=158]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbface_6.png" type="Texture" id=159]
+[ext_resource path="res://Sprites/PNJ/soldatchloro.png" type="Texture" id=160]
+[ext_resource path="res://Sprites/Characters/TheVoid/LLurek.png" type="Texture" id=161]
+[ext_resource path="res://Sprites/PNJ/hfsolleftSANS.png" type="Texture" id=162]
+[ext_resource path="res://Sprites/PNJ/hfsolrightSANS.png" type="Texture" id=163]
+[ext_resource path="res://Sprites/PNJ/waterflamesailer.png" type="Texture" id=164]
+[ext_resource path="res://Sprites/Characters/Togspr/sprite386_0.png" type="Texture" id=165]
+[ext_resource path="res://Sprites/Characters/Togspr/sprite386_1.png" type="Texture" id=166]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbl_0.png" type="Texture" id=167]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbl_3.png" type="Texture" id=168]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbl_6.png" type="Texture" id=169]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbl_9.png" type="Texture" id=170]
+[ext_resource path="res://Sprites/Props/Cygio/fax.png" type="Texture" id=171]
+[ext_resource path="res://Sprites/Characters/Togspr/togl_0.png" type="Texture" id=172]
+[ext_resource path="res://Sprites/PNJ/catgrandma.png" type="Texture" id=173]
+[ext_resource path="res://Sprites/PNJ/catgrandma_1.png" type="Texture" id=174]
+[ext_resource path="res://Sprites/PNJ/catgrandma_2.png" type="Texture" id=175]
+[ext_resource path="res://Sprites/PNJ/catgrandma_3.png" type="Texture" id=176]
+[ext_resource path="res://Sprites/Characters/TheVoid/LFanaty.png" type="Texture" id=177]
+[ext_resource path="res://Sprites/Characters/Togspr/togfacem_0.png" type="Texture" id=178]
+[ext_resource path="res://Sprites/Characters/Togspr/togfacem_3.png" type="Texture" id=179]
+[ext_resource path="res://Sprites/Characters/Togspr/togfacem_6.png" type="Texture" id=180]
+[ext_resource path="res://Sprites/Mobs/HSoldier/hsolface_0.png" type="Texture" id=181]
+[ext_resource path="res://Sprites/Characters/Progferspr/pface_0.png" type="Texture" id=182]
+[ext_resource path="res://Sprites/Characters/Togspr/togrm_0.png" type="Texture" id=183]
+[ext_resource path="res://Sprites/Characters/Togspr/togrm_3.png" type="Texture" id=184]
+[ext_resource path="res://Sprites/Characters/Togspr/togrm_6.png" type="Texture" id=185]
+[ext_resource path="res://Sprites/Characters/Vegetspr/tgturnrm_6.png" type="Texture" id=186]
+[ext_resource path="res://Sprites/Characters/Vegetspr/tgturnrm_0.png" type="Texture" id=187]
+[ext_resource path="res://Sprites/Characters/GoldenTeam/LWaffle.png" type="Texture" id=188]
+[ext_resource path="res://Sprites/PNJ/hsolfaceSANS.png" type="Texture" id=189]
+[ext_resource path="res://Sprites/Characters/TheVoid/LWest.png" type="Texture" id=190]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "01Tog",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "00Mumbo",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "00OlgaEnd",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "05Tog",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "00Veget",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "00LSalty",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "00LEposhina",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "00LXilhice",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "07Veget",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "01HFsolSANS",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "00LNapolo",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ) ],
+"loop": true,
+"name": "03Hsol",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 20 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "pcara1",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "00LLaChose",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "03Veget",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 24 ) ],
+"loop": true,
+"name": "00LSimilarity",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "stress",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "00LAndriae",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
+"loop": true,
+"name": "00LBrumen",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 36 ) ],
+"loop": true,
+"name": "00Grian",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 37 ) ],
+"loop": true,
+"name": "03Progfer",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 38 ) ],
+"loop": true,
+"name": "00LProdige",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 39 ) ],
+"loop": true,
+"name": "01Progfer",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 40 ) ],
+"loop": true,
+"name": "00LKwykart",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 41 ) ],
+"loop": true,
+"name": "00Doobliks",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ) ],
+"loop": true,
+"name": "00milkdude",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ) ],
+"loop": true,
+"name": "00OlBug",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 52 ) ],
+"loop": true,
+"name": "01Olga",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 53 ) ],
+"loop": true,
+"name": "00LGips",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ) ],
+"loop": true,
+"name": "pcara2",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 57 ) ],
+"loop": true,
+"name": "01Hsol",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 58 ) ],
+"loop": true,
+"name": "00Cygien",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 59 ) ],
+"loop": true,
+"name": "03HsolSANS",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 60 ) ],
+"loop": true,
+"name": "00HFsolSANS",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 63 ) ],
+"loop": true,
+"name": "00LKruezenberg",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 66 ) ],
+"loop": true,
+"name": "07Tog",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ) ],
+"loop": true,
+"name": "00LKura",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 72 ) ],
+"loop": true,
+"name": "00LAlvara",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ) ],
+"loop": true,
+"name": "01Doubliks",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 77 ) ],
+"loop": true,
+"name": "01Veget",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 78 ), ExtResource( 79 ) ],
+"loop": true,
+"name": "00OlH",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ) ],
+"loop": true,
+"name": "02Doubliks",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 85 ) ],
+"loop": true,
+"name": "06Progfer",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 87 ) ],
+"loop": true,
+"name": "02Progfer",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 88 ) ],
+"loop": true,
+"name": "00LJigok",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 89 ), ExtResource( 90 ) ],
+"loop": true,
+"name": "00Csoldier1",
+"speed": 0.3
+}, {
+"frames": [ ExtResource( 91 ) ],
+"loop": true,
+"name": "00LZick",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 92 ) ],
+"loop": true,
+"name": "00Scar",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ) ],
+"loop": true,
+"name": "00LZeikio",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 79 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 102 ) ],
+"loop": true,
+"name": "00OlDApp",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 103 ) ],
+"loop": true,
+"name": "00Tog",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 104 ), ExtResource( 77 ), ExtResource( 105 ), ExtResource( 77 ) ],
+"loop": true,
+"name": "05Veget",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 109 ) ],
+"loop": true,
+"name": "00Doublix",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 110 ), ExtResource( 7 ), ExtResource( 111 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "04Veget",
+"speed": 5.02
+}, {
+"frames": [ ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 115 ) ],
+"loop": true,
+"name": "07Doubliks",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 116 ), ExtResource( 39 ), ExtResource( 117 ), ExtResource( 39 ) ],
+"loop": true,
+"name": "05Progfer",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ), ExtResource( 121 ) ],
+"loop": true,
+"name": "05Doubliks",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 123 ) ],
+"loop": true,
+"name": "04Progfer",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ) ],
+"loop": true,
+"name": "06Doubliks",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 102 ), ExtResource( 101 ), ExtResource( 100 ), ExtResource( 99 ), ExtResource( 98 ), ExtResource( 97 ), ExtResource( 79 ) ],
+"loop": true,
+"name": "00OlApp",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 129 ), ExtResource( 130 ), ExtResource( 131 ), ExtResource( 132 ) ],
+"loop": true,
+"name": "00LVeos",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 133 ) ],
+"loop": true,
+"name": "01HsolSANS",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 134 ) ],
+"loop": true,
+"name": "02Tog",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 135 ), ExtResource( 136 ), ExtResource( 137 ), ExtResource( 138 ) ],
+"loop": true,
+"name": "03Doublix",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 139 ), ExtResource( 140 ), ExtResource( 141 ), ExtResource( 140 ) ],
+"loop": true,
+"name": "07Progfer",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 142 ) ],
+"loop": true,
+"name": "00LElectro",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 143 ) ],
+"loop": true,
+"name": "02HsolSANS",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 144 ), ExtResource( 145 ), ExtResource( 146 ), ExtResource( 145 ) ],
+"loop": true,
+"name": "05Olga",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 147 ) ],
+"loop": true,
+"name": "00Anddr",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 148 ), ExtResource( 149 ), ExtResource( 150 ), ExtResource( 151 ) ],
+"loop": true,
+"name": "04Doubliks",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 152 ) ],
+"loop": true,
+"name": "00LStartio",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 153 ) ],
+"loop": true,
+"name": "02Veget",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 154 ) ],
+"loop": true,
+"name": "00LFunina",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 155 ) ],
+"loop": true,
+"name": "00LSkyder",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 156 ), ExtResource( 157 ), ExtResource( 158 ), ExtResource( 159 ) ],
+"loop": true,
+"name": "00Doubliks",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 160 ) ],
+"loop": true,
+"name": "00Csoldier0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 161 ) ],
+"loop": true,
+"name": "00LLurek",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 162 ) ],
+"loop": true,
+"name": "03HFsolSANS",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 163 ) ],
+"loop": true,
+"name": "02HFsolSANS",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 164 ) ],
+"loop": true,
+"name": "02WFSailer",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 165 ), ExtResource( 166 ) ],
+"loop": true,
+"name": "tfly",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 167 ), ExtResource( 168 ), ExtResource( 169 ), ExtResource( 170 ) ],
+"loop": true,
+"name": "03Doobliks",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 171 ) ],
+"loop": true,
+"name": "00Note",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 172 ) ],
+"loop": true,
+"name": "03Tog",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 173 ), ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ) ],
+"loop": true,
+"name": "00catgrandma",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 177 ) ],
+"loop": true,
+"name": "00LFanaty",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 178 ), ExtResource( 179 ), ExtResource( 180 ), ExtResource( 179 ) ],
+"loop": true,
+"name": "04Tog",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 181 ) ],
+"loop": true,
+"name": "00Hsol",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 182 ) ],
+"loop": true,
+"name": "00Progfer",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 183 ), ExtResource( 184 ), ExtResource( 185 ), ExtResource( 184 ) ],
+"loop": true,
+"name": "06Tog",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 186 ), ExtResource( 153 ), ExtResource( 187 ), ExtResource( 153 ) ],
+"loop": true,
+"name": "06Veget",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 188 ) ],
+"loop": true,
+"name": "00LWaffle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 189 ) ],
+"loop": true,
+"name": "00HsolSANS",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 190 ) ],
+"loop": true,
+"name": "00LWestbrook",
+"speed": 5.0
+} ]

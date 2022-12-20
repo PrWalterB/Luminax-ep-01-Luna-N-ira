@@ -1,0 +1,1814 @@
+[gd_scene load_steps=306 format=2]
+
+[ext_resource path="res://Scenes/Cinematics/Generique.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Cinematics/Begin/back1.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Player/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sprites/GUI/Theme/theme.tres" type="Theme" id=4]
+[ext_resource path="res://Sprites/Characters/PNJ.tres" type="SpriteFrames" id=5]
+[ext_resource path="res://Fonts/defaut.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Scripts/Cinematics/Generique/gen0.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/Cinematics/Generique/gen1.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/Cinematics/Generique/gen2.png" type="Texture" id=9]
+[ext_resource path="res://Scripts/Cinematics/Generique/gen3.png" type="Texture" id=10]
+[ext_resource path="res://Scripts/Cinematics/Generique/gen4.png" type="Texture" id=11]
+[ext_resource path="res://Scripts/Cinematics/Generique/end0.jpg" type="Texture" id=12]
+[ext_resource path="res://Scripts/Cinematics/Generique/end1.jpg" type="Texture" id=13]
+[ext_resource path="res://Scripts/Cinematics/Generique/end2.jpg" type="Texture" id=14]
+[ext_resource path="res://Tiles/tileset01.tres" type="TileSet" id=15]
+[ext_resource path="res://Sprites/Mobs/Soldier/solfacem_0.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Mobs/Soldier/solfacem_4.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Mobs/Soldier/solfacem_8.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Mobs/BigSoldier/sol2faceprep_0.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Mobs/BigSoldier/sol2faceprep_1.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Mobs/BigSoldier/sol2faceprep_2.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Mobs/BigSoldier/sol2faceprep_3.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Mobs/BigSoldier/sol2faceprep_4.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Mobs/BigSoldier/sol2faceprep_5.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Mobs/BigSoldier/sol2faceprep_6.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Mobs/BigSoldier/sol2faceprep_7.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Mobs/BigSoldier/sol2faceprep_8.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Mobs/BigSoldier/sol2faceprep_9.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Mobs/BigSoldier/sol2faceprep_10.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Mobs/BigSoldier/sol2faceprep_11.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/Mobs/BigSoldier/sol2faceprep_12.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/Mobs/BigSoldier/sol2faceprep_13.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/Mobs/BigSoldier/sol2faceprep_14.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A Mode Pre shooting 0.1.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A Mode Pre shooting 0.2.png" type="Texture" id=35]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A Mode Pre shooting 0.3.png" type="Texture" id=36]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A Mode shooting 0.1.png" type="Texture" id=37]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A Mode shooting 0.2.png" type="Texture" id=38]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A Mode shooting 0.3.png" type="Texture" id=39]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A Mode shooting 1.2.png" type="Texture" id=40]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A Mode shooting 1.3.png" type="Texture" id=41]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A Mode shooting 1.4.png" type="Texture" id=42]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A Mode shooting 1.5.png" type="Texture" id=43]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A Mode shooting 1.6.png" type="Texture" id=44]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A Mode shooting 1.7.png" type="Texture" id=45]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A Mode shooting 1.8.png" type="Texture" id=46]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A phase 2.1.png" type="Texture" id=47]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A phase 2.2.png" type="Texture" id=48]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A phase 2.3.png" type="Texture" id=49]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A phase 2.4.png" type="Texture" id=50]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A phase 2.5.png" type="Texture" id=51]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A phase 2.6.png" type="Texture" id=52]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A phase 2.7.png" type="Texture" id=53]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A phase 2.8.png" type="Texture" id=54]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A phase 2.9.png" type="Texture" id=55]
+[ext_resource path="res://Sprites/Mobs/Unit50/Mobile units 51 A phase 2.10.png" type="Texture" id=56]
+[ext_resource path="res://Sprites/Characters/TheVoid/LFanaty.png" type="Texture" id=57]
+[ext_resource path="res://Tiles/Foret/05.png" type="Texture" id=58]
+[ext_resource path="res://Tiles/Foret/01.png" type="Texture" id=59]
+[ext_resource path="res://Sprites/Props/Rocks/12.png" type="Texture" id=60]
+[ext_resource path="res://Sprites/Props/Rocks/10.png" type="Texture" id=61]
+[ext_resource path="res://Sprites/Props/Rocks/9.png" type="Texture" id=62]
+[ext_resource path="res://Sprites/Mobs/Gneu/gneu_0.png" type="Texture" id=63]
+[ext_resource path="res://Sprites/Mobs/Gneu/gneu_1.png" type="Texture" id=64]
+[ext_resource path="res://Sprites/Mobs/Gneu/gneu_2.png" type="Texture" id=65]
+[ext_resource path="res://Sprites/Characters/Vegetspr/tgface_0.png" type="Texture" id=66]
+[ext_resource path="res://Sprites/Characters/Vegetspr/tgturnr_0.png" type="Texture" id=67]
+[ext_resource path="res://Sprites/Characters/Vegetspr/tgback_0.png" type="Texture" id=68]
+[ext_resource path="res://Sprites/Characters/Vegetspr/tgturnl_0.png" type="Texture" id=69]
+[ext_resource path="res://Sprites/Characters/Togspr/togrm_0.png" type="Texture" id=70]
+[ext_resource path="res://Sprites/Characters/Togspr/togrm_3.png" type="Texture" id=71]
+[ext_resource path="res://Sprites/Characters/Togspr/togrm_6.png" type="Texture" id=72]
+[ext_resource path="res://Sprites/Characters/Togspr/togr_0.png" type="Texture" id=73]
+[ext_resource path="res://Sprites/Props/sprite142_0.png" type="Texture" id=74]
+[ext_resource path="res://Sprites/Props/sprite142_3.png" type="Texture" id=75]
+[ext_resource path="res://Sprites/Props/vaisseauspace.png" type="Texture" id=76]
+[ext_resource path="res://Sprites/Props/vaisseauspace_0.png" type="Texture" id=77]
+[ext_resource path="res://Sprites/Props/vaisseauspace_1.png" type="Texture" id=78]
+[ext_resource path="res://Sprites/Props/vaisseauspace_2.png" type="Texture" id=79]
+[ext_resource path="res://Sprites/Props/vaisseauspace_3.png" type="Texture" id=80]
+[ext_resource path="res://Sprites/Props/vaisseauspace_4.png" type="Texture" id=81]
+[ext_resource path="res://Sprites/Props/vaisseauspace_5.png" type="Texture" id=82]
+[ext_resource path="res://Sprites/Props/vaisseauspace_6.png" type="Texture" id=83]
+[ext_resource path="res://Sprites/Props/vaisseauspace_7.png" type="Texture" id=84]
+[ext_resource path="res://Sprites/Mobs/WaspSoldier/wasp_soldier_0.png" type="Texture" id=85]
+[ext_resource path="res://Sprites/Mobs/WaspSoldier/wasp_soldier_1.png" type="Texture" id=86]
+[ext_resource path="res://Sprites/Mobs/WaspSoldier/wasp_soldier_2.png" type="Texture" id=87]
+[ext_resource path="res://Sprites/Mobs/WaspSoldier/wasp_soldier_3.png" type="Texture" id=88]
+[ext_resource path="res://Sprites/Mobs/WaspSoldier/wasp_soldier_4.png" type="Texture" id=89]
+[ext_resource path="res://Sprites/Props/Foret/karlisse.png" type="Texture" id=90]
+[ext_resource path="res://Sprites/Characters/TheVoid/LProdige.png" type="Texture" id=91]
+[ext_resource path="res://Sprites/Characters/Progferspr/pnu_1.png" type="Texture" id=92]
+[ext_resource path="res://Sprites/Characters/Progferspr/pnu_3.png" type="Texture" id=93]
+[ext_resource path="res://Sprites/Characters/Progferspr/pnu_5.png" type="Texture" id=94]
+[ext_resource path="res://Sprites/Props/Bunker/Paraprodige.png" type="Texture" id=95]
+[ext_resource path="res://Sprites/Mobs/Astéroïde/sprite163_0.png" type="Texture" id=96]
+[ext_resource path="res://Sprites/Mobs/Astéroïde/sprite166_0.png" type="Texture" id=97]
+[ext_resource path="res://Sprites/PNJ/rasta.png" type="Texture" id=98]
+[ext_resource path="res://Sprites/PNJ/rasta_0.png" type="Texture" id=99]
+[ext_resource path="res://Sprites/PNJ/rasta_1.png" type="Texture" id=100]
+[ext_resource path="res://Sprites/Mobs/Soldier/solturnlm_0.png" type="Texture" id=101]
+[ext_resource path="res://Sprites/Mobs/Soldier/solturnlm_4.png" type="Texture" id=102]
+[ext_resource path="res://Sprites/Mobs/Soldier/solturnlm_8.png" type="Texture" id=103]
+[ext_resource path="res://Sprites/Mobs/Soldier/solturnlm_12.png" type="Texture" id=104]
+[ext_resource path="res://Sprites/Mobs/HSoldier/hsolrm_0.png" type="Texture" id=105]
+[ext_resource path="res://Sprites/Mobs/HSoldier/hsolrm_3.png" type="Texture" id=106]
+[ext_resource path="res://Sprites/Mobs/HSoldier/hsolrm_6.png" type="Texture" id=107]
+[ext_resource path="res://Sprites/Mobs/HSoldier/hsolr_0.png" type="Texture" id=108]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/sprite305_0.png" type="Texture" id=109]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/sprite305_3.png" type="Texture" id=110]
+[ext_resource path="res://Sprites/PNJ/general.png" type="Texture" id=111]
+[ext_resource path="res://Sprites/PNJ/hsolrightSANS.png" type="Texture" id=112]
+[ext_resource path="res://Sprites/PNJ/hfsolbackSANS.png" type="Texture" id=113]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_0.png" type="Texture" id=114]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_1.png" type="Texture" id=115]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_2.png" type="Texture" id=116]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_3.png" type="Texture" id=117]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_4.png" type="Texture" id=118]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_5.png" type="Texture" id=119]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_6.png" type="Texture" id=120]
+[ext_resource path="res://Tiles/Bunker/proj_0.png" type="Texture" id=121]
+[ext_resource path="res://Tiles/Bunker/proj_1.png" type="Texture" id=122]
+[ext_resource path="res://Tiles/Bunker/proj_2.png" type="Texture" id=123]
+[ext_resource path="res://Tiles/Bunker/proj_3.png" type="Texture" id=124]
+[ext_resource path="res://Tiles/Bunker/proj_4.png" type="Texture" id=125]
+[ext_resource path="res://Tiles/Bunker/proj_5.png" type="Texture" id=126]
+[ext_resource path="res://Tiles/Bunker/proj_6.png" type="Texture" id=127]
+[ext_resource path="res://Tiles/Bunker/proj_7.png" type="Texture" id=128]
+[ext_resource path="res://Sprites/Mobs/VaisseauChloro/flottechloro.png" type="Texture" id=129]
+[ext_resource path="res://Sprites/Mobs/Ecyleam/Boss3_0.png" type="Texture" id=130]
+[ext_resource path="res://Sprites/Mobs/Ecyleam/Boss3_1.png" type="Texture" id=131]
+[ext_resource path="res://Sprites/Mobs/Ecyleam/Boss3_2.png" type="Texture" id=132]
+[ext_resource path="res://Sprites/Mobs/Ecyleam/Sword_0.png" type="Texture" id=133]
+[ext_resource path="res://Sprites/Mobs/Ecyleam/Sword_1.png" type="Texture" id=134]
+[ext_resource path="res://Sprites/Mobs/Ecyleam/Sword_2.png" type="Texture" id=135]
+[ext_resource path="res://Sprites/Mobs/Ecyleam/Sword_3.png" type="Texture" id=136]
+[ext_resource path="res://Sprites/Mobs/Traw/Bocal_0.png" type="Texture" id=137]
+[ext_resource path="res://Sprites/Mobs/Traw/Bocal_1.png" type="Texture" id=138]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_4_0.png" type="Texture" id=139]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_4_1.png" type="Texture" id=140]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_4_2.png" type="Texture" id=141]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_4_3.png" type="Texture" id=142]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_4_4.png" type="Texture" id=143]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_4_5.png" type="Texture" id=144]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_4_6.png" type="Texture" id=145]
+[ext_resource path="res://Sprites/Mobs/Traw/screen_4_7.png" type="Texture" id=146]
+[ext_resource path="res://Sprites/PNJ/waterflamesailer.png" type="Texture" id=147]
+[ext_resource path="res://Sprites/Props/Special/Ol_0.png" type="Texture" id=148]
+[ext_resource path="res://Sprites/Props/Special/Ol_1526_1.png" type="Texture" id=149]
+[ext_resource path="res://Sprites/Props/Special/Ol_1528_0.png" type="Texture" id=150]
+[ext_resource path="res://Sprites/Props/Special/Ol_1529_1.png" type="Texture" id=151]
+[ext_resource path="res://Sprites/Props/Special/Ol_1530_0.png" type="Texture" id=152]
+[ext_resource path="res://Sprites/PNJ/president_back.png" type="Texture" id=153]
+[ext_resource path="res://Sprites/PNJ/president_back_walk_0.png" type="Texture" id=154]
+[ext_resource path="res://Sprites/PNJ/president_back_walk_1.png" type="Texture" id=155]
+[ext_resource path="res://Sprites/PNJ/president_back_walk_2.png" type="Texture" id=156]
+[ext_resource path="res://Sprites/PNJ/animals/soufris.png" type="Texture" id=157]
+[ext_resource path="res://Sprites/PNJ/animals/soufris_1.png" type="Texture" id=158]
+[ext_resource path="res://Sprites/PNJ/animals/soufris_2.png" type="Texture" id=159]
+[ext_resource path="res://Sprites/PNJ/milkdude.png" type="Texture" id=160]
+[ext_resource path="res://Sprites/PNJ/milkdude_1.png" type="Texture" id=161]
+[ext_resource path="res://Sprites/PNJ/milkdude_2.png" type="Texture" id=162]
+[ext_resource path="res://Sprites/PNJ/milkdude_3.png" type="Texture" id=163]
+[ext_resource path="res://Sprites/PNJ/catgrandma.png" type="Texture" id=164]
+[ext_resource path="res://Sprites/PNJ/catgrandma_1.png" type="Texture" id=165]
+[ext_resource path="res://Sprites/PNJ/catgrandma_2.png" type="Texture" id=166]
+[ext_resource path="res://Sprites/PNJ/catgrandma_3.png" type="Texture" id=167]
+[ext_resource path="res://Sprites/PNJ/animals/moustfeu_0_0.png" type="Texture" id=168]
+[ext_resource path="res://Sprites/PNJ/animals/moustfeu_0_1.png" type="Texture" id=169]
+[ext_resource path="res://Sprites/PNJ/animals/moustfeu_2_0.png" type="Texture" id=170]
+[ext_resource path="res://Sprites/PNJ/animals/moustfeu_2_1.png" type="Texture" id=171]
+[ext_resource path="res://Sprites/PNJ/animals/moustfeu_1_0.png" type="Texture" id=172]
+[ext_resource path="res://Sprites/PNJ/animals/moustfeu_1_1.png" type="Texture" id=173]
+[ext_resource path="res://Sprites/PNJ/animals/moustfeu_3_0.png" type="Texture" id=174]
+[ext_resource path="res://Sprites/PNJ/animals/moustfeu_3_1.png" type="Texture" id=175]
+[ext_resource path="res://Sprites/PNJ/animals/moustfeu_3_2.png" type="Texture" id=176]
+[ext_resource path="res://Sprites/Mobs/Hvaisseau/hvaisseau.png" type="Texture" id=177]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/MEGALASER.png" type="Texture" id=178]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/MEGALASER_1.png" type="Texture" id=179]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/MEGALASER_2.png" type="Texture" id=180]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/MEGALASER_3.png" type="Texture" id=181]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/MEGALASER_4.png" type="Texture" id=182]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/MEGALASER_5.png" type="Texture" id=183]
+[ext_resource path="res://Tiles/Vulav/stele_0.png" type="Texture" id=184]
+[ext_resource path="res://Tiles/Vulav/stele_1.png" type="Texture" id=185]
+[ext_resource path="res://Tiles/Vulav/stele_2.png" type="Texture" id=186]
+[ext_resource path="res://Sprites/Props/Black Moon/ecr_c2_8.png" type="Texture" id=187]
+[ext_resource path="res://Sprites/Characters/TheVoid/LBrumen_0.png" type="Texture" id=188]
+[ext_resource path="res://Sprites/Characters/TheVoid/LBrumen_1.png" type="Texture" id=189]
+[ext_resource path="res://Sprites/Characters/TheVoid/LBrumen_2.png" type="Texture" id=190]
+[ext_resource path="res://Sprites/Characters/TheVoid/LBrumen_3.png" type="Texture" id=191]
+[ext_resource path="res://Sprites/Props/Cygio/senti_back.png" type="Texture" id=192]
+[ext_resource path="res://Sprites/Props/Cygio/senti_disque.png" type="Texture" id=193]
+[ext_resource path="res://Sprites/Props/Cygio/senti_disque_1.png" type="Texture" id=194]
+[ext_resource path="res://Sprites/Props/Cygio/senti_front.png" type="Texture" id=195]
+[ext_resource path="res://Sprites/Props/Cygio/senti_front_1.png" type="Texture" id=196]
+[ext_resource path="res://Sprites/Props/Cygio/barrier_0.png" type="Texture" id=197]
+[ext_resource path="res://Sprites/Props/Cygio/barrier_1.png" type="Texture" id=198]
+[ext_resource path="res://Sprites/Props/Cygio/barrier_2.png" type="Texture" id=199]
+[ext_resource path="res://Sprites/Props/Cygio/spikes_0.png" type="Texture" id=200]
+[ext_resource path="res://Sprites/Props/Cygio/spikes_1.png" type="Texture" id=201]
+[ext_resource path="res://Sprites/Props/Cygio/spikes_2.png" type="Texture" id=202]
+[ext_resource path="res://Sprites/Characters/TheVoid/LGips.png" type="Texture" id=203]
+[ext_resource path="res://Sprites/Characters/TheVoid/LVeos.png" type="Texture" id=204]
+[ext_resource path="res://Sprites/Characters/TheVoid/LVeos_1.png" type="Texture" id=205]
+[ext_resource path="res://Sprites/Characters/TheVoid/LVeos_2.png" type="Texture" id=206]
+[ext_resource path="res://Sprites/Characters/TheVoid/LVeos_3.png" type="Texture" id=207]
+[ext_resource path="res://Sprites/PNJ/soldatchloro_2_0.png" type="Texture" id=208]
+[ext_resource path="res://Sprites/PNJ/soldatchloro_2_1.png" type="Texture" id=209]
+[ext_resource path="res://Tiles/Bunker/organ_tentacle.png" type="Texture" id=210]
+[ext_resource path="res://Tiles/Bunker/organ_tentacle_1.png" type="Texture" id=211]
+[ext_resource path="res://Tiles/Bunker/organ_tentacle_2.png" type="Texture" id=212]
+[ext_resource path="res://Sprites/GUI/MenuStars/BlackMoon.png" type="Texture" id=213]
+[ext_resource path="res://Sprites/GUI/MenuStars/Chlorozol.png" type="Texture" id=214]
+[ext_resource path="res://Sprites/GUI/MenuStars/Cygio.png" type="Texture" id=215]
+[ext_resource path="res://Sprites/GUI/MenuStars/Gentilis.png" type="Texture" id=216]
+[ext_resource path="res://Sprites/GUI/MenuStars/Hydroplan.png" type="Texture" id=217]
+[ext_resource path="res://Sprites/GUI/MenuStars/Magna.png" type="Texture" id=218]
+[ext_resource path="res://Sprites/GUI/MenuStars/Rauthur.png" type="Texture" id=219]
+[ext_resource path="res://Sprites/GUI/MenuStars/Stalor.png" type="Texture" id=220]
+[ext_resource path="res://Sprites/GUI/MenuStars/Vulav.png" type="Texture" id=221]
+[ext_resource path="res://Sprites/GUI/MenuStars/Where.png" type="Texture" id=222]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/sprite211_0.png" type="Texture" id=223]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/sprite211_3.png" type="Texture" id=224]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/sprite211_6.png" type="Texture" id=225]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/sprite211_9.png" type="Texture" id=226]
+[ext_resource path="res://Sprites/Mobs/MotherSoldier/mothersol_0.png" type="Texture" id=227]
+[ext_resource path="res://Sprites/Mobs/MotherSoldier/mothersol_1.png" type="Texture" id=228]
+[ext_resource path="res://Sprites/Mobs/MotherSoldier/mothersol_2.png" type="Texture" id=229]
+[ext_resource path="res://Sprites/Mobs/MotherSoldier/mothersol_3.png" type="Texture" id=230]
+[ext_resource path="res://Sprites/Mobs/MotherSoldier/mothersol_4.png" type="Texture" id=231]
+[ext_resource path="res://Sprites/Mobs/MotherSoldier/mothersol_5.png" type="Texture" id=232]
+[ext_resource path="res://Sprites/Mobs/MotherSoldier/mothersol_6.png" type="Texture" id=233]
+[ext_resource path="res://Sprites/Mobs/HSoldier/hsolbakm_0.png" type="Texture" id=234]
+[ext_resource path="res://Sprites/Mobs/HSoldier/hsollm_3.png" type="Texture" id=235]
+[ext_resource path="res://Sprites/Mobs/HSoldier/hsolfacem_0.png" type="Texture" id=236]
+[ext_resource path="res://Scripts/Cinematics/Generique/neg0.png" type="Texture" id=237]
+[ext_resource path="res://Fonts/Descu.tres" type="DynamicFont" id=238]
+[ext_resource path="res://Scenes/Player/GUICanvas.tscn" type="PackedScene" id=239]
+[ext_resource path="res://Scenes/Player/mouse.tscn" type="PackedScene" id=240]
+[ext_resource path="res://Musiques/emotion_locomotion.wav" type="AudioStream" id=241]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 57 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 58 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 59 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 60 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 61 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 62 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ) ],
+"loop": true,
+"name": "default",
+"speed": 8.0
+} ]
+
+[sub_resource type="SpriteFrames" id=13]
+animations = [ {
+"frames": [ ExtResource( 74 ), ExtResource( 75 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [ ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+} ]
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=16]
+animations = [ {
+"frames": [ ExtResource( 90 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=17]
+animations = [ {
+"frames": [ ExtResource( 91 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=18]
+animations = [ {
+"frames": [ ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=19]
+animations = [ {
+"frames": [ ExtResource( 95 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=20]
+animations = [ {
+"frames": [ ExtResource( 96 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=21]
+animations = [ {
+"frames": [ ExtResource( 97 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=23]
+animations = [ {
+"frames": [ ExtResource( 101 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=24]
+animations = [ {
+"frames": [ ExtResource( 105 ), ExtResource( 106 ), ExtResource( 107 ), ExtResource( 108 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+} ]
+
+[sub_resource type="SpriteFrames" id=25]
+animations = [ {
+"frames": [ ExtResource( 109 ), ExtResource( 110 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=26]
+animations = [ {
+"frames": [ ExtResource( 111 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=27]
+animations = [ {
+"frames": [ ExtResource( 112 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=28]
+animations = [ {
+"frames": [ ExtResource( 113 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=29]
+animations = [ {
+"frames": [ ExtResource( 114 ), ExtResource( 115 ), ExtResource( 116 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 120 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=30]
+animations = [ {
+"frames": [ ExtResource( 121 ), ExtResource( 122 ), ExtResource( 123 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 128 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=31]
+animations = [ {
+"frames": [ ExtResource( 129 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=32]
+animations = [ {
+"frames": [ ExtResource( 130 ), ExtResource( 131 ), ExtResource( 132 ), ExtResource( 131 ), ExtResource( 130 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+} ]
+
+[sub_resource type="SpriteFrames" id=33]
+animations = [ {
+"frames": [ ExtResource( 133 ), ExtResource( 134 ), ExtResource( 135 ), ExtResource( 136 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=34]
+animations = [ {
+"frames": [ ExtResource( 137 ), ExtResource( 138 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=35]
+animations = [ {
+"frames": [ ExtResource( 139 ), ExtResource( 140 ), ExtResource( 141 ), ExtResource( 142 ), ExtResource( 143 ), ExtResource( 144 ), ExtResource( 145 ), ExtResource( 146 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=36]
+animations = [ {
+"frames": [ ExtResource( 147 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=37]
+animations = [ {
+"frames": [ ExtResource( 148 ), ExtResource( 149 ), ExtResource( 150 ), ExtResource( 151 ), ExtResource( 152 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=38]
+animations = [ {
+"frames": [ ExtResource( 153 ), ExtResource( 154 ), ExtResource( 155 ), ExtResource( 156 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=39]
+animations = [ {
+"frames": [ ExtResource( 157 ), ExtResource( 158 ), ExtResource( 159 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=40]
+animations = [ {
+"frames": [ ExtResource( 160 ), ExtResource( 161 ), ExtResource( 162 ), ExtResource( 163 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=41]
+animations = [ {
+"frames": [ ExtResource( 164 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 167 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=42]
+animations = [ {
+"frames": [ ExtResource( 168 ), ExtResource( 169 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=43]
+animations = [ {
+"frames": [ ExtResource( 170 ), ExtResource( 171 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=44]
+animations = [ {
+"frames": [ ExtResource( 172 ), ExtResource( 173 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=45]
+animations = [ {
+"frames": [ ExtResource( 174 ), ExtResource( 175 ), ExtResource( 176 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="SpriteFrames" id=46]
+animations = [ {
+"frames": [ ExtResource( 177 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=47]
+animations = [ {
+"frames": [ ExtResource( 178 ), ExtResource( 179 ), ExtResource( 180 ), ExtResource( 181 ), ExtResource( 182 ), ExtResource( 183 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=48]
+animations = [ {
+"frames": [ ExtResource( 184 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=49]
+animations = [ {
+"frames": [ ExtResource( 185 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=50]
+animations = [ {
+"frames": [ ExtResource( 186 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=51]
+animations = [ {
+"frames": [ ExtResource( 187 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=52]
+animations = [ {
+"frames": [ ExtResource( 188 ), ExtResource( 189 ), ExtResource( 190 ), ExtResource( 191 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=53]
+animations = [ {
+"frames": [ ExtResource( 192 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=54]
+animations = [ {
+"frames": [ ExtResource( 193 ), ExtResource( 194 ), ExtResource( 195 ), ExtResource( 196 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=55]
+animations = [ {
+"frames": [ ExtResource( 197 ), ExtResource( 198 ), ExtResource( 199 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=56]
+animations = [ {
+"frames": [ ExtResource( 200 ), ExtResource( 201 ), ExtResource( 202 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=57]
+animations = [ {
+"frames": [ ExtResource( 203 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=58]
+animations = [ {
+"frames": [ ExtResource( 204 ), ExtResource( 205 ), ExtResource( 206 ), ExtResource( 207 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=59]
+animations = [ {
+"frames": [ ExtResource( 208 ), ExtResource( 209 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="SpriteFrames" id=60]
+animations = [ {
+"frames": [ ExtResource( 210 ), ExtResource( 211 ), ExtResource( 212 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=61]
+animations = [ {
+"frames": [ ExtResource( 213 ), ExtResource( 214 ), ExtResource( 215 ), ExtResource( 216 ), ExtResource( 217 ), ExtResource( 218 ), ExtResource( 219 ), ExtResource( 220 ), ExtResource( 221 ), ExtResource( 222 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=62]
+animations = [ {
+"frames": [ ExtResource( 223 ), ExtResource( 224 ), ExtResource( 225 ), ExtResource( 226 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+} ]
+
+[sub_resource type="SpriteFrames" id=63]
+animations = [ {
+"frames": [ ExtResource( 227 ), ExtResource( 228 ), ExtResource( 229 ), ExtResource( 230 ), ExtResource( 231 ), ExtResource( 232 ), ExtResource( 233 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=64]
+animations = [ {
+"frames": [ ExtResource( 234 ), ExtResource( 235 ), ExtResource( 236 ), ExtResource( 106 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Generique" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="fd" type="Sprite" parent="Node2D"]
+position = Vector2( 230, 135 )
+scale = Vector2( 1.48017, 1.1758 )
+texture = ExtResource( 2 )
+
+[node name="fd2" type="Sprite" parent="Node2D"]
+position = Vector2( 557.803, -6 )
+scale = Vector2( 1.48017, 1.1758 )
+texture = ExtResource( 2 )
+offset = Vector2( 160.25, 120.297 )
+
+[node name="player" parent="Node2D" instance=ExtResource( 3 )]
+position = Vector2( 230, 135 )
+
+[node name="Node" type="Node2D" parent="."]
+position = Vector2( 44, 58 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="Label1" type="Label" parent="Node"]
+margin_left = 214.907
+margin_top = 85.643
+margin_right = 254.907
+margin_bottom = 113.643
+theme = ExtResource( 4 )
+text = "FIN."
+align = 1
+
+[node name="Label2" type="Label" parent="Node"]
+margin_left = 103.469
+margin_top = 269.463
+margin_right = 351.469
+margin_bottom = 328.463
+theme = ExtResource( 4 )
+text = "Créé par
+Pr.Walter Bulbazor"
+align = 1
+
+[node name="Veget" type="Label" parent="Node"]
+margin_left = 183.97
+margin_top = 344.657
+margin_right = 273.97
+margin_bottom = 372.657
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 1, 0.0156863, 1 )
+text = "Veget"
+align = 1
+
+[node name="Veget2" type="AnimatedSprite" parent="Node"]
+position = Vector2( 226.869, 400.033 )
+frames = ExtResource( 5 )
+animation = "04Veget"
+frame = 1
+playing = true
+
+[node name="Progfer" type="Label" parent="Node"]
+margin_left = 67.956
+margin_top = 344.499
+margin_right = 157.956
+margin_bottom = 372.499
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 0.458824, 0.309804, 0, 1 )
+text = "Progfer"
+align = 1
+
+[node name="Progfer2" type="AnimatedSprite" parent="Node"]
+position = Vector2( 109.344, 397.683 )
+frames = ExtResource( 5 )
+animation = "04Progfer"
+frame = 3
+playing = true
+
+[node name="Doubliks" type="Label" parent="Node"]
+margin_left = 309.753
+margin_top = 346.031
+margin_right = 399.753
+margin_bottom = 374.031
+theme = ExtResource( 4 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Doublix"
+align = 1
+
+[node name="Doubliks2" type="AnimatedSprite" parent="Node"]
+position = Vector2( 353.797, 393.765 )
+frames = ExtResource( 5 )
+animation = "04Doubliks"
+frame = 3
+playing = true
+
+[node name="Label3" type="Label" parent="Node"]
+margin_left = 102.761
+margin_top = 323.843
+margin_right = 350.761
+margin_bottom = 351.843
+theme = ExtResource( 4 )
+text = "D'après une histoire de"
+align = 1
+
+[node name="Label4" type="Label" parent="Node"]
+margin_left = 94.2552
+margin_top = 530.357
+margin_right = 452.255
+margin_bottom = 589.357
+theme = ExtResource( 4 )
+custom_fonts/font = ExtResource( 6 )
+text = "PROGRAMMATION:
+Pr.Walter Bulbazor (Maël Capolino)"
+align = 2
+
+[node name="Label5" type="Label" parent="Node"]
+margin_left = 82.0198
+margin_top = 599.084
+margin_right = 450.02
+margin_bottom = 658.084
+theme = ExtResource( 4 )
+text = "Programmé avec GameMaker Studio 1
+Puis Godot Engine 3.1"
+align = 2
+
+[node name="img" type="Sprite" parent="Node"]
+position = Vector2( 115.925, 752.386 )
+scale = Vector2( 0.0601053, 0.0596555 )
+texture = ExtResource( 7 )
+
+[node name="img2" type="Sprite" parent="Node"]
+position = Vector2( 260.695, 1340.16 )
+scale = Vector2( 0.104104, 0.107881 )
+texture = ExtResource( 8 )
+
+[node name="img3" type="Sprite" parent="Node"]
+position = Vector2( 260.751, 1791.7 )
+scale = Vector2( 0.103525, 0.0985079 )
+texture = ExtResource( 9 )
+
+[node name="img4" type="Sprite" parent="Node"]
+position = Vector2( 284.343, 2610.07 )
+scale = Vector2( 0.087326, 0.0873329 )
+texture = ExtResource( 10 )
+
+[node name="img5" type="Sprite" parent="Node"]
+position = Vector2( 278.463, 3149.82 )
+scale = Vector2( 0.0953679, 0.0951635 )
+texture = ExtResource( 11 )
+
+[node name="img6" type="Sprite" parent="Node"]
+position = Vector2( 204.596, 3858.97 )
+rotation = 0.153552
+scale = Vector2( 0.112816, 0.114457 )
+texture = ExtResource( 12 )
+
+[node name="img7" type="Sprite" parent="Node"]
+position = Vector2( 349.558, 4035.15 )
+rotation = -0.411023
+scale = Vector2( 0.131965, 0.138939 )
+texture = ExtResource( 13 )
+
+[node name="img8" type="Sprite" parent="Node"]
+position = Vector2( 251.571, 4331.99 )
+rotation = 0.0674056
+scale = Vector2( 0.173444, 0.18295 )
+texture = ExtResource( 14 )
+
+[node name="Label6" type="Label" parent="Node"]
+margin_left = 81.2003
+margin_top = 712.396
+margin_right = 449.201
+margin_bottom = 1174.4
+theme = ExtResource( 4 )
+text = "SPRITES:
+Pr.Walter Bulbazor
+(la plupart)
+
+Ce sacré Victor
+(quelques décors)
+
+Fanaty
+(décors Forêt de Stret)
+
+Ruine Maniac
+(sprite de Veget)
+
+Kamykaz777
+(premier Vaisseau)"
+align = 2
+
+[node name="Label7" type="Label" parent="Node"]
+margin_left = 4.94438
+margin_top = 1498.23
+margin_right = 470.944
+margin_bottom = 3479.23
+theme = ExtResource( 4 )
+text = "MUSIQUES:
+- [MUSIQUES ORIGINALES] -
+---------------------------------
+Town of Broken Hearts (Karlisse)
+Progfer with dual tec9 (Prodige)
+
+
+
+
+
+
+
+
+
+"
+align = 2
+
+[node name="Label8" type="Label" parent="Node"]
+margin_left = -5.71774
+margin_top = 1941.81
+margin_right = 460.282
+margin_bottom = 3922.81
+theme = ExtResource( 4 )
+text = "- [MUSIQUES DE PEER GYNT (pas toutes)] -
+(par Edvard Grieg, tirées de cette vidéo:
+https://youtube.com/watch?v=YIk5oxSnrIw)
+---------------------------------
+[PG] Prelude: Morning Mood
+[PG] Peer Gynt and the Herd-Girls
+March of the Trolls
+Symphonic Dances
+[PG] The Bridal Procession passes
+[PG] Peer Gynt hunted by the trolls
+[PG] Dance of the Mountain King's Daughter
+[PG] Day scene
+Funeral March for Rikard Nordraak
+[PG] Arabian Dance
+[PG] Prelude: Deep inside the pine forest
+[PG] Three norwegian dances
+[PG] Solveig's Cradle Song
+[PG]  In the Hall of the Mountain King
+
+
+
+
+
+
+
+
+
+"
+align = 2
+
+[node name="Label9" type="Label" parent="Node"]
+margin_left = -3.0
+margin_top = 2738.0
+margin_right = 463.0
+margin_bottom = 4751.0
+theme = ExtResource( 4 )
+text = "- [MUSIQUES PAR WATERFLAME] -
+(https://www.waterflame.com/)
+(https://youtube.com/channel/
+UCVuv5iaVR55QXIc_BHQLakA)
+---------------------------------
+Queens garden
+You and Me
+Invaders
+Emotion Burst Locomotion
+
+
+
+
+
+
+
+
+
+"
+align = 2
+
+[node name="Label10" type="Label" parent="Node"]
+margin_left = -7.2323
+margin_top = 3306.85
+margin_right = 458.768
+margin_bottom = 5287.85
+theme = ExtResource( 4 )
+text = "- [AUTRES MUSIQUES] -
+In the Hall of the Mountain King (Sir Spork)
+https://youtube.com/watch?v=YXRPchyPXfI
+
+Downforce (Chris Allen)
+https://youtube.com/watch?v=Y04LBDTsGIk"
+align = 2
+
+[node name="Label11" type="Label" parent="Node"]
+margin_left = 2.3158
+margin_top = 3502.58
+margin_right = 474.316
+margin_bottom = 3768.58
+theme = ExtResource( 4 )
+text = "Merci à Brumen pour s'être cassé les dents
+sur les versions bêta du jeu, et pour
+ses nombreux conseils utiles
+
+Merci aussi à tout ceux qui depuis le début
+me soutiennent dans ce projet
+Merci à Tnhar pour son aide
+sur le lore"
+align = 1
+
+[node name="Label12" type="Label" parent="Node"]
+margin_left = 148.833
+margin_top = 4527.29
+margin_right = 362.833
+margin_bottom = 4586.29
+theme = ExtResource( 4 )
+text = "Luminax, 2010 - 2020
+Fin."
+align = 1
+
+[node name="Trucs" type="Node2D" parent="Node"]
+scale = Vector2( 1.5, 1.5 )
+
+[node name="TileMap" type="TileMap" parent="Node/Trucs"]
+tile_set = ExtResource( 15 )
+cell_size = Vector2( 32, 32 )
+cell_half_offset = 3
+format = 1
+tile_data = PoolIntArray( 1179653, 46, 0, 1245184, 46, 0, 1245185, 40, 0, 1245186, 40, 0, 1310721, 40, 0, 1376256, 40, 0, 1376259, 40, 0 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 181.202, 360.002 )
+frames = SubResource( 1 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 198.272, 462.697 )
+frames = SubResource( 2 )
+frame = 12
+playing = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 130.912, 579.158 )
+frames = SubResource( 3 )
+frame = 9
+playing = true
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 232.561, 618.974 )
+frames = SubResource( 4 )
+playing = true
+
+[node name="AnimatedSprite5" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -0.903625, 665.241 )
+frames = SubResource( 5 )
+playing = true
+
+[node name="AnimatedSprite6" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 23.2958, 605.784 )
+frames = SubResource( 5 )
+playing = true
+
+[node name="AnimatedSprite7" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 161.484, 679.264 )
+frames = SubResource( 5 )
+playing = true
+
+[node name="AnimatedSprite8" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 167.36, 636.824 )
+frames = SubResource( 6 )
+playing = true
+
+[node name="AnimatedSprite9" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 167.36, 636.824 )
+frames = SubResource( 6 )
+playing = true
+
+[node name="AnimatedSprite10" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 53.6973, 712.423 )
+frames = SubResource( 6 )
+playing = true
+
+[node name="AnimatedSprite11" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 1.82912, 601.221 )
+frames = SubResource( 7 )
+playing = true
+
+[node name="AnimatedSprite12" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 100.428, 622.063 )
+frames = SubResource( 8 )
+playing = true
+
+[node name="AnimatedSprite13" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 108.444, 691.804 )
+frames = SubResource( 9 )
+playing = true
+
+[node name="AnimatedSprite14" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 89.0182, 645.333 )
+frames = SubResource( 10 )
+playing = true
+
+[node name="AnimatedSprite15" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 193.486, 681.897 )
+frames = SubResource( 11 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite16" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 154.444, 359.727 )
+frames = SubResource( 12 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite42" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 55.1003, 1402.2 )
+scale = Vector2( -1, 1 )
+frames = SubResource( 12 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite17" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 156.729, 700.398 )
+frames = SubResource( 13 )
+playing = true
+
+[node name="AnimatedSprite18" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 4.37286, 798.834 )
+scale = Vector2( -1, 1 )
+frames = SubResource( 14 )
+frame = 7
+playing = true
+
+[node name="AnimatedSprite19" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 7.81921, 876.302 )
+rotation = 0.741784
+scale = Vector2( 0.333923, 0.361927 )
+frames = SubResource( 15 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite20" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 29.4629, 915.582 )
+rotation = 0.741784
+scale = Vector2( 0.223109, 0.260381 )
+frames = SubResource( 15 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite21" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -1.39941, 925.201 )
+rotation = 0.741784
+scale = Vector2( 0.143105, 0.163805 )
+frames = SubResource( 15 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite22" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 81.5598, 1022.58 )
+frames = SubResource( 16 )
+playing = true
+
+[node name="AnimatedSprite23" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 58.4834, 1087.77 )
+scale = Vector2( 1.3, 1.3 )
+frames = SubResource( 17 )
+playing = true
+
+[node name="AnimatedSprite24" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 30.7722, 1083.37 )
+frames = SubResource( 18 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite25" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 221.251, 1003.26 )
+frames = SubResource( 19 )
+playing = true
+
+[node name="AnimatedSprite26" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 7.74197, 984.891 )
+frames = SubResource( 20 )
+playing = true
+
+[node name="AnimatedSprite27" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -8.17416, 1039.15 )
+frames = SubResource( 21 )
+playing = true
+
+[node name="AnimatedSprite28" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 100.1, 1375.45 )
+frames = SubResource( 22 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite29" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 12.7786, 1477.74 )
+scale = Vector2( -1, 1 )
+frames = SubResource( 23 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite35" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -73.8755, 1401.64 )
+frames = SubResource( 23 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite30" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -6.92494, 1477.74 )
+scale = Vector2( -1, 1 )
+frames = SubResource( 23 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite40" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 29.3692, 1400.71 )
+frames = SubResource( 23 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite31" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -27.6389, 1478.75 )
+scale = Vector2( -1, 1 )
+frames = SubResource( 23 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite39" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 8.65525, 1401.72 )
+frames = SubResource( 23 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite32" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -49.4417, 1478.16 )
+scale = Vector2( -1, 1 )
+frames = SubResource( 23 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite37" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -13.1475, 1401.13 )
+frames = SubResource( 23 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite33" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -70.6551, 1478.75 )
+scale = Vector2( -1, 1 )
+frames = SubResource( 23 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite36" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -34.361, 1401.72 )
+frames = SubResource( 23 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite34" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -90.1008, 1478.75 )
+scale = Vector2( -1, 1 )
+frames = SubResource( 23 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite38" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -53.8066, 1401.72 )
+frames = SubResource( 23 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite41" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 39.6071, 1479.13 )
+frames = SubResource( 24 )
+playing = true
+
+[node name="AnimatedSprite43" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 143.16, 1436.74 )
+frames = SubResource( 25 )
+playing = true
+
+[node name="AnimatedSprite44" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 30.5028, 1545.02 )
+frames = SubResource( 26 )
+playing = true
+
+[node name="AnimatedSprite45" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 50.8706, 1545.47 )
+frames = SubResource( 27 )
+playing = true
+
+[node name="AnimatedSprite46" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 10.346, 1546.33 )
+frames = SubResource( 28 )
+playing = true
+
+[node name="AnimatedSprite47" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 30.1464, 1050.89 )
+frames = SubResource( 29 )
+frame = 5
+playing = true
+
+[node name="AnimatedSprite48" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -16.2054, 1079.04 )
+frames = SubResource( 30 )
+frame = 5
+playing = true
+
+[node name="AnimatedSprite49" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 2.83303, 1123.97 )
+frames = SubResource( 30 )
+frame = 4
+playing = true
+
+[node name="AnimatedSprite50" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -19.2516, 1154.43 )
+frames = SubResource( 30 )
+frame = 3
+playing = true
+
+[node name="AnimatedSprite51" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 21.6065, 1168.64 )
+frames = SubResource( 30 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite52" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 130.483, 1567.82 )
+scale = Vector2( 0.309857, 0.292008 )
+frames = SubResource( 31 )
+playing = true
+
+[node name="AnimatedSprite53" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -12.8578, 1603.47 )
+frames = SubResource( 32 )
+frame = 3
+playing = true
+
+[node name="AnimatedSprite54" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 76.8513, 1628.79 )
+frames = SubResource( 33 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite55" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 46.7579, 1609.19 )
+frames = SubResource( 33 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite56" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 3.97261, 1670.07 )
+frames = SubResource( 34 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite57" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 25.5111, 1757.41 )
+scale = Vector2( 0.103487, 0.122797 )
+frames = SubResource( 35 )
+frame = 7
+playing = true
+
+[node name="AnimatedSprite58" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 92.5779, 1885.28 )
+frames = SubResource( 36 )
+playing = true
+
+[node name="AnimatedSprite59" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 18.5602, 1866.63 )
+frames = SubResource( 37 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite60" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 189.305, 1940.38 )
+frames = SubResource( 38 )
+frame = 3
+playing = true
+
+[node name="AnimatedSprite61" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 10.6101, 1938.93 )
+frames = SubResource( 39 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite62" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 44.6128, 1969.32 )
+frames = SubResource( 39 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite63" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -1.69449, 1987.18 )
+frames = SubResource( 40 )
+frame = 3
+playing = true
+
+[node name="AnimatedSprite64" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 77.441, 1928.81 )
+frames = SubResource( 41 )
+frame = 3
+playing = true
+
+[node name="AnimatedSprite65" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 68.1367, 1943.42 )
+frames = SubResource( 42 )
+playing = true
+
+[node name="AnimatedSprite66" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 89.6245, 1944.1 )
+frames = SubResource( 43 )
+playing = true
+
+[node name="AnimatedSprite67" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 76.8196, 1948.67 )
+frames = SubResource( 44 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite68" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 91.2222, 1929.33 )
+frames = SubResource( 45 )
+playing = true
+
+[node name="AnimatedSprite69" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 142.276, 1958.05 )
+rotation = -0.89388
+frames = SubResource( 46 )
+playing = true
+
+[node name="AnimatedSprite70" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 150.604, 2272.22 )
+scale = Vector2( 100, 1 )
+frames = SubResource( 47 )
+frame = 3
+playing = true
+
+[node name="AnimatedSprite71" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -9.6271, 2040.84 )
+frames = SubResource( 48 )
+playing = true
+
+[node name="AnimatedSprite72" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 24.8191, 2065.44 )
+frames = SubResource( 49 )
+playing = true
+
+[node name="AnimatedSprite73" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -11.7011, 2078.43 )
+frames = SubResource( 50 )
+playing = true
+
+[node name="AnimatedSprite74" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 281.368, 2387.52 )
+frames = SubResource( 51 )
+playing = true
+
+[node name="AnimatedSprite81" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 34.6998, 2387.69 )
+frames = SubResource( 51 )
+playing = true
+
+[node name="AnimatedSprite82" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 8.54276, 2368.88 )
+frames = SubResource( 52 )
+playing = true
+
+[node name="AnimatedSprite75" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 25.307, 2128.35 )
+frames = SubResource( 53 )
+playing = true
+
+[node name="AnimatedSprite76" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 25.301, 2127.92 )
+frames = SubResource( 54 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite77" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 259.475, 2297.86 )
+scale = Vector2( 1.1466, 1.09775 )
+frames = SubResource( 55 )
+playing = true
+
+[node name="AnimatedSprite78" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -11.5177, 2302.25 )
+scale = Vector2( 1.1466, 1.09775 )
+frames = SubResource( 56 )
+playing = true
+
+[node name="AnimatedSprite79" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 123.395, 2199.59 )
+scale = Vector2( 1.1466, 1.09775 )
+frames = SubResource( 56 )
+playing = true
+
+[node name="AnimatedSprite80" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 75.4131, 2196.32 )
+scale = Vector2( 1.1466, 1.09775 )
+frames = SubResource( 56 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite83" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 38.1877, 2466.4 )
+frames = SubResource( 57 )
+playing = true
+
+[node name="AnimatedSprite84" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 278.079, 2465.78 )
+frames = SubResource( 58 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite85" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 210.231, 1974.06 )
+frames = SubResource( 59 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite86" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 5.30322, 1222.23 )
+frames = SubResource( 60 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite87" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 52.2878, 746.532 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 61 )
+frame = 8
+
+[node name="AnimatedSprite88" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 75.6875, 753.977 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 61 )
+frame = 7
+
+[node name="AnimatedSprite89" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 63.9876, 770.995 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 61 )
+frame = 1
+
+[node name="AnimatedSprite90" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 86.3236, 770.463 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 61 )
+frame = 4
+
+[node name="AnimatedSprite91" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 72.3916, 763.502 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 61 )
+frame = 3
+
+[node name="AnimatedSprite92" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 44.0527, 787.064 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 61 )
+frame = 2
+
+[node name="AnimatedSprite93" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 76.9731, 788.299 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 61 )
+frame = 5
+
+[node name="AnimatedSprite94" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 111.74, 768.264 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 61 )
+frame = 6
+
+[node name="AnimatedSprite95" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 146.315, 778.848 )
+frames = SubResource( 61 )
+frame = 9
+
+[node name="AnimatedSprite96" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 25.2837, 1751.4 )
+frames = SubResource( 62 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite97" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -36.5138, 1299.93 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 63 )
+playing = true
+
+[node name="AnimatedSprite98" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -11.1269, 1341.44 )
+frames = SubResource( 64 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite99" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 33.0042, 1271.98 )
+frames = SubResource( 64 )
+playing = true
+
+[node name="AnimatedSprite100" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 130.252, 1001.6 )
+frames = SubResource( 64 )
+playing = true
+
+[node name="AnimatedSprite101" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 135.08, 687.931 )
+frames = SubResource( 64 )
+frame = 3
+playing = true
+
+[node name="AnimatedSprite102" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 48.0812, 576.767 )
+frames = SubResource( 64 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite103" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 87.9554, 594.891 )
+frames = SubResource( 64 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite104" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 137.496, 620.266 )
+frames = SubResource( 64 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite105" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -10.8527, 728.014 )
+frames = SubResource( 64 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite106" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -32.6304, 1439.81 )
+frames = SubResource( 64 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite107" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -11.9109, 1438.77 )
+frames = SubResource( 64 )
+playing = true
+
+[node name="AnimatedSprite108" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 8.80858, 1441.88 )
+frames = SubResource( 64 )
+frame = 3
+playing = true
+
+[node name="AnimatedSprite109" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 28.4921, 1437.74 )
+frames = SubResource( 64 )
+frame = 3
+playing = true
+
+[node name="AnimatedSprite110" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 48.1756, 1440.84 )
+frames = SubResource( 64 )
+frame = 3
+playing = true
+
+[node name="AnimatedSprite111" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 68.8952, 1434.63 )
+frames = SubResource( 64 )
+frame = 3
+playing = true
+
+[node name="AnimatedSprite112" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 87.5427, 1441.88 )
+frames = SubResource( 64 )
+frame = 3
+playing = true
+
+[node name="AnimatedSprite113" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 111.37, 1435.66 )
+frames = SubResource( 64 )
+frame = 3
+playing = true
+
+[node name="AnimatedSprite114" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 65.2481, 1682.5 )
+frames = SubResource( 64 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite115" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 87.7971, 1837.52 )
+frames = SubResource( 64 )
+frame = 2
+playing = true
+
+[node name="AnimatedSprite116" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 99.665, 1988.84 )
+frames = SubResource( 64 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite117" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 43.1582, 2027.18 )
+frames = SubResource( 64 )
+playing = true
+
+[node name="AnimatedSprite118" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -13.3485, 2204.78 )
+frames = SubResource( 64 )
+playing = true
+
+[node name="AnimatedSprite119" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( 95.1393, 2283.68 )
+frames = SubResource( 64 )
+frame = 3
+playing = true
+
+[node name="AnimatedSprite120" type="AnimatedSprite" parent="Node/Trucs"]
+position = Vector2( -15.6887, 2412.74 )
+frames = SubResource( 64 )
+frame = 2
+playing = true
+
+[node name="badend" type="Sprite" parent="Node"]
+position = Vector2( 636, -1691 )
+scale = Vector2( 0.786925, 0.790697 )
+texture = ExtResource( 237 )
+offset = Vector2( 384.043, 1024.07 )
+
+[node name="Label13" type="Label" parent="Node"]
+margin_left = 658.108
+margin_top = -47.554
+margin_right = 1225.11
+margin_bottom = 242.446
+theme = ExtResource( 4 )
+custom_fonts/font = ExtResource( 238 )
+text = "Créé par Pr.Walter Bulbazor"
+align = 1
+valign = 1
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 239 )]
+
+[node name="mouse" parent="CanvasLayer" instance=ExtResource( 240 )]
+
+[node name="EndMus" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 241 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Mov" type="Timer" parent="."]
+
+[node name="Timer2" type="Timer" parent="."]
+
+[node name="Timer3" type="Timer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Mov" to="." method="_on_Mov_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
+[connection signal="timeout" from="Timer3" to="." method="_on_Timer3_timeout"]

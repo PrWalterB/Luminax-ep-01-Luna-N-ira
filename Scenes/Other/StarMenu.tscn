@@ -1,0 +1,477 @@
+[gd_scene load_steps=39 format=2]
+
+[ext_resource path="res://Scripts/Other/StarMenu.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/GUI/Menu/fdmenu.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/GUI/Menu/sprite238_0.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/GUI/MenuStars/lign.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/GUI/MenuStars/Vulav.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/GUI/MenuStars/Stalor.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/GUI/MenuStars/Chlorozol.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/GUI/MenuStars/Gentilis.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/GUI/MenuStars/Hydroplan.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/GUI/MenuStars/Belt.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/GUI/MenuStars/Cygio.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/GUI/MenuStars/Magna.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/GUI/MenuStars/Rauthur.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/GUI/MenuStars/BlackMoon.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Cinematics/Begin/obj0101.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/GUI/MenuStars/Where.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/GUI/MenuStars/Point.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/GUI/Theme/theme.tres" type="Theme" id=18]
+[ext_resource path="res://Fonts/Descu.tres" type="DynamicFont" id=19]
+[ext_resource path="res://Scenes/Player/mouse.tscn" type="PackedScene" id=20]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 423.208, 353.116, 0, 0, 0, 0, 412.23, 323.101, 0, 0, 0, 0, 411.938, 284.85, 0, 0, 0, 0, 425.873, 251.886, 0, 0, 0, 0, 448.065, 229.695, 0, 0, 0, 0, 481.057, 213.19, 0, 0, 0, 0, 519.004, 211.609, 0, 0, 0, 0, 550, 220, 0, 0, 0, 0, 572.747, 238.777, 0, 0, 0, 0, 592.211, 265.788, 0, 0, 0, 0, 600, 300, 0, 0, 0, 0, 594.991, 335.698, 0, 0, 0, 0, 574.179, 369.414, 0, 0, 0, 0, 550, 390, 0, 0, 0, 0, 510, 400, 0, 0, 0, 0, 465.698, 392.791, 0, 0, 0, 0, 430.277, 366.025, 0, 0, 0, 0, 422.9, 352.809 )
+}
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 45.9606
+
+[sub_resource type="Curve2D" id=3]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 362.339, 328.132, 0, 0, 0, 0, 362.702, 288.402, 0, 0, 0, 0, 365.707, 270.383, 0, 0, 0, 0, 371.509, 250.49, 0, 0, 0, 0, 384.53, 230.883, 0, 0, 0, 0, 400.824, 210.238, 0, 0, 0, 0, 425.619, 193.353, 0, 0, 0, 0, 453.154, 180.66, 0, 0, 0, 0, 477.462, 172.58, 0, 0, 0, 0, 506.053, 170.99, 0, 0, 0, 0, 543.21, 175.378, 0, 0, 0, 0, 570.327, 184.642, 0, 0, 0, 0, 596.217, 201.313, 0, 0, 0, 0, 615.857, 219.848, 0, 0, 0, 0, 626.68, 233.488, 0, 0, 0, 0, 637.971, 250.998, 0, 0, 0, 0, 643.872, 269.157, 0, 0, 0, 0, 648.976, 290.954, 0, 0, 0, 0, 647.131, 323.194, 0, 0, 0, 0, 641.693, 346.93, 0, 0, 0, 0, 632.86, 367.072, 0, 0, 0, 0, 622.052, 383.856, 0, 0, 0, 0, 604.43, 401.728, 0, 0, 0, 0, 581.02, 419.806, 0, 0, 0, 0, 556.711, 431.029, 0, 0, 0, 0, 525.618, 438.254, 0, 0, 0, 0, 501.299, 438.786, 0, 0, 0, 0, 477.689, 436.49, 0, 0, 0, 0, 451.546, 429.817, 0, 0, 0, 0, 430.987, 421.376, 0, 0, 0, 0, 410.828, 408.055, 0, 0, 0, 0, 394.54, 390.478, 0, 0, 0, 0, 379.796, 372.05, 0, 0, 0, 0, 365.584, 343.358, 0, 0, 0, 0, 362.188, 328.264 )
+}
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 24.9349
+
+[sub_resource type="Curve2D" id=5]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 322.022, 307.49, 0, 0, 0, 0, 328.538, 265.136, 0, 0, 0, 0, 340.756, 224.41, 0, 0, 0, 0, 359.49, 197.532, 0, 0, 0, 0, 377.409, 177.983, 0, 0, 0, 0, 410.804, 155.177, 0, 0, 0, 0, 451.586, 138.496, 0, 0, 0, 0, 486.169, 132.552, 0, 0, 0, 0, 535.342, 132.011, 0, 0, 0, 0, 570.66, 142.171, 0, 0, 0, 0, 597.067, 154.055, 0, 0, 0, 0, 621.714, 170.34, 0, 0, 0, 0, 647.682, 193.666, 0, 0, 0, 0, 670.491, 228.7, 0, 0, 0, 0, 681.838, 262.202, 0, 0, 0, 0, 688.13, 299.112, 0, 0, 0, 0, 686.66, 338.807, 0, 0, 0, 0, 675.622, 373.235, 0, 0, 0, 0, 655.019, 405.929, 0, 0, 0, 0, 629.082, 434.028, 0, 0, 0, 0, 601.528, 455.481, 0, 0, 0, 0, 569.342, 467.185, 0, 0, 0, 0, 535.204, 477.914, 0, 0, 0, 0, 489.648, 478.854, 0, 0, 0, 0, 449.206, 471.09, 0, 0, 0, 0, 403.207, 450.339, 0, 0, 0, 0, 375.112, 429.004, 0, 0, 0, 0, 349.792, 399.094, 0, 0, 0, 0, 334.243, 369.084, 0, 0, 0, 0, 322.332, 333.373, 0, 0, 0, 0, 321.954, 307.492 )
+}
+
+[sub_resource type="Curve2D" id=6]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 297.059, 289.807, 0, 0, 0, 0, 300.169, 267.962, 0, 0, 0, 0, 304.622, 250.101, 0, 0, 0, 0, 313.102, 224.388, 0, 0, 0, 0, 330.462, 201.571, 0, 0, 0, 0, 347.168, 183.54, 0, 0, 0, 0, 366.731, 170.103, 0, 0, 0, 0, 391.855, 158.118, 0, 0, 0, 0, 420.881, 152.053, 0, 0, 0, 0, 452.356, 154.236, 0, 0, 0, 0, 481.349, 159.273, 0, 0, 0, 0, 514.43, 167.764, 0, 0, 0, 0, 541.817, 179.128, 0, 0, 0, 0, 564.646, 194.587, 0, 0, 0, 0, 584.234, 213.423, 0, 0, 0, 0, 604.591, 238.472, 0, 0, 0, 0, 617.647, 264.96, 0, 0, 0, 0, 623.444, 290.736, 0, 0, 0, 0, 624.867, 316.403, 0, 0, 0, 0, 622.528, 341.154, 0, 0, 0, 0, 614.037, 362.431, 0, 0, 0, 0, 600.921, 382.767, 0, 0, 0, 0, 583.352, 396.726, 0, 0, 0, 0, 561.735, 410.15, 0, 0, 0, 0, 535.519, 421.093, 0, 0, 0, 0, 504.236, 422.296, 0, 0, 0, 0, 475.051, 416.581, 0, 0, 0, 0, 446.45, 411.861, 0, 0, 0, 0, 419.096, 403.946, 0, 0, 0, 0, 394.707, 399.019, 0, 0, 0, 0, 370.361, 391.311, 0, 0, 0, 0, 345.104, 377.502, 0, 0, 0, 0, 326.138, 358.821, 0, 0, 0, 0, 312.452, 342.698, 0, 0, 0, 0, 302.673, 325.428, 0, 0, 0, 0, 297.188, 308.415, 0, 0, 0, 0, 295.998, 290.861 )
+}
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 4.32355
+
+[sub_resource type="Curve2D" id=8]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 277.568, 267.696, 0, 0, 0, 0, 291.219, 222.192, 0, 0, 0, 0, 313.382, 187.033, 0, 0, 0, 0, 339.717, 154.359, 0, 0, 0, 0, 380.182, 125.779, 0, 0, 0, 0, 414.963, 107.113, 0, 0, 0, 0, 471.534, 93.4578, 0, 0, 0, 0, 547.918, 93.3974, 0, 0, 0, 0, 577.186, 100.505, 0, 0, 0, 0, 616.099, 117.948, 0, 0, 0, 0, 644.737, 137.868, 0, 0, 0, 0, 667.026, 152.674, 0, 0, 0, 0, 688.326, 177.177, 0, 0, 0, 0, 704.164, 192.989, 0, 0, 0, 0, 714.696, 213.49, 0, 0, 0, 0, 724.207, 240.316, 0, 0, 0, 0, 732.427, 269.243, 0, 0, 0, 0, 735.385, 303.535, 0, 0, 0, 0, 734.169, 347.494, 0, 0, 0, 0, 726.338, 377.582, 0, 0, 0, 0, 712.367, 412.837, 0, 0, 0, 0, 689.809, 439.909, 0, 0, 0, 0, 669.123, 464.996, 0, 0, 0, 0, 648.392, 483.297, 0, 0, 0, 0, 624.433, 500.169, 0, 0, 0, 0, 593.489, 514.886, 0, 0, 0, 0, 563.301, 521.678, 0, 0, 0, 0, 517.52, 527.2, 0, 0, 0, 0, 475.426, 527.422, 0, 0, 0, 0, 432.777, 517.387, 0, 0, 0, 0, 393.937, 501.8, 0, 0, 0, 0, 366.603, 483.269, 0, 0, 0, 0, 339.732, 464.737, 0, 0, 0, 0, 321.664, 442.962, 0, 0, 0, 0, 302.936, 416.862, 0, 0, 0, 0, 288.562, 386.061, 0, 0, 0, 0, 278.295, 351.667, 0, 0, 0, 0, 273.622, 316.358, 0, 0, 0, 0, 273.207, 280.188, 0, 0, 0, 0, 277.867, 267.283 )
+}
+
+[sub_resource type="CircleShape2D" id=9]
+radius = 25.6747
+
+[sub_resource type="Curve2D" id=10]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 227.471, 224.452, 0, 0, 0, 0, 245.484, 185.008, 0, 0, 0, 0, 264.479, 157.21, 0, 0, 0, 0, 283.443, 133.417, 0, 0, 0, 0, 311.277, 107.39, 0, 0, 0, 0, 348.359, 82.8631, 0, 0, 0, 0, 384.848, 65.2577, 0, 0, 0, 0, 412.254, 57.0886, 0, 0, 0, 0, 449.147, 48.6559, 0, 0, 0, 0, 490.361, 41.1512, 0, 0, 0, 0, 521.874, 40.521, 0, 0, 0, 0, 560.339, 47.5782, 0, 0, 0, 0, 596.954, 56.7321, 0, 0, 0, 0, 624.964, 65.2037, 0, 0, 0, 0, 642.62, 72.8458, 0, 0, 0, 0, 661.594, 82.069, 0, 0, 0, 0, 682.95, 96.3055, 0, 0, 0, 0, 698.221, 107.321, 0, 0, 0, 0, 726.259, 133.106, 0, 0, 0, 0, 753.196, 166.348, 0, 0, 0, 0, 762.959, 183.622, 0, 0, 0, 0, 771.788, 200.077, 0, 0, 0, 0, 781.275, 225.639, 0, 0, 0, 0, 790.396, 258.929, 0, 0, 0, 0, 797.525, 288.488, 0, 0, 0, 0, 799.665, 313.131, 0, 0, 0, 0, 796.47, 338.293, 0, 0, 0, 0, 790.124, 360.877, 0, 0, 0, 0, 781.678, 394.036, 0, 0, 0, 0, 771.863, 419.767, 0, 0, 0, 0, 754.381, 453.239, 0, 0, 0, 0, 726.472, 486.767, 0, 0, 0, 0, 698.705, 512.792, 0, 0, 0, 0, 662.13, 537.073, 0, 0, 0, 0, 624.282, 554.64, 0, 0, 0, 0, 597.679, 563.169, 0, 0, 0, 0, 561.502, 574.061, 0, 0, 0, 0, 522.297, 579.813, 0, 0, 0, 0, 478.364, 579.132, 0, 0, 0, 0, 449.757, 570.958, 0, 0, 0, 0, 412.635, 562.444, 0, 0, 0, 0, 384.709, 553.93, 0, 0, 0, 0, 348.226, 538.294, 0, 0, 0, 0, 310.878, 512.752, 0, 0, 0, 0, 283.713, 487.079, 0, 0, 0, 0, 270.274, 471.822, 0, 0, 0, 0, 256.553, 453.306, 0, 0, 0, 0, 247.04, 436.783, 0, 0, 0, 0, 228.345, 394.508, 0, 0, 0, 0, 219.215, 360.229, 0, 0, 0, 0, 211.5, 332.268, 0, 0, 0, 0, 211.013, 283.5, 0, 0, 0, 0, 215.641, 257.792, 0, 0, 0, 0, 227.471, 224.452 )
+}
+
+[sub_resource type="CircleShape2D" id=11]
+radius = 81.251
+
+[sub_resource type="Curve2D" id=12]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 181.585, 180.768, 0, 0, 0, 0, 204.598, 138.962, 0, 0, 0, 0, 238.001, 100.21, 0, 0, 0, 0, 272.112, 69.9806, 0, 0, 0, 0, 316.263, 39.4148, 0, 0, 0, 0, 360.376, 20.3771, 0, 0, 0, 0, 394.074, 9.62251, 0, 0, 0, 0, 438.768, -0.305269, 0, 0, 0, 0, 488.143, -10.2913, 0, 0, 0, 0, 531.414, -10.0292, 0, 0, 0, 0, 570.886, -0.323172, 0, 0, 0, 0, 616.004, 9.62897, 0, 0, 0, 0, 648.326, 19.615, 0, 0, 0, 0, 693.209, 39.3243, 0, 0, 0, 0, 737.739, 69.8245, 0, 0, 0, 0, 771.239, 100.442, 0, 0, 0, 0, 804.025, 139.887, 0, 0, 0, 0, 826.602, 179.742, 0, 0, 0, 0, 837.39, 210.156, 0, 0, 0, 0, 848.561, 250.06, 0, 0, 0, 0, 859.418, 286.841, 0, 0, 0, 0, 859.418, 336.636, 0, 0, 0, 0, 847.611, 370.003, 0, 0, 0, 0, 837.965, 410.041, 0, 0, 0, 0, 826.077, 439.761, 0, 0, 0, 0, 804.158, 479.43, 0, 0, 0, 0, 771.149, 519.922, 0, 0, 0, 0, 738.384, 549.468, 0, 0, 0, 0, 693.471, 579.52, 0, 0, 0, 0, 649.241, 600.095, 0, 0, 0, 0, 615.562, 610.004, 0, 0, 0, 0, 571.074, 620.332, 0, 0, 0, 0, 539.266, 629.237, 0, 0, 0, 0, 480.301, 629.414, 0, 0, 0, 0, 438, 619.735, 0, 0, 0, 0, 393.49, 609.905, 0, 0, 0, 0, 360.283, 599.339, 0, 0, 0, 0, 316.199, 579.49, 0, 0, 0, 0, 270.904, 549.18, 0, 0, 0, 0, 238.811, 519.264, 0, 0, 0, 0, 204.793, 480.408, 0, 0, 0, 0, 182.858, 440.405, 0, 0, 0, 0, 171.338, 409.819, 0, 0, 0, 0, 160.62, 370.62, 0, 0, 0, 0, 151.378, 339.585, 0, 0, 0, 0, 152.077, 272.544, 0, 0, 0, 0, 160.615, 237.826, 0, 0, 0, 0, 171.831, 210.028, 0, 0, 0, 0, 181.585, 180.768 )
+}
+
+[sub_resource type="CircleShape2D" id=13]
+radius = 99.5381
+
+[sub_resource type="Curve2D" id=14]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 133.685, 133.842, 0, 0, 0, 0, 146.078, 110.535, 0, 0, 0, 0, 185.092, 63.2307, 0, 0, 0, 0, 225.634, 26.8899, 0, 0, 0, 0, 278.834, -9.96508, 0, 0, 0, 0, 305.36, -21.9872, 0, 0, 0, 0, 330.841, -34.4961, 0, 0, 0, 0, 371.148, -46.5417, 0, 0, 0, 0, 466.805, -69.4407, 0, 0, 0, 0, 536.768, -70.5783, 0, 0, 0, 0, 637.446, -46.1198, 0, 0, 0, 0, 676.754, -34.1637, 0, 0, 0, 0, 730.398, -9.77982, 0, 0, 0, 0, 784.041, 26.989, 0, 0, 0, 0, 823.287, 62.2181, 0, 0, 0, 0, 862.615, 110.185, 0, 0, 0, 0, 876.385, 134.279, 0, 0, 0, 0, 889.765, 158.949, 0, 0, 0, 0, 903.42, 193.817, 0, 0, 0, 0, 927.968, 271.653, 0, 0, 0, 0, 929.389, 346.728, 0, 0, 0, 0, 903.66, 434.204, 0, 0, 0, 0, 890.11, 469.982, 0, 0, 0, 0, 862.91, 519.076, 0, 0, 0, 0, 823.424, 568.609, 0, 0, 0, 0, 783.698, 605.034, 0, 0, 0, 0, 730.235, 640.469, 0, 0, 0, 0, 703.542, 651.763, 0, 0, 0, 0, 677.874, 664.597, 0, 0, 0, 0, 637.716, 677.009, 0, 0, 0, 0, 549.642, 699.763, 0, 0, 0, 0, 463.269, 699.234, 0, 0, 0, 0, 372.221, 675.829, 0, 0, 0, 0, 332.433, 664.016, 0, 0, 0, 0, 279.478, 640.781, 0, 0, 0, 0, 225.893, 603.181, 0, 0, 0, 0, 186.43, 568.228, 0, 0, 0, 0, 145.623, 519.715, 0, 0, 0, 0, 118.889, 470.229, 0, 0, 0, 0, 106.873, 434.754, 0, 0, 0, 0, 79.6747, 353.894, 0, 0, 0, 0, 79.6725, 276.483, 0, 0, 0, 0, 106.907, 193.917, 0, 0, 0, 0, 120.626, 158.874, 0, 0, 0, 0, 133.2, 134.326 )
+}
+
+[sub_resource type="CircleShape2D" id=15]
+radius = 77.8939
+
+[sub_resource type="Curve2D" id=16]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 53.5019, 56.0526, 0, 0, 0, 0, 104.481, 0.883781, 0, 0, 0, 0, 154.526, -45.4345, 0, 0, 0, 0, 402.281, -148.892, 0, 0, 0, 0, 661.706, -140.523, 0, 0, 0, 0, 823.498, -73.5747, 0, 0, 0, 0, 864.297, -44.8222, 0, 0, 0, 0, 914.912, -0.809364, 0, 0, 0, 0, 965.286, 58.6091, 0, 0, 0, 0, 998.883, 116.097, 0, 0, 0, 0, 1016.24, 159.451, 0, 0, 0, 0, 1049.53, 248.244, 0, 0, 0, 0, 1049.05, 356.086, 0, 0, 0, 0, 1016.56, 449.043, 0, 0, 0, 0, 998.351, 494.151, 0, 0, 0, 0, 966.051, 551.151, 0, 0, 0, 0, 914.001, 610.001, 0, 0, 0, 0, 864.431, 654.048, 0, 0, 0, 0, 604.243, 756.95, 0, 0, 0, 0, 317.076, 732.851, 0, 0, 0, 0, 154.451, 651.571, 0, 0, 0, 0, 103.951, 609.217, 0, 0, 0, 0, 53.99, 552.053, 0, 0, 0, 0, 37.3115, 523.329, 0, 0, 0, 0, 19.825, 493.343, 0, 0, 0, 0, 3.10012, 450.65, 0, 0, 0, 0, -29.606, 343.975, 0, 0, 0, 0, -29.3544, 257.593, 0, 0, 0, 0, 0.815536, 159.665, 0, 0, 0, 0, 20.6706, 115.443, 0, 0, 0, 0, 53.9881, 56.6877 )
+}
+
+[sub_resource type="CircleShape2D" id=17]
+radius = 65.1125
+
+[sub_resource type="CircleShape2D" id=18]
+radius = 23.218
+
+[node name="StarMenu" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="fd" type="Sprite" parent="."]
+position = Vector2( 510, 300 )
+scale = Vector2( 3.375, 2.75 )
+texture = ExtResource( 2 )
+
+[node name="stars" type="Sprite" parent="."]
+position = Vector2( 510, 300 )
+scale = Vector2( 1.6875, 1.03125 )
+texture = ExtResource( 3 )
+
+[node name="lignes" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="Sprite" type="Sprite" parent="lignes"]
+modulate = Color( 1, 1, 1, 0.145098 )
+position = Vector2( 505, 305 )
+scale = Vector2( 2.96875, 2.96875 )
+texture = ExtResource( 4 )
+
+[node name="Sprite2" type="Sprite" parent="lignes"]
+modulate = Color( 1, 1, 1, 0.145098 )
+position = Vector2( 505, 305 )
+scale = Vector2( 4.53125, 4.21875 )
+texture = ExtResource( 4 )
+
+[node name="Sprite3" type="Sprite" parent="lignes"]
+modulate = Color( 1, 1, 1, 0.145098 )
+position = Vector2( 505, 305 )
+scale = Vector2( 5.78125, 5.46875 )
+texture = ExtResource( 4 )
+
+[node name="Sprite4" type="Sprite" parent="lignes"]
+modulate = Color( 1, 1, 1, 0.145098 )
+position = Vector2( 505, 310 )
+scale = Vector2( 7.34375, 6.875 )
+texture = ExtResource( 4 )
+
+[node name="Sprite5" type="Sprite" parent="lignes"]
+modulate = Color( 1, 1, 1, 0.145098 )
+position = Vector2( 505, 310 )
+scale = Vector2( 9.21875, 8.4375 )
+texture = ExtResource( 4 )
+
+[node name="Sprite6" type="Sprite" parent="lignes"]
+modulate = Color( 1, 1, 1, 0.145098 )
+position = Vector2( 505, 310 )
+scale = Vector2( 11.0938, 10 )
+texture = ExtResource( 4 )
+
+[node name="Sprite7" type="Sprite" parent="lignes"]
+modulate = Color( 1, 1, 1, 0.145098 )
+position = Vector2( 505, 315 )
+scale = Vector2( 13.2812, 12.0312 )
+texture = ExtResource( 4 )
+
+[node name="Sprite8" type="Sprite" parent="lignes"]
+modulate = Color( 1, 1, 1, 0.145098 )
+position = Vector2( 510, 305 )
+scale = Vector2( 16.875, 14.5312 )
+texture = ExtResource( 4 )
+
+[node name="planets" type="Node" parent="."]
+
+[node name="VulavPath" type="Path2D" parent="planets"]
+editor/display_folded = true
+visible = false
+curve = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="planets/VulavPath"]
+position = Vector2( 423.208, 353.116 )
+rotation = -1.92141
+rotate = false
+
+[node name="Vulavspr" type="Sprite" parent="planets/VulavPath/PathFollow2D"]
+position = Vector2( 0.320465, -0.210205 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+
+[node name="vulav" type="Area2D" parent="planets/VulavPath/PathFollow2D/Vulavspr"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="planets/VulavPath/PathFollow2D/Vulavspr/vulav"]
+shape = SubResource( 2 )
+
+[node name="StalorPath" type="Path2D" parent="planets"]
+editor/display_folded = true
+visible = false
+curve = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="planets/StalorPath"]
+position = Vector2( 362.339, 328.132 )
+rotate = false
+
+[node name="Stalorspr" type="Sprite" parent="planets/StalorPath/PathFollow2D"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+
+[node name="stalor" type="Area2D" parent="planets/StalorPath/PathFollow2D/Stalorspr"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="planets/StalorPath/PathFollow2D/Stalorspr/stalor"]
+position = Vector2( -0.134399, 0.0683594 )
+scale = Vector2( 2, 2 )
+shape = SubResource( 4 )
+
+[node name="ChlorozolPath" type="Path2D" parent="planets"]
+editor/display_folded = true
+visible = false
+curve = SubResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="planets/ChlorozolPath"]
+position = Vector2( 322.022, 307.49 )
+rotation = -1.41813
+rotate = false
+
+[node name="Chlorozolspr" type="Sprite" parent="planets/ChlorozolPath/PathFollow2D"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="chloro" type="Area2D" parent="planets/ChlorozolPath/PathFollow2D/Chlorozolspr"]
+position = Vector2( -28.5415, 85.9743 )
+rotation = 1.41813
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="planets/ChlorozolPath/PathFollow2D/Chlorozolspr/chloro"]
+position = Vector2( -80.5072, -41.4802 )
+scale = Vector2( 2, 2 )
+shape = SubResource( 4 )
+
+[node name="GentilisPath" type="Path2D" parent="planets"]
+editor/display_folded = true
+visible = false
+curve = SubResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="planets/GentilisPath"]
+position = Vector2( 297.059, 289.807 )
+rotation = -1.42938
+rotate = false
+
+[node name="Gentilisspr" type="Sprite" parent="planets/GentilisPath/PathFollow2D"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+
+[node name="genti" type="Area2D" parent="planets/GentilisPath/PathFollow2D/Gentilisspr"]
+position = Vector2( 14.6438, 420.799 )
+rotation = 1.42938
+scale = Vector2( 8.61786, 7.83912 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="planets/GentilisPath/PathFollow2D/Gentilisspr/genti"]
+position = Vector2( -48.4858, -5.76602 )
+shape = SubResource( 7 )
+
+[node name="HydroplanPath" type="Path2D" parent="planets"]
+editor/display_folded = true
+visible = false
+curve = SubResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="planets/HydroplanPath"]
+position = Vector2( 277.568, 267.696 )
+rotation = -1.27933
+rotate = false
+
+[node name="spr" type="Sprite" parent="planets/HydroplanPath/PathFollow2D"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="hydro" type="Area2D" parent="planets/HydroplanPath/PathFollow2D/spr"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="planets/HydroplanPath/PathFollow2D/spr/hydro"]
+position = Vector2( 0.0801697, -0.0574951 )
+rotation = 1.27933
+scale = Vector2( 2, 2 )
+shape = SubResource( 9 )
+
+[node name="Belt" type="Sprite" parent="planets"]
+position = Vector2( 506.39, 312.213 )
+scale = Vector2( 4.30893, 3.91956 )
+texture = ExtResource( 10 )
+
+[node name="CygioPath" type="Path2D" parent="planets"]
+editor/display_folded = true
+visible = false
+curve = SubResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="planets/CygioPath"]
+position = Vector2( 227.471, 224.452 )
+rotation = -1.14242
+rotate = false
+
+[node name="spr" type="Sprite" parent="planets/CygioPath/PathFollow2D"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="cygio" type="Area2D" parent="planets/CygioPath/PathFollow2D/spr"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="planets/CygioPath/PathFollow2D/spr/cygio"]
+shape = SubResource( 11 )
+
+[node name="MagnaPath" type="Path2D" parent="planets"]
+editor/display_folded = true
+visible = false
+curve = SubResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="planets/MagnaPath"]
+position = Vector2( 181.585, 180.768 )
+rotation = -1.06758
+rotate = false
+
+[node name="spr" type="Sprite" parent="planets/MagnaPath/PathFollow2D"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+
+[node name="magna" type="Area2D" parent="planets/MagnaPath/PathFollow2D/spr"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="planets/MagnaPath/PathFollow2D/spr/magna"]
+shape = SubResource( 13 )
+
+[node name="RauthurPath" type="Path2D" parent="planets"]
+editor/display_folded = true
+visible = false
+curve = SubResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="planets/RauthurPath"]
+position = Vector2( 133.685, 133.842 )
+rotation = -1.08209
+rotate = false
+
+[node name="spr" type="Sprite" parent="planets/RauthurPath/PathFollow2D"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+
+[node name="rau" type="Area2D" parent="planets/RauthurPath/PathFollow2D/spr"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="planets/RauthurPath/PathFollow2D/spr/rau"]
+shape = SubResource( 15 )
+
+[node name="BMPath" type="Path2D" parent="planets"]
+editor/display_folded = true
+visible = false
+curve = SubResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="planets/BMPath"]
+position = Vector2( 53.5019, 56.0526 )
+rotation = -0.824854
+rotate = false
+
+[node name="spr" type="Sprite" parent="planets/BMPath/PathFollow2D"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 14 )
+
+[node name="bm" type="Area2D" parent="planets/BMPath/PathFollow2D/spr"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="planets/BMPath/PathFollow2D/spr/bm"]
+shape = SubResource( 17 )
+
+[node name="Luminax" type="Sprite" parent="."]
+position = Vector2( 510, 300 )
+scale = Vector2( 2.29358, 2.20994 )
+texture = ExtResource( 15 )
+
+[node name="luminax" type="Area2D" parent="Luminax"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Luminax/luminax"]
+position = Vector2( -1.73596, 0.772156 )
+shape = SubResource( 18 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Timer2" type="Timer" parent="."]
+
+[node name="where" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 16 )
+
+[node name="point" type="Sprite" parent="."]
+position = Vector2( 33.7715, 22.5936 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 17 )
+
+[node name="InfoPlanet" type="TabContainer" parent="."]
+margin_left = 703.0
+margin_top = 292.0
+margin_right = 1027.0
+margin_bottom = 604.0
+theme = ExtResource( 18 )
+
+[node name="Planet" type="Tabs" parent="InfoPlanet"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 52.0
+margin_right = -8.0
+margin_bottom = -8.0
+
+[node name="Desc" type="Label" parent="InfoPlanet/Planet"]
+margin_right = 306.0
+margin_bottom = 250.0
+custom_fonts/font = ExtResource( 19 )
+text = "salut"
+autowrap = true
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 190.0
+margin_bottom = 609.0
+theme = ExtResource( 18 )
+
+[node name="youare" type="Label" parent="Panel"]
+margin_left = 3.0
+margin_right = 188.0
+margin_bottom = 18.0
+custom_fonts/font = ExtResource( 19 )
+text = "Vous êtes à"
+align = 1
+autowrap = true
+
+[node name="City" type="Label" parent="Panel"]
+margin_left = 71.9502
+margin_top = 10.7336
+margin_right = 113.95
+margin_bottom = 38.7336
+text = "City"
+align = 1
+
+[node name="trait" type="Label" parent="Panel"]
+margin_left = 6.30252
+margin_top = 28.3613
+margin_right = 190.303
+margin_bottom = 56.3613
+text = "-----------------------"
+align = 1
+
+[node name="Desc" type="Label" parent="Panel"]
+margin_left = 8.0
+margin_top = 47.0
+margin_right = 187.0
+margin_bottom = 420.0
+custom_fonts/font = ExtResource( 19 )
+text = "blabla"
+autowrap = true
+
+[node name="mouse" parent="." instance=ExtResource( 20 )]
+position = Vector2( -28.3015, 12.1292 )
+scale = Vector2( 3, 3 )
+[connection signal="mouse_entered" from="planets/VulavPath/PathFollow2D/Vulavspr/vulav" to="." method="_on_vulav_mouse_entered"]
+[connection signal="mouse_entered" from="planets/StalorPath/PathFollow2D/Stalorspr/stalor" to="." method="_on_stalor_mouse_entered"]
+[connection signal="mouse_entered" from="planets/ChlorozolPath/PathFollow2D/Chlorozolspr/chloro" to="." method="_on_chloro_mouse_entered"]
+[connection signal="mouse_entered" from="planets/GentilisPath/PathFollow2D/Gentilisspr/genti" to="." method="_on_genti_mouse_entered"]
+[connection signal="mouse_entered" from="planets/HydroplanPath/PathFollow2D/spr/hydro" to="." method="_on_hydro_mouse_entered"]
+[connection signal="mouse_entered" from="planets/CygioPath/PathFollow2D/spr/cygio" to="." method="_on_cygio_mouse_entered"]
+[connection signal="mouse_entered" from="planets/MagnaPath/PathFollow2D/spr/magna" to="." method="_on_magna_mouse_entered"]
+[connection signal="mouse_entered" from="planets/RauthurPath/PathFollow2D/spr/rau" to="." method="_on_rau_mouse_entered"]
+[connection signal="mouse_entered" from="planets/BMPath/PathFollow2D/spr/bm" to="." method="_on_bm_mouse_entered"]
+[connection signal="mouse_entered" from="Luminax/luminax" to="." method="_on_luminax_mouse_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]

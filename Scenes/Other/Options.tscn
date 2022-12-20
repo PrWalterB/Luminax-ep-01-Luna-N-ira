@@ -1,0 +1,465 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Other/Options.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/GUI/Theme/theme.tres" type="Theme" id=2]
+[ext_resource path="res://Languages/fr.png" type="Texture" id=3]
+[ext_resource path="res://Languages/en.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Player/mouse.tscn" type="PackedScene" id=5]
+
+[node name="Options" type="CanvasLayer"]
+layer = 0
+script = ExtResource( 1 )
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -453.208
+margin_top = -256.853
+margin_right = 455.792
+margin_bottom = 229.147
+theme = ExtResource( 2 )
+tab_align = 0
+
+[node name="General" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 52.0
+margin_right = -8.0
+margin_bottom = -8.0
+theme = ExtResource( 2 )
+
+[node name="LangueL" type="Label" parent="TabContainer/General"]
+margin_left = 23.2084
+margin_top = 14.8526
+margin_right = 95.2084
+margin_bottom = 42.8526
+text = "Langue"
+
+[node name="Barre2" type="Label" parent="TabContainer/General"]
+margin_left = 23.2084
+margin_top = 44.853
+margin_right = 359.208
+margin_bottom = 72.853
+text = "------------------------------------------"
+
+[node name="SonL" type="Label" parent="TabContainer/General"]
+margin_left = 23.2084
+margin_top = 144.853
+margin_right = 359.208
+margin_bottom = 203.853
+text = "Audio"
+
+[node name="Barre" type="Label" parent="TabContainer/General"]
+margin_left = 23.0
+margin_top = 174.853
+margin_right = 359.0
+margin_bottom = 202.853
+text = "------------------------------------------"
+
+[node name="GraphL" type="Label" parent="TabContainer/General"]
+margin_left = 433.208
+margin_top = 14.8526
+margin_right = 769.208
+margin_bottom = 73.8526
+text = "Graphismes"
+
+[node name="Barre3" type="Label" parent="TabContainer/General"]
+margin_left = 433.208
+margin_top = 44.853
+margin_right = 769.208
+margin_bottom = 72.853
+text = "------------------------------------------"
+
+[node name="ZoomL" type="Label" parent="TabContainer/General"]
+margin_left = 463.0
+margin_top = 75.0
+margin_right = 513.0
+margin_bottom = 105.0
+custom_colors/font_color = Color( 0, 0.360784, 0.341176, 1 )
+text = "Zoom"
+
+[node name="RotationL" type="Label" parent="TabContainer/General"]
+margin_left = 463.0
+margin_top = 112.853
+margin_right = 513.0
+margin_bottom = 142.853
+custom_colors/font_color = Color( 0, 0.360784, 0.341176, 1 )
+text = "Rotation"
+
+[node name="VitesseL" type="Label" parent="TabContainer/General"]
+margin_left = 463.208
+margin_top = 144.853
+margin_right = 551.208
+margin_bottom = 174.853
+custom_colors/font_color = Color( 0, 0.360784, 0.341176, 1 )
+text = "Vitesse"
+
+[node name="MusicL" type="Label" parent="TabContainer/General"]
+margin_left = 23.2084
+margin_top = 204.853
+margin_right = 103.208
+margin_bottom = 234.853
+custom_colors/font_color = Color( 0, 0.360784, 0.341176, 1 )
+text = "Musique"
+
+[node name="SonL2" type="Label" parent="TabContainer/General"]
+margin_left = 23.2084
+margin_top = 244.853
+margin_right = 73.2084
+margin_bottom = 274.853
+custom_colors/font_color = Color( 0, 0.360784, 0.341176, 1 )
+text = "Son"
+
+[node name="OptionButton" type="OptionButton" parent="TabContainer/General"]
+margin_left = 20.0
+margin_top = 74.0
+margin_right = 359.0
+margin_bottom = 118.0
+focus_mode = 0
+theme = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "Français"
+items = [ "Français", ExtResource( 3 ), false, 0, null, "English", ExtResource( 4 ), false, 1, null ]
+selected = 0
+
+[node name="Zoom" type="HSlider" parent="TabContainer/General"]
+margin_left = 563.208
+margin_top = 85.0
+margin_right = 803.208
+margin_bottom = 101.0
+min_value = 0.2
+max_value = 0.7
+step = 0.01
+value = 0.45
+ticks_on_borders = true
+
+[node name="Rotation" type="HSlider" parent="TabContainer/General"]
+margin_left = 563.208
+margin_top = 118.0
+margin_right = 803.208
+margin_bottom = 134.0
+max_value = 180.0
+step = 0.001
+ticks_on_borders = true
+
+[node name="Vitesse" type="HSlider" parent="TabContainer/General"]
+margin_left = 563.208
+margin_top = 154.853
+margin_right = 803.208
+margin_bottom = 170.853
+min_value = 0.1
+max_value = 20.0
+step = 0.01
+value = 20.0
+ticks_on_borders = true
+
+[node name="MusicbL" type="HSlider" parent="TabContainer/General"]
+margin_left = 111.848
+margin_top = 214.853
+margin_right = 351.848
+margin_bottom = 230.853
+min_value = -80.0
+max_value = 24.0
+step = 0.001
+value = -2.0
+ticks_on_borders = true
+
+[node name="SonbL" type="HSlider" parent="TabContainer/General"]
+margin_left = 113.208
+margin_top = 254.853
+margin_right = 353.208
+margin_bottom = 270.853
+min_value = -80.0
+max_value = 24.0
+step = 0.001
+value = -15.0
+ticks_on_borders = true
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/General"]
+margin_left = 463.208
+margin_top = 184.853
+margin_right = 613.208
+margin_bottom = 228.853
+text = " Plein Écran"
+
+[node name="CheckBox2" type="CheckBox" parent="TabContainer/General"]
+margin_left = 463.207
+margin_top = 227.817
+margin_right = 629.207
+margin_bottom = 271.817
+text = " Guide de Jeu"
+
+[node name="Reset2" type="CheckBox" parent="TabContainer/General"]
+margin_left = 7.09735
+margin_top = 389.817
+margin_right = 263.097
+margin_bottom = 433.817
+text = "Supprimer la Sauvegarde"
+
+[node name="Reset1" type="CheckBox" parent="TabContainer/General"]
+margin_left = 7.20691
+margin_top = 349.817
+margin_right = 263.207
+margin_bottom = 393.817
+text = "Paramètres par Défaut"
+
+[node name="Controls" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 52.0
+margin_right = -8.0
+margin_bottom = -8.0
+
+[node name="B01ui_up" type="Button" parent="TabContainer/Controls"]
+margin_left = 423.208
+margin_top = 144.853
+margin_right = 473.208
+margin_bottom = 194.853
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="B02ui_right" type="Button" parent="TabContainer/Controls"]
+margin_left = 473.208
+margin_top = 194.853
+margin_right = 523.208
+margin_bottom = 244.853
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="B03ui_left" type="Button" parent="TabContainer/Controls"]
+margin_left = 373.208
+margin_top = 194.853
+margin_right = 423.208
+margin_bottom = 244.853
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="B04ui_down" type="Button" parent="TabContainer/Controls"]
+margin_left = 423.208
+margin_top = 194.853
+margin_right = 473.208
+margin_bottom = 244.853
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="B05att01" type="Button" parent="TabContainer/Controls"]
+margin_left = 133.208
+margin_top = 104.853
+margin_right = 183.208
+margin_bottom = 154.853
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="B06att02" type="Button" parent="TabContainer/Controls"]
+margin_left = 133.208
+margin_top = 164.853
+margin_right = 183.208
+margin_bottom = 214.853
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="B07att03" type="Button" parent="TabContainer/Controls"]
+margin_left = 133.208
+margin_top = 224.853
+margin_right = 183.208
+margin_bottom = 274.853
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="B08att04" type="Button" parent="TabContainer/Controls"]
+margin_left = 133.0
+margin_top = 284.853
+margin_right = 183.0
+margin_bottom = 334.853
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="B09att05" type="Button" parent="TabContainer/Controls"]
+margin_left = 133.0
+margin_top = 344.853
+margin_right = 183.0
+margin_bottom = 394.853
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="B10selveget" type="Button" parent="TabContainer/Controls"]
+margin_left = 233.208
+margin_top = 25.0
+margin_right = 303.208
+margin_bottom = 75.0
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="B11selprogfer" type="Button" parent="TabContainer/Controls"]
+margin_left = 383.208
+margin_top = 24.853
+margin_right = 453.208
+margin_bottom = 74.853
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="B12seldoub" type="Button" parent="TabContainer/Controls"]
+margin_left = 513.208
+margin_top = 24.853
+margin_right = 583.208
+margin_bottom = 74.853
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="B13seltog" type="Button" parent="TabContainer/Controls"]
+margin_left = 673.208
+margin_top = 25.0
+margin_right = 743.208
+margin_bottom = 75.0
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="B14ui_select" type="Button" parent="TabContainer/Controls"]
+margin_left = 584.208
+margin_top = 273.853
+margin_right = 634.208
+margin_bottom = 323.853
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="B15info" type="Button" parent="TabContainer/Controls"]
+margin_left = 583.208
+margin_top = 118.0
+margin_right = 633.208
+margin_bottom = 168.0
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="B16help" type="Button" parent="TabContainer/Controls"]
+margin_left = 583.208
+margin_top = 194.853
+margin_right = 633.208
+margin_bottom = 244.853
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="ArrowsL" type="Label" parent="TabContainer/Controls"]
+margin_left = 373.208
+margin_top = 244.853
+margin_right = 523.208
+margin_bottom = 274.853
+text = "<-   \\/   ->"
+align = 1
+
+[node name="Arrows2L" type="Label" parent="TabContainer/Controls"]
+margin_left = 373.208
+margin_top = 114.853
+margin_right = 523.208
+margin_bottom = 144.853
+text = "/\\"
+align = 1
+
+[node name="AttacksL" type="Label" parent="TabContainer/Controls"]
+margin_left = 13.0
+margin_top = 115.0
+margin_right = 133.0
+margin_bottom = 365.0
+text = "Attaque 01
+
+Attaque 02
+
+Attaque 03
+
+Attaque 04
+
+Spécial"
+
+[node name="CharactersL" type="Label" parent="TabContainer/Controls"]
+margin_left = 233.208
+margin_top = 84.853
+margin_right = 773.208
+margin_bottom = 112.853
+text = "Veget         Progfer      Doubliks       Tog"
+
+[node name="InteractL" type="Label" parent="TabContainer/Controls"]
+margin_left = 586.208
+margin_top = 322.853
+margin_right = 680.208
+margin_bottom = 350.853
+text = "Interagir"
+
+[node name="HelpL" type="Label" parent="TabContainer/Controls"]
+margin_left = 583.208
+margin_top = 244.853
+margin_right = 677.208
+margin_bottom = 272.853
+text = "Aide Attaques"
+
+[node name="InfoL" type="Label" parent="TabContainer/Controls"]
+margin_left = 583.208
+margin_top = 164.853
+margin_right = 677.208
+margin_bottom = 192.853
+text = "Infos"
+
+[node name="Valider" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 324.0
+margin_top = 176.0
+margin_right = 444.0
+margin_bottom = 220.0
+focus_mode = 0
+theme = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "Valider"
+
+[node name="Annuler" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 188.0
+margin_top = 176.0
+margin_right = 308.0
+margin_bottom = 220.0
+focus_mode = 0
+theme = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "Annuler"
+
+[node name="mouse" parent="." instance=ExtResource( 5 )]
+scale = Vector2( 3, 3 )
+[connection signal="tab_changed" from="TabContainer" to="." method="_on_TabContainer_tab_changed"]
+[connection signal="item_focused" from="TabContainer/General/OptionButton" to="." method="_on_OptionButton_item_focused"]
+[connection signal="item_selected" from="TabContainer/General/OptionButton" to="." method="_on_OptionButton_item_selected"]
+[connection signal="pressed" from="TabContainer/General/OptionButton" to="." method="_on_OptionButton_pressed"]
+[connection signal="value_changed" from="TabContainer/General/Zoom" to="." method="_on_Zoom_value_changed"]
+[connection signal="value_changed" from="TabContainer/General/Rotation" to="." method="_on_Rotation_value_changed"]
+[connection signal="value_changed" from="TabContainer/General/Vitesse" to="." method="_on_Vitesse_value_changed"]
+[connection signal="value_changed" from="TabContainer/General/MusicbL" to="." method="_on_MusicbL_value_changed"]
+[connection signal="value_changed" from="TabContainer/General/SonbL" to="." method="_on_SonbL_value_changed"]
+[connection signal="pressed" from="TabContainer/General/CheckBox" to="." method="_on_CheckBox_pressed"]
+[connection signal="pressed" from="TabContainer/General/CheckBox2" to="." method="_on_CheckBox2_pressed"]
+[connection signal="pressed" from="TabContainer/General/Reset2" to="." method="_on_Reset2_pressed"]
+[connection signal="pressed" from="TabContainer/General/Reset1" to="." method="_on_Reset1_pressed"]
+[connection signal="pressed" from="TabContainer/Controls/B01ui_up" to="." method="_on_BUp_pressed"]
+[connection signal="pressed" from="TabContainer/Controls/B02ui_right" to="." method="_on_BRight_pressed"]
+[connection signal="pressed" from="TabContainer/Controls/B03ui_left" to="." method="_on_BLeft_pressed"]
+[connection signal="pressed" from="TabContainer/Controls/B04ui_down" to="." method="_on_BDown_pressed"]
+[connection signal="pressed" from="TabContainer/Controls/B05att01" to="." method="_on_BAtt1_pressed"]
+[connection signal="pressed" from="TabContainer/Controls/B06att02" to="." method="_on_BAtt2_pressed"]
+[connection signal="pressed" from="TabContainer/Controls/B07att03" to="." method="_on_BAtt3_pressed"]
+[connection signal="pressed" from="TabContainer/Controls/B08att04" to="." method="_on_BAtt4_pressed"]
+[connection signal="pressed" from="TabContainer/Controls/B09att05" to="." method="_on_BAtt5_pressed"]
+[connection signal="pressed" from="TabContainer/Controls/B10selveget" to="." method="_on_BSV_pressed"]
+[connection signal="pressed" from="TabContainer/Controls/B11selprogfer" to="." method="_on_BSP_pressed"]
+[connection signal="pressed" from="TabContainer/Controls/B12seldoub" to="." method="_on_BSD_pressed"]
+[connection signal="pressed" from="TabContainer/Controls/B13seltog" to="." method="_on_BST_pressed"]
+[connection signal="pressed" from="TabContainer/Controls/B14ui_select" to="." method="_on_BInter_pressed"]
+[connection signal="pressed" from="TabContainer/Controls/B15info" to="." method="_on_BInfo_pressed"]
+[connection signal="pressed" from="TabContainer/Controls/B16help" to="." method="_on_B16help_pressed"]
+[connection signal="pressed" from="Valider" to="." method="_on_Valider_pressed"]
+[connection signal="pressed" from="Annuler" to="." method="_on_Annuler_pressed"]

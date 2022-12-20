@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="Laison" type="Node"]
+
+[node name="Musique" type="AudioStreamPlayer" parent="."]
+
+[node name="Ambiance" type="AudioStreamPlayer" parent="."]

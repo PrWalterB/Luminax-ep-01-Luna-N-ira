@@ -1,0 +1,143 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Scripts/Other/Cinematic2.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Cinematics/Begin/back1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Cinematics/Begin/back2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Cinematics/Begin/obj0101.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Cinematics/Begin/back4.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Cinematics/Begin/back5.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Cinematics/Begin/back6.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Cinematics/Begin/back7.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Cinematics/Begin/back8.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Cinematics/Begin/back9.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Cinematics/Begin/back10.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Cinematics/Begin/back11-1.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Cinematics/Begin/back11-2.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Cinematics/Begin/back11-3.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Cinematics/Begin/back11-4.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Cinematics/Begin/back11-5.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Cinematics/Begin/back11-6.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Cinematics/Begin/back11-7.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Cinematics/Begin/back11-8.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Cinematics/Begin/back11-9.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Cinematics/Begin/back11-10.png" type="Texture" id=21]
+[ext_resource path="res://Videos/cntbg.webm" type="VideoStream" id=22]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[node name="Cinematic2" type="Node2D"]
+position = Vector2( 517.143, 304.806 )
+script = ExtResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="Black" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+scale = Vector2( 10.3407, 11.2136 )
+z_index = -10
+texture = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Background2" type="Sprite" parent="Node2D"]
+position = Vector2( 0.0462036, -0.27124 )
+scale = Vector2( 3.23274, 3.06165 )
+z_index = -10
+texture = ExtResource( 3 )
+
+[node name="Background" type="Sprite" parent="Node2D"]
+position = Vector2( -0.00155294, -0.24452 )
+scale = Vector2( 3.2321, 3.06125 )
+z_index = -10
+texture = ExtResource( 2 )
+
+[node name="Obj" type="AnimatedSprite" parent="Node2D"]
+modulate = Color( 1, 1, 1, 0.372549 )
+position = Vector2( -1.44183, -3.47632 )
+z_index = -10
+frames = SubResource( 1 )
+
+[node name="Background3" type="Sprite" parent="Node2D"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 51.6061, -46.0273 )
+scale = Vector2( 3.57159, 3.61518 )
+texture = ExtResource( 5 )
+
+[node name="Background4" type="Sprite" parent="Node2D"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 165.211, 130.62 )
+scale = Vector2( 3.57159, 3.61518 )
+texture = ExtResource( 6 )
+
+[node name="Background5" type="Sprite" parent="Node2D"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 275.276, -140.435 )
+scale = Vector2( 3.57159, 3.61518 )
+texture = ExtResource( 7 )
+
+[node name="Background6" type="Sprite" parent="Node2D"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 382.857, 125.194 )
+scale = Vector2( 3.57159, 3.61518 )
+texture = ExtResource( 8 )
+
+[node name="Background7" type="Sprite" parent="Node2D"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 382.857, -134.806 )
+scale = Vector2( 3.572, 3.615 )
+texture = ExtResource( 9 )
+
+[node name="Background8" type="Sprite" parent="Node2D"]
+visible = false
+position = Vector2( -2.16763, 0.194 )
+scale = Vector2( 3.2189, 3.04167 )
+texture = ExtResource( 10 )
+
+[node name="Background9" type="Sprite" parent="Node2D"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -2.16763, 0.194 )
+scale = Vector2( 3.2189, 3.04167 )
+texture = ExtResource( 11 )
+
+[node name="Obj2" type="AnimatedSprite" parent="Node2D"]
+position = Vector2( -4.50775, -12.649 )
+frames = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Timer2" type="Timer" parent="."]
+
+[node name="Fondu" type="Timer" parent="."]
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_left = -515.0
+margin_top = -301.0
+margin_right = 511.0
+margin_bottom = 298.0
+stream = ExtResource( 22 )
+
+[node name="Black2" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+scale = Vector2( 10.3407, 11.2136 )
+texture = ExtResource( 2 )
+[connection signal="animation_finished" from="Node2D/Obj2" to="." method="_on_Obj2_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
+[connection signal="timeout" from="Fondu" to="." method="_on_Fondu_timeout"]
+[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]

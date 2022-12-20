@@ -1,0 +1,676 @@
+[gd_scene load_steps=41 format=2]
+
+[ext_resource path="res://Scripts/Other/HelpMenu.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/GUI/Menu/fdmenu.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/GUI/Menu/sprite238_0.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/GUI/Theme/theme.tres" type="Theme" id=4]
+[ext_resource path="res://Sprites/Characters/Vegetspr/tgfacem_8.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Characters/Vegetspr/tgface_0.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Characters/Vegetspr/tgfacem_0.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/GUI/Att/attt1.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/GUI/Att/attt2.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/GUI/Att/attt3.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/GUI/Att/attt4.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/GUI/Att/attd1.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/GUI/Att/attd2.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/GUI/Att/attd3.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/GUI/Att/attd4.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/GUI/Att/attp1.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/GUI/Att/attp2.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/GUI/Att/attp3.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/GUI/Att/attp4.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/GUI/Att/attv1.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/GUI/Att/attv2.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/GUI/Att/attv3.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/GUI/Att/attv4.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Characters/Progferspr/pfacem_0.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Characters/Progferspr/pfacem_5.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Characters/Progferspr/pfacem_10.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Characters/Progferspr/pface_0.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbfacem_0.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbfacem_3.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbfacem_6.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/Characters/Doubliksspr/dbfacem_9.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/Characters/Togspr/togfacem_0.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/Characters/Togspr/togfacem_3.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/Characters/Togspr/togfacem_6.png" type="Texture" id=34]
+[ext_resource path="res://Scenes/Player/mouse.tscn" type="PackedScene" id=35]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "active",
+"speed": 5.02
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "tog",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "doubliks",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "progfer",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "veget",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "active",
+"speed": 4.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "active",
+"speed": 6.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "active",
+"speed": 7.0
+} ]
+
+[node name="HelpMenu" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="fd" type="Sprite" parent="."]
+position = Vector2( 510, 300 )
+scale = Vector2( 3.375, 2.75 )
+texture = ExtResource( 2 )
+
+[node name="stars" type="Sprite" parent="."]
+position = Vector2( 510, 300 )
+scale = Vector2( 1.6875, 1.03125 )
+texture = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Timer2" type="Timer" parent="."]
+
+[node name="InfoPlanet" type="TabContainer" parent="."]
+margin_left = 9.0
+margin_top = 2.0
+margin_right = 1016.0
+margin_bottom = 596.0
+theme = ExtResource( 4 )
+tab_align = 0
+
+[node name="Attacks" type="Tabs" parent="InfoPlanet"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 52.0
+margin_right = -8.0
+margin_bottom = -8.0
+
+[node name="Attaques" type="Node2D" parent="InfoPlanet/Attacks"]
+position = Vector2( -42.8974, -28.7682 )
+
+[node name="veget" type="Node2D" parent="InfoPlanet/Attacks/Attaques"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 54, 76 )
+scale = Vector2( 2.83708, 2.93128 )
+
+[node name="Perso" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/veget"]
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 1 )
+animation = "active"
+frame = 3
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/veget"]
+margin_left = 11.3349
+margin_top = -16.1941
+margin_right = 71.3349
+margin_bottom = 11.8059
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0.172549, 1, 0, 1 )
+text = "VEGET"
+
+[node name="Stats" type="Label" parent="InfoPlanet/Attacks/Attaques/veget"]
+margin_left = 11.0
+margin_top = -5.0
+margin_right = 102.0
+margin_bottom = 55.0
+rect_scale = Vector2( 0.3, 0.3 )
+text = "SPD: 100
+DEF: 100"
+
+[node name="ATT0" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/veget"]
+position = Vector2( 0.700001, 28.132 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "veget"
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/veget/ATT0"]
+margin_left = 20.1827
+margin_top = -17.4223
+margin_right = 142.183
+margin_bottom = 10.5777
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0.12549, 1, 0, 1 )
+text = "Boule Sigma"
+
+[node name="Name2" type="Label" parent="InfoPlanet/Attacks/Attaques/veget/ATT0"]
+margin_left = 20.8326
+margin_top = -4.50253
+margin_right = 142.833
+margin_bottom = 23.4975
+rect_scale = Vector2( 0.4, 0.4 )
+text = "Concentre de l'énergie
+Sigma en une boule, et la
+projette."
+
+[node name="ATT1" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/veget"]
+editor/display_folded = true
+position = Vector2( 0.700001, 56.244 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "veget"
+frame = 1
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/veget/ATT1"]
+margin_left = 20.1827
+margin_top = -17.4223
+margin_right = 142.183
+margin_bottom = 10.5777
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0.12549, 1, 0, 1 )
+text = "Photosynthèse"
+
+[node name="Name2" type="Label" parent="InfoPlanet/Attacks/Attaques/veget/ATT1"]
+margin_left = 20.8326
+margin_top = -4.50253
+margin_right = 142.833
+margin_bottom = 23.4975
+rect_scale = Vector2( 0.4, 0.4 )
+text = "Régénère un peu de vie
+par photosynthèse rapide."
+
+[node name="ATT2" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/veget"]
+editor/display_folded = true
+position = Vector2( 0.700001, 83.598 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "veget"
+frame = 2
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/veget/ATT2"]
+margin_left = 20.1827
+margin_top = -17.4223
+margin_right = 142.183
+margin_bottom = 10.5777
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0.12549, 1, 0, 1 )
+text = "Vol-Vie"
+
+[node name="Name2" type="Label" parent="InfoPlanet/Attacks/Attaques/veget/ATT2"]
+margin_left = 20.8326
+margin_top = -4.50253
+margin_right = 142.833
+margin_bottom = 23.4975
+rect_scale = Vector2( 0.4, 0.4 )
+text = "Aspire la vie d'un ennemi
+à l'aide de son Sigma."
+
+[node name="ATT3" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/veget"]
+editor/display_folded = true
+position = Vector2( 0.700001, 109.866 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "veget"
+frame = 3
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/veget/ATT3"]
+margin_left = 20.1827
+margin_top = -17.4223
+margin_right = 142.183
+margin_bottom = 10.5777
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0.12549, 1, 0, 1 )
+text = "Ronces Terribles"
+
+[node name="Name2" type="Label" parent="InfoPlanet/Attacks/Attaques/veget/ATT3"]
+margin_left = 20.8326
+margin_top = -4.50253
+margin_right = 142.833
+margin_bottom = 23.4975
+rect_scale = Vector2( 0.4, 0.4 )
+text = "Concentre toute sa propre
+haine en Sigma dans le sol
+afin de faire pousser des ronces"
+
+[node name="progfer" type="Node2D" parent="InfoPlanet/Attacks/Attaques"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 303.172, 76 )
+scale = Vector2( 2.83708, 2.93128 )
+
+[node name="Perso" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/progfer"]
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 3 )
+animation = "active"
+frame = 3
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/progfer"]
+margin_left = 11.3348
+margin_top = -16.1941
+margin_right = 71.3349
+margin_bottom = 11.8059
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0.921569, 1, 0, 1 )
+text = "PROGFER"
+
+[node name="Stats" type="Label" parent="InfoPlanet/Attacks/Attaques/progfer"]
+margin_left = 11.0
+margin_top = -5.0
+margin_right = 102.0
+margin_bottom = 55.0
+rect_scale = Vector2( 0.3, 0.3 )
+text = "SPD: 75
+DEF: 200"
+
+[node name="ATT4" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/progfer"]
+position = Vector2( 0.699997, 28.132 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "progfer"
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/progfer/ATT4"]
+margin_left = 20.1827
+margin_top = -17.4223
+margin_right = 142.183
+margin_bottom = 10.5777
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0.921569, 1, 0, 1 )
+text = "Agrégat Rocheux"
+
+[node name="Name2" type="Label" parent="InfoPlanet/Attacks/Attaques/progfer/ATT4"]
+margin_left = 20.8326
+margin_top = -4.50253
+margin_right = 142.833
+margin_bottom = 23.4975
+rect_scale = Vector2( 0.4, 0.4 )
+text = "Forme une pierre à partir
+de la poussière environnante
+et la projette."
+
+[node name="ATT5" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/progfer"]
+editor/display_folded = true
+position = Vector2( 0.699997, 56.244 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "progfer"
+frame = 1
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/progfer/ATT5"]
+margin_left = 20.1827
+margin_top = -17.4223
+margin_right = 142.183
+margin_bottom = 10.5777
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0.921569, 1, 0, 1 )
+text = "Bouclier de Peur"
+
+[node name="Name2" type="Label" parent="InfoPlanet/Attacks/Attaques/progfer/ATT5"]
+margin_left = 20.8326
+margin_top = -4.50253
+margin_right = 142.833
+margin_bottom = 23.4975
+rect_scale = Vector2( 0.4, 0.4 )
+text = "Se renferme au sein de sa
+carapace et encaisse les
+coups."
+
+[node name="ATT6" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/progfer"]
+editor/display_folded = true
+position = Vector2( 0.699997, 83.598 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "progfer"
+frame = 2
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/progfer/ATT6"]
+margin_left = 20.1827
+margin_top = -17.4223
+margin_right = 142.183
+margin_bottom = 10.5777
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0.921569, 1, 0, 1 )
+text = "Concentré de Peur"
+
+[node name="Name2" type="Label" parent="InfoPlanet/Attacks/Attaques/progfer/ATT6"]
+margin_left = 20.8326
+margin_top = -4.50253
+margin_right = 142.833
+margin_bottom = 23.4975
+rect_scale = Vector2( 0.4, 0.4 )
+text = "Projette sa carapace, contenant
+tout les coups encaissés jusque là.
+(le rend plus vulnérable)"
+
+[node name="ATT7" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/progfer"]
+editor/display_folded = true
+position = Vector2( 0.699997, 109.866 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "progfer"
+frame = 3
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/progfer/ATT7"]
+margin_left = 20.1827
+margin_top = -17.4223
+margin_right = 142.183
+margin_bottom = 10.5777
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0.921569, 1, 0, 1 )
+text = "Excrécat de Boue"
+
+[node name="Name2" type="Label" parent="InfoPlanet/Attacks/Attaques/progfer/ATT7"]
+margin_left = 20.8326
+margin_top = -4.50253
+margin_right = 142.833
+margin_bottom = 23.4975
+rect_scale = Vector2( 0.4, 0.4 )
+text = "Rejette de la boue gluante de ses
+pores. Coince les ennemis."
+
+[node name="doubliks" type="Node2D" parent="InfoPlanet/Attacks/Attaques"]
+editor/display_folded = true
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 580.069, 76 )
+scale = Vector2( 2.83708, 2.93128 )
+
+[node name="Perso" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/doubliks"]
+position = Vector2( -1.36369, -7.69468 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 4 )
+animation = "active"
+frame = 3
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/doubliks"]
+margin_left = 11.3348
+margin_top = -16.1941
+margin_right = 71.3349
+margin_bottom = 11.8059
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0.482353, 0.482353, 0.482353, 1 )
+text = "DOUBLIKS"
+
+[node name="Stats" type="Label" parent="InfoPlanet/Attacks/Attaques/doubliks"]
+margin_left = 11.0
+margin_top = -5.0
+margin_right = 102.0
+margin_bottom = 55.0
+rect_scale = Vector2( 0.3, 0.3 )
+text = "SPD: 100
+DEF: 70"
+
+[node name="ATT8" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/doubliks"]
+editor/display_folded = true
+position = Vector2( 0.699997, 28.132 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "doubliks"
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/doubliks/ATT8"]
+margin_left = 20.1827
+margin_top = -17.4223
+margin_right = 142.183
+margin_bottom = 10.5777
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0.482353, 0.482353, 0.482353, 1 )
+text = "Vapeur Brûlante"
+
+[node name="Name2" type="Label" parent="InfoPlanet/Attacks/Attaques/doubliks/ATT8"]
+margin_left = 20.8326
+margin_top = -4.50253
+margin_right = 142.833
+margin_bottom = 23.4975
+rect_scale = Vector2( 0.4, 0.4 )
+text = "Concentre de la vapeur
+en un point et la dirige
+(peut se stacker)"
+
+[node name="ATT9" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/doubliks"]
+editor/display_folded = true
+position = Vector2( 0.699997, 56.244 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "doubliks"
+frame = 1
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/doubliks/ATT9"]
+margin_left = 20.1827
+margin_top = -17.4223
+margin_right = 142.183
+margin_bottom = 10.5777
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0.482353, 0.482353, 0.482353, 1 )
+text = "Tornade de Folie"
+
+[node name="Name2" type="Label" parent="InfoPlanet/Attacks/Attaques/doubliks/ATT9"]
+margin_left = 20.8326
+margin_top = -4.50253
+margin_right = 142.833
+margin_bottom = 23.4975
+rect_scale = Vector2( 0.4, 0.4 )
+text = "Projette une tornade
+destructrice dans la direction
+choisie."
+
+[node name="ATT10" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/doubliks"]
+editor/display_folded = true
+position = Vector2( 0.699997, 83.598 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "doubliks"
+frame = 2
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/doubliks/ATT10"]
+margin_left = 20.1827
+margin_top = -17.4223
+margin_right = 142.183
+margin_bottom = 10.5777
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0.482353, 0.482353, 0.482353, 1 )
+text = "Geyser Précis"
+
+[node name="Name2" type="Label" parent="InfoPlanet/Attacks/Attaques/doubliks/ATT10"]
+margin_left = 20.8326
+margin_top = -4.50253
+margin_right = 142.833
+margin_bottom = 23.4975
+rect_scale = Vector2( 0.4, 0.4 )
+text = "Ouvre la terre et en fait sortir
+un jet d'eau brûlante coupant 
+comme une lame."
+
+[node name="ATT11" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/doubliks"]
+editor/display_folded = true
+position = Vector2( 0.699997, 109.866 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "doubliks"
+frame = 3
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/doubliks/ATT11"]
+margin_left = 20.1827
+margin_top = -17.4223
+margin_right = 142.183
+margin_bottom = 10.5777
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0.482353, 0.482353, 0.482353, 1 )
+text = "Terminaison Thermique"
+
+[node name="Name2" type="Label" parent="InfoPlanet/Attacks/Attaques/doubliks/ATT11"]
+margin_left = 20.8326
+margin_top = -4.50253
+margin_right = 142.833
+margin_bottom = 23.4975
+rect_scale = Vector2( 0.4, 0.4 )
+text = "Puissante attaque au corps à 
+corps constituant en une lame 
+de vapeur contrôlée par le Sigma."
+
+[node name="tog" type="Node2D" parent="InfoPlanet/Attacks/Attaques"]
+editor/display_folded = true
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 834.742, 76 )
+scale = Vector2( 2.83708, 2.93128 )
+
+[node name="Perso" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/tog"]
+position = Vector2( -2.98222, 1.97203 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 5 )
+animation = "active"
+frame = 3
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/tog"]
+margin_left = 11.3348
+margin_top = -16.1941
+margin_right = 71.3349
+margin_bottom = 11.8059
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0, 0.647059, 1, 1 )
+text = "TOG"
+
+[node name="Stats" type="Label" parent="InfoPlanet/Attacks/Attaques/tog"]
+margin_left = 11.0
+margin_top = -5.0
+margin_right = 102.0
+margin_bottom = 55.0
+rect_scale = Vector2( 0.3, 0.3 )
+text = "SPD: 150
+DEF: 80"
+
+[node name="ATT12" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/tog"]
+editor/display_folded = true
+position = Vector2( 0.699997, 28.132 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "tog"
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/tog/ATT12"]
+margin_left = 20.1827
+margin_top = -17.4223
+margin_right = 142.183
+margin_bottom = 10.5777
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0, 0.647059, 1, 1 )
+text = "Bulle de Cavitation"
+
+[node name="Name2" type="Label" parent="InfoPlanet/Attacks/Attaques/tog/ATT12"]
+margin_left = 20.8326
+margin_top = -4.50253
+margin_right = 142.833
+margin_bottom = 23.4975
+rect_scale = Vector2( 0.4, 0.4 )
+text = "Crée une bulle de vapeur
+par cavitation, implose 
+violemment sur un ennemi."
+
+[node name="ATT13" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/tog"]
+editor/display_folded = true
+position = Vector2( 0.699997, 56.244 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "tog"
+frame = 1
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/tog/ATT13"]
+margin_left = 20.1827
+margin_top = -17.4223
+margin_right = 142.183
+margin_bottom = 10.5777
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0, 0.647059, 1, 1 )
+text = "Jetpack"
+
+[node name="Name2" type="Label" parent="InfoPlanet/Attacks/Attaques/tog/ATT13"]
+margin_left = 20.8326
+margin_top = -4.50253
+margin_right = 142.833
+margin_bottom = 23.4975
+rect_scale = Vector2( 0.4, 0.4 )
+text = "Permet de se survoler le sol
+rapidement, en rejettant de
+l'énergie Sigma."
+
+[node name="ATT14" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/tog"]
+editor/display_folded = true
+position = Vector2( 0.699997, 83.598 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "tog"
+frame = 2
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/tog/ATT14"]
+margin_left = 20.1827
+margin_top = -17.4223
+margin_right = 142.183
+margin_bottom = 10.5777
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0, 0.647059, 1, 1 )
+text = "Bombe à Retardement"
+
+[node name="Name2" type="Label" parent="InfoPlanet/Attacks/Attaques/tog/ATT14"]
+margin_left = 20.8326
+margin_top = -4.50253
+margin_right = 142.833
+margin_bottom = 23.4975
+rect_scale = Vector2( 0.4, 0.4 )
+text = "Place une bombe bourrée
+d'énergie Sigma, explosant
+après quelques secondes."
+
+[node name="ATT15" type="AnimatedSprite" parent="InfoPlanet/Attacks/Attaques/tog"]
+editor/display_folded = true
+position = Vector2( 0.699997, 109.866 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "tog"
+frame = 3
+
+[node name="Name" type="Label" parent="InfoPlanet/Attacks/Attaques/tog/ATT15"]
+margin_left = 20.1827
+margin_top = -17.4223
+margin_right = 142.183
+margin_bottom = 10.5777
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color = Color( 0, 0.647059, 1, 1 )
+text = "Mine de la Croisée"
+
+[node name="Name2" type="Label" parent="InfoPlanet/Attacks/Attaques/tog/ATT15"]
+margin_left = 20.8326
+margin_top = -4.50253
+margin_right = 142.833
+margin_bottom = 23.4975
+rect_scale = Vector2( 0.4, 0.4 )
+text = "Mine explosant en croix
+au contact avec un ennemi."
+
+[node name="mouse" parent="." instance=ExtResource( 35 )]
+position = Vector2( -28.3015, 12.1292 )
+scale = Vector2( 3, 3 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]

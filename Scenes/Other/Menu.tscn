@@ -1,0 +1,453 @@
+[gd_scene load_steps=95 format=2]
+
+[ext_resource path="res://Scripts/Other/Menu.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/GUI/Menu/fdmenu.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/GUI/Menu/sprite238_0.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Other/invisble.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/GUI/Menu/sprite239_0.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/GUI/Menu/sprite240_2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/GUI/Theme/nonestyleboxtexture.tres" type="StyleBox" id=7]
+[ext_resource path="res://Sprites/GUI/Menu/tuto_0.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/GUI/Menu/tuto_1.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/GUI/Menu/tuto_2.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/GUI/Menu/tuto_3.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/GUI/Menu/tuto_4.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/GUI/Menu/tuto_5.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/GUI/Menu/tuto_6.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/GUI/Menu/tuto_7.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/GUI/Menu/tuto_8.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/GUI/Menu/tuto_9.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/GUI/Menu/tuto_10.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/GUI/Menu/tuto_11.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/GUI/Menu/tuto_storm.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/GUI/Menu/tuto_toggle0.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/GUI/Menu/tuto_toggle1.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/GUI/Menu/tuto_toggle3.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/GUI/Menu/sprite242_0.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/GUI/Menu/sprite242_1.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/GUI/Menu/sprite242_2.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/GUI/Menu/sprite242_3.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/GUI/Menu/sprite242_4.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/GUI/Menu/sprite242_5.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/GUI/Menu/sprite242_6.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/GUI/Menu/sprite242_7.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/GUI/Menu/sprite242_8.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/GUI/Menu/sprite242_9.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/GUI/Menu/sprite242_10.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/GUI/Menu/sprite242_11.png" type="Texture" id=35]
+[ext_resource path="res://Sprites/GUI/Menu/sprite242_12.png" type="Texture" id=36]
+[ext_resource path="res://Sprites/GUI/Menu/sprite242_13.png" type="Texture" id=37]
+[ext_resource path="res://Sprites/GUI/Menu/sprite242_14.png" type="Texture" id=38]
+[ext_resource path="res://Sprites/GUI/Menu/sprite243_0.png" type="Texture" id=39]
+[ext_resource path="res://Sprites/GUI/Menu/sprite244_0.png" type="Texture" id=40]
+[ext_resource path="res://Sprites/GUI/Menu/sprite244_1.png" type="Texture" id=41]
+[ext_resource path="res://Sprites/GUI/Menu/sprite244_2.png" type="Texture" id=42]
+[ext_resource path="res://Sprites/GUI/Menu/sprite244_3.png" type="Texture" id=43]
+[ext_resource path="res://Sprites/GUI/Menu/sprite244_4.png" type="Texture" id=44]
+[ext_resource path="res://Sprites/GUI/Menu/sprite244_5.png" type="Texture" id=45]
+[ext_resource path="res://Sprites/GUI/Menu/sprite244_6.png" type="Texture" id=46]
+[ext_resource path="res://Sprites/GUI/Menu/sprite244_7.png" type="Texture" id=47]
+[ext_resource path="res://Sprites/GUI/Menu/sprite244_8.png" type="Texture" id=48]
+[ext_resource path="res://Sprites/GUI/Menu/sprite244_9.png" type="Texture" id=49]
+[ext_resource path="res://Sprites/GUI/Menu/sprite244_10.png" type="Texture" id=50]
+[ext_resource path="res://Sprites/GUI/Menu/sprite244_11.png" type="Texture" id=51]
+[ext_resource path="res://Sprites/GUI/Menu/chat.png" type="Texture" id=52]
+[ext_resource path="res://Sprites/GUI/Menu/sprite246_0.png" type="Texture" id=53]
+[ext_resource path="res://Sprites/GUI/Menu/chat_0.png" type="Texture" id=54]
+[ext_resource path="res://Sprites/GUI/Menu/chat_1.png" type="Texture" id=55]
+[ext_resource path="res://Sprites/GUI/Menu/chat_2.png" type="Texture" id=56]
+[ext_resource path="res://Sprites/GUI/Menu/option_0.png" type="Texture" id=57]
+[ext_resource path="res://Sprites/GUI/Menu/sprite249_0.png" type="Texture" id=58]
+[ext_resource path="res://Sprites/GUI/Menu/option_1.png" type="Texture" id=59]
+[ext_resource path="res://Sprites/GUI/Menu/option_2.png" type="Texture" id=60]
+[ext_resource path="res://Sprites/GUI/Menu/success_0.png" type="Texture" id=61]
+[ext_resource path="res://Sprites/GUI/Menu/success_3.png" type="Texture" id=62]
+[ext_resource path="res://Sprites/GUI/Menu/success_1.png" type="Texture" id=63]
+[ext_resource path="res://Sprites/GUI/Menu/success_2.png" type="Texture" id=64]
+[ext_resource path="res://Sprites/GUI/Menu/rss_0.png" type="Texture" id=65]
+[ext_resource path="res://Sprites/GUI/Menu/rss_5.png" type="Texture" id=66]
+[ext_resource path="res://Sprites/GUI/Menu/rss_1.png" type="Texture" id=67]
+[ext_resource path="res://Sprites/GUI/Menu/rss_2.png" type="Texture" id=68]
+[ext_resource path="res://Sprites/GUI/Menu/rss_3.png" type="Texture" id=69]
+[ext_resource path="res://Sprites/GUI/Menu/rss_4.png" type="Texture" id=70]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_0.png" type="Texture" id=71]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_1.png" type="Texture" id=72]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_2.png" type="Texture" id=73]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_3.png" type="Texture" id=74]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_4.png" type="Texture" id=75]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_5.png" type="Texture" id=76]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_6.png" type="Texture" id=77]
+[ext_resource path="res://Sprites/GUI/Menu/licence_0.png" type="Texture" id=78]
+[ext_resource path="res://Sprites/GUI/Menu/licence_3.png" type="Texture" id=79]
+[ext_resource path="res://Sprites/GUI/Menu/licence_1.png" type="Texture" id=80]
+[ext_resource path="res://Sprites/GUI/Menu/sprite237_0.png" type="Texture" id=81]
+[ext_resource path="res://Sprites/GUI/Menu/sprite241_0.png" type="Texture" id=82]
+[ext_resource path="res://Scenes/Player/mouse.tscn" type="PackedScene" id=83]
+[ext_resource path="res://Musiques/Luminax.wav" type="AudioStream" id=84]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "storm",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "storm2",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "default",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "storm",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "toggle",
+"speed": 15.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "default",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 39 ) ],
+"loop": true,
+"name": "storm",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ) ],
+"loop": true,
+"name": "toggle",
+"speed": 15.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 52 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 53 ) ],
+"loop": true,
+"name": "storm",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 54 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 56 ) ],
+"loop": true,
+"name": "toggle",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 57 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 58 ) ],
+"loop": true,
+"name": "storm",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 59 ), ExtResource( 60 ) ],
+"loop": true,
+"name": "toggle",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 61 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 62 ) ],
+"loop": true,
+"name": "storm",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 63 ), ExtResource( 64 ) ],
+"loop": true,
+"name": "toggle",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 65 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 66 ) ],
+"loop": true,
+"name": "storm",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ) ],
+"loop": true,
+"name": "toggle",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 78 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 79 ) ],
+"loop": true,
+"name": "storm",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 80 ) ],
+"loop": true,
+"name": "toggle",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 81 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 82 ) ],
+"loop": true,
+"name": "storm",
+"speed": 5.0
+} ]
+
+[node name="Menu" type="CanvasLayer"]
+layer = 0
+script = ExtResource( 1 )
+
+[node name="fd" type="Sprite" parent="."]
+position = Vector2( 512.637, 303.265 )
+scale = Vector2( 3.40804, 2.82571 )
+texture = ExtResource( 2 )
+
+[node name="stars" type="Sprite" parent="."]
+position = Vector2( 650, 580 )
+scale = Vector2( 3.84375, 3.25 )
+texture = ExtResource( 3 )
+
+[node name="storm" type="AnimatedSprite" parent="."]
+position = Vector2( 509, 310 )
+scale = Vector2( 3.50625, 2.25 )
+frames = SubResource( 1 )
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Tuto" type="Button" parent="Node"]
+margin_left = 416.0
+margin_top = 303.0
+margin_right = 582.0
+margin_bottom = 331.0
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 7 )
+custom_styles/focus = ExtResource( 7 )
+custom_styles/disabled = ExtResource( 7 )
+custom_styles/normal = ExtResource( 7 )
+
+[node name="Play" type="Button" parent="Node"]
+margin_left = 370.0
+margin_top = 240.0
+margin_right = 630.0
+margin_bottom = 303.0
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 7 )
+custom_styles/focus = ExtResource( 7 )
+custom_styles/disabled = ExtResource( 7 )
+custom_styles/normal = ExtResource( 7 )
+
+[node name="Tutospr" type="AnimatedSprite" parent="Node"]
+position = Vector2( 498.655, 315.529 )
+scale = Vector2( 2.38893, 2.15739 )
+frames = SubResource( 2 )
+frame = 6
+playing = true
+
+[node name="Playspr" type="AnimatedSprite" parent="Node"]
+position = Vector2( 500, 290 )
+scale = Vector2( 2.38893, 2.15739 )
+frames = SubResource( 3 )
+frame = 12
+playing = true
+
+[node name="Node2" type="Node" parent="."]
+
+[node name="868" type="Button" parent="Node2"]
+margin_left = 230.261
+margin_top = 519.201
+margin_right = 290.262
+margin_bottom = 579.201
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 7 )
+custom_styles/focus = ExtResource( 7 )
+custom_styles/disabled = ExtResource( 7 )
+custom_styles/normal = ExtResource( 7 )
+
+[node name="huit" type="AnimatedSprite" parent="Node2"]
+position = Vector2( 260.037, 549.245 )
+scale = Vector2( 2.5, 2.5 )
+frames = SubResource( 4 )
+playing = true
+
+[node name="Node3" type="Node" parent="."]
+
+[node name="options" type="Button" parent="Node3"]
+margin_left = 20.0
+margin_top = 520.0
+margin_right = 80.0
+margin_bottom = 580.0
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 7 )
+custom_styles/focus = ExtResource( 7 )
+custom_styles/disabled = ExtResource( 7 )
+custom_styles/normal = ExtResource( 7 )
+
+[node name="optionsspt" type="AnimatedSprite" parent="Node3"]
+position = Vector2( 50, 550 )
+scale = Vector2( 2.5, 2.5 )
+frames = SubResource( 5 )
+playing = true
+
+[node name="Node4" type="Node" parent="."]
+
+[node name="suCC" type="Button" parent="Node4"]
+margin_left = 89.2946
+margin_top = 520.0
+margin_right = 149.295
+margin_bottom = 580.0
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 7 )
+custom_styles/focus = ExtResource( 7 )
+custom_styles/disabled = ExtResource( 7 )
+custom_styles/normal = ExtResource( 7 )
+
+[node name="succspt" type="AnimatedSprite" parent="Node4"]
+position = Vector2( 119.586, 550 )
+scale = Vector2( 2.5, 2.5 )
+frames = SubResource( 6 )
+playing = true
+
+[node name="Node5" type="Node" parent="."]
+
+[node name="RSS" type="Button" parent="Node5"]
+margin_left = 159.482
+margin_top = 519.245
+margin_right = 219.483
+margin_bottom = 579.245
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 7 )
+custom_styles/focus = ExtResource( 7 )
+custom_styles/disabled = ExtResource( 7 )
+custom_styles/normal = ExtResource( 7 )
+
+[node name="rssspt" type="AnimatedSprite" parent="Node5"]
+position = Vector2( 189.774, 549.245 )
+scale = Vector2( 2.5, 2.5 )
+frames = SubResource( 7 )
+playing = true
+
+[node name="ex" type="AnimatedSprite" parent="Node5"]
+visible = false
+position = Vector2( 215.309, 524.529 )
+scale = Vector2( 3, 2 )
+frames = SubResource( 8 )
+playing = true
+
+[node name="Node6" type="Node" parent="."]
+
+[node name="Credit" type="Button" parent="Node6"]
+margin_left = 937.81
+margin_top = 519.112
+margin_right = 997.811
+margin_bottom = 579.112
+custom_styles/hover = ExtResource( 7 )
+custom_styles/pressed = ExtResource( 7 )
+custom_styles/focus = ExtResource( 7 )
+custom_styles/disabled = ExtResource( 7 )
+custom_styles/normal = ExtResource( 7 )
+
+[node name="credspt" type="AnimatedSprite" parent="Node6"]
+position = Vector2( 967.563, 549.2 )
+scale = Vector2( 2.5, 2.5 )
+frames = SubResource( 9 )
+playing = true
+
+[node name="starsturn" type="Timer" parent="."]
+
+[node name="stormturn" type="Timer" parent="."]
+
+[node name="title" type="AnimatedSprite" parent="."]
+position = Vector2( 500, 157.5 )
+scale = Vector2( 3.51562, 3.82813 )
+frames = SubResource( 10 )
+
+[node name="mouse" parent="." instance=ExtResource( 83 )]
+position = Vector2( 70, 35 )
+scale = Vector2( 3, 3 )
+
+[node name="LuminaxMainTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 84 )
+autoplay = true
+
+[node name="Storm" type="AudioStreamPlayer" parent="."]
+[connection signal="mouse_entered" from="Node/Tuto" to="." method="_on_Tuto_mouse_entered"]
+[connection signal="mouse_exited" from="Node/Tuto" to="." method="_on_Tuto_mouse_exited"]
+[connection signal="pressed" from="Node/Tuto" to="." method="_on_Tuto_pressed"]
+[connection signal="mouse_entered" from="Node/Play" to="." method="_on_Play_mouse_entered"]
+[connection signal="mouse_exited" from="Node/Play" to="." method="_on_Play_mouse_exited"]
+[connection signal="pressed" from="Node/Play" to="." method="_on_Play_pressed"]
+[connection signal="mouse_entered" from="Node2/868" to="." method="_on_868_mouse_entered"]
+[connection signal="mouse_exited" from="Node2/868" to="." method="_on_868_mouse_exited"]
+[connection signal="pressed" from="Node2/868" to="." method="_on_868_pressed"]
+[connection signal="mouse_entered" from="Node3/options" to="." method="_on_options_mouse_entered"]
+[connection signal="mouse_exited" from="Node3/options" to="." method="_on_options_mouse_exited"]
+[connection signal="pressed" from="Node3/options" to="." method="_on_options_pressed"]
+[connection signal="mouse_entered" from="Node4/suCC" to="." method="_on_suCC_mouse_entered"]
+[connection signal="mouse_exited" from="Node4/suCC" to="." method="_on_suCC_mouse_exited"]
+[connection signal="pressed" from="Node4/suCC" to="." method="_on_suCC_pressed"]
+[connection signal="mouse_entered" from="Node5/RSS" to="." method="_on_RSS_mouse_entered"]
+[connection signal="mouse_exited" from="Node5/RSS" to="." method="_on_RSS_mouse_exited"]
+[connection signal="pressed" from="Node5/RSS" to="." method="_on_RSS_pressed"]
+[connection signal="mouse_entered" from="Node6/Credit" to="." method="_on_Credit_mouse_entered"]
+[connection signal="mouse_exited" from="Node6/Credit" to="." method="_on_Credit_mouse_exited"]
+[connection signal="pressed" from="Node6/Credit" to="." method="_on_Credit_pressed"]
+[connection signal="timeout" from="starsturn" to="." method="_on_starsturn_timeout"]
+[connection signal="timeout" from="stormturn" to="." method="_on_stormturn_timeout"]
+[connection signal="finished" from="LuminaxMainTheme" to="." method="_on_AudioStreamPlayer_finished"]

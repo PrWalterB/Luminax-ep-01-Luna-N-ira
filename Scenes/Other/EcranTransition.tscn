@@ -1,0 +1,96 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Scripts/Other/EcranTransition.gd" type="Script" id=1]
+[ext_resource path="res://Backgrounds/sprite156_0.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/Squarewave.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_0.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_2.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_3.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_4.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_5.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_6.png" type="Texture" id=10]
+[ext_resource path="res://Fonts/defaut.tres" type="DynamicFont" id=11]
+[ext_resource path="res://Sprites/GUI/loading_0.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/GUI/loading_1.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/GUI/loading_2.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/GUI/loading_3.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/GUI/loading_4.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/GUI/loading_5.png" type="Texture" id=17]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=3]
+size = 69
+font_data = ExtResource( 3 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[node name="EcranTransition" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 514.838, 297.071 )
+scale = Vector2( 3.36807, 2.76228 )
+texture = ExtResource( 2 )
+
+[node name="astuce" type="Label" parent="."]
+margin_left = 40.0
+margin_top = 545.0
+margin_right = 1003.0
+margin_bottom = 598.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 1, 0.976471, 1 )
+text = "ASTUCE:"
+autowrap = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 27.4329, 553.019 )
+scale = Vector2( 2.46303, 0.969514 )
+frames = SubResource( 2 )
+frame = 6
+playing = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 427.45
+margin_top = 171.137
+margin_right = 603.45
+margin_bottom = 199.137
+custom_fonts/font = ExtResource( 11 )
+custom_colors/font_color = Color( 0, 1, 0.976471, 1 )
+text = "En direction de..."
+
+[node name="Nextmap" type="Label" parent="."]
+margin_left = 5.0
+margin_top = 193.0
+margin_right = 1026.0
+margin_bottom = 279.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 1, 0.976471, 1 )
+text = "Map"
+align = 1
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 508.174, 284.518 )
+frames = SubResource( 4 )
+frame = 1
+playing = true
+
+[node name="Timer" type="Timer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

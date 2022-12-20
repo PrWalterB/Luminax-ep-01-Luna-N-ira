@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/GUI/Theme/theme.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/Other/rss_reader.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Cinematics/Begin/back1.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Player/mouse.tscn" type="PackedScene" id=4]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="RSSReader" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="RSSReader"]
+margin_left = 22.0
+margin_top = 29.0
+margin_right = 1001.0
+margin_bottom = 576.0
+
+[node name="OpenButton" type="Button" parent="RSSReader"]
+margin_left = 372.532
+margin_top = 35.2403
+margin_right = 490.532
+margin_bottom = 83.2403
+text = "Quitter"
+
+[node name="ItemList" type="ItemList" parent="RSSReader"]
+margin_left = 41.0
+margin_top = 94.0
+margin_right = 496.0
+margin_bottom = 532.0
+
+[node name="HTTPRequest" type="HTTPRequest" parent="RSSReader"]
+
+[node name="DescriptionField" type="TextEdit" parent="RSSReader"]
+margin_left = 513.0
+margin_top = 45.0
+margin_right = 973.0
+margin_bottom = 328.0
+readonly = true
+wrap_enabled = true
+
+[node name="LinkButton" type="LinkButton" parent="RSSReader"]
+margin_left = 34.0
+margin_top = 551.947
+margin_right = 990.0
+margin_bottom = 576.947
+
+[node name="Label" type="Label" parent="RSSReader"]
+margin_left = 44.7179
+margin_top = 46.2278
+margin_right = 179.718
+margin_bottom = 74.2278
+text = "Nouveautées"
+
+[node name="Sprite" type="Sprite" parent="RSSReader"]
+position = Vector2( 741.931, 437.959 )
+scale = Vector2( 1.4411, 0.783348 )
+texture = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="RSSReader"]
+margin_left = 512.0
+margin_top = 341.708
+margin_right = 972.0
+margin_bottom = 530.708
+stretch_mode = 1
+
+[node name="mouse" parent="." instance=ExtResource( 4 )]
+scale = Vector2( 3, 3 )
+[connection signal="pressed" from="RSSReader/OpenButton" to="RSSReader" method="_on_OpenButton_pressed"]
+[connection signal="item_selected" from="RSSReader/ItemList" to="RSSReader" method="_on_ItemList_item_selected"]
+[connection signal="pressed" from="RSSReader/LinkButton" to="RSSReader" method="_on_LinkButton_pressed"]

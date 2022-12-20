@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Other/PlVar.gd" type="Script" id=1]
+[ext_resource path="res://Sons/Play_Menu.wav" type="AudioStream" id=2]
+[ext_resource path="res://Sons/Clic_1.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sons/chiant.wav" type="AudioStream" id=4]
+
+[node name="PlVar" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="TimerMenu" type="Timer" parent="."]
+
+[node name="Musique" type="AudioStreamPlayer" parent="."]
+volume_db = -0.341
+autoplay = true
+
+[node name="Ambiance" type="AudioStreamPlayer" parent="."]
+volume_db = -0.341
+autoplay = true
+
+[node name="TransLoop" type="Timer" parent="."]
+
+[node name="Play" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+
+[node name="Clic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="CasseLesCouilles" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = 10.0
+
+[node name="Timer2" type="Timer" parent="."]
+
+[node name="Defi" type="Timer" parent="."]
+wait_time = 4096.0
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="CLC" type="Timer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="TimerMenu" to="." method="_on_TimerMenu_timeout"]
+[connection signal="finished" from="Musique" to="." method="_on_AudioStreamPlayer_finished"]
+[connection signal="finished" from="Ambiance" to="." method="_on_Ambiance_finished"]
+[connection signal="timeout" from="TransLoop" to="." method="_on_TransLoop_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
+[connection signal="timeout" from="Defi" to="." method="_on_Defi_timeout"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+[connection signal="timeout" from="CLC" to="." method="_on_CLC_timeout"]

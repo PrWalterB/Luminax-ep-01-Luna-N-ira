@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/Other/Bryce.gd" type="Script" id=1]
+[ext_resource path="res://Backgrounds/sprite156_0.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Player/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sprites/Other/brycelarkin.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/GUI/Theme/theme.tres" type="Theme" id=5]
+[ext_resource path="res://Sprites/Cinematics/linuxflash.webm" type="VideoStream" id=6]
+[ext_resource path="res://Scenes/Player/GUICanvas.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Player/mouse.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sons/flash.wav" type="AudioStream" id=9]
+
+[node name="Bryce" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="fd" type="Sprite" parent="."]
+position = Vector2( 505.305, 293.596 )
+scale = Vector2( 4.20809, 4.0791 )
+texture = ExtResource( 2 )
+
+[node name="player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 501, 306 )
+
+[node name="larkin" type="Sprite" parent="."]
+position = Vector2( 326.183, 365.227 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 327.131
+margin_top = 186.276
+margin_right = 721.131
+margin_bottom = 307.276
+theme = ExtResource( 5 )
+text = "Imagine jouer en hardcore à Luminax,
+presque gagner, et d'un coup...
+
+Bryce Larkin."
+align = 2
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_left = 270.407
+margin_top = 170.047
+margin_right = 310.407
+margin_bottom = 210.047
+rect_scale = Vector2( 11.6, 6.8 )
+stream = ExtResource( 6 )
+autoplay = true
+
+[node name="Sprite" type="Sprite" parent="VideoPlayer"]
+position = Vector2( 21.7153, -11.5796 )
+scale = Vector2( 0.170642, 0.147059 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="VideoPlayer"]
+position = Vector2( 20.4128, 52.8571 )
+scale = Vector2( 0.170642, 0.147059 )
+texture = ExtResource( 2 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 7 )]
+
+[node name="mouse" parent="CanvasLayer" instance=ExtResource( 8 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = 20.0
+autoplay = true
+[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]

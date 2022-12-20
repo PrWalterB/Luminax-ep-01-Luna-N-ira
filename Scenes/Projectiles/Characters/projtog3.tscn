@@ -1,0 +1,63 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Scripts/Projectiles/Characters/projtog3.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite401_0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite401_3.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite402_0.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite402_3.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite402_6.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite402_9.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite402_12.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite402_15.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite402_18.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite402_21.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite402_24.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite402_27.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite402_30.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite402_33.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite403_0.png" type="Texture" id=16]
+[ext_resource path="res://Sons/Explo1.wav" type="AudioStream" id=17]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.5
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "explode",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "soon",
+"speed": 10.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 74.1657
+
+[node name="projtog3" type="Area2D"]
+position = Vector2( -0.0961342, 0.293663 )
+collision_layer = 16
+collision_mask = 19
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="particlespr" type="AnimatedSprite" parent="."]
+position = Vector2( 0.40514, -0.405882 )
+z_index = -1
+frames = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.228714, -0.23032 )
+shape = SubResource( 2 )
+
+[node name="Son" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 17 )
+[connection signal="area_entered" from="." to="." method="_on_projtog3_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_projdoub3_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

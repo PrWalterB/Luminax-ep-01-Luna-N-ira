@@ -1,0 +1,63 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scripts/Projectiles/Characters/protog2.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt02/sprite387_1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt02/sprite387_3.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt02/sprite387_5.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt02/sprite387_6.png" type="Texture" id=5]
+[ext_resource path="res://Sons/jetpack.wav" type="AudioStream" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 4.72017
+
+[sub_resource type="StreamTexture" id=3]
+flags = 4
+load_path = "res://.import/image.axd.png-c6dfa6ae2764dc24b10c5e93f25bdcf4.stex"
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 5.2863
+
+[node name="protog2" type="KinematicBody2D"]
+z_index = -1
+collision_layer = 8
+collision_mask = 3
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -0.566961, -0.566963 )
+frames = SubResource( 1 )
+
+[node name="veg" type="CollisionShape2D" parent="."]
+position = Vector2( -1.90735e-06, 0.0809937 )
+shape = SubResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( -0.0256521, 0.0206091 )
+scale = Vector2( 0.0636516, 0.0621445 )
+texture = SubResource( 3 )
+color = Color( 0, 1, 0.976471, 1 )
+energy = 1.04
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="boulpos" type="Position2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 4 )
+
+[node name="Son" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

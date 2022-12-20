@@ -1,0 +1,62 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scripts/Projectiles/Characters/projtog4.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt04/attt040.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt04/attt041.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt04/attt042.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt04/attt043.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt04/attt044.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt04/attt045.png" type="Texture" id=7]
+[ext_resource path="res://Sons/Explo2.wav" type="AudioStream" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.5
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "explode",
+"speed": 20.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 67.8683, 12.7461 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 11.1176, 62.7326 )
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 5.28968
+
+[node name="projtog4" type="Area2D"]
+position = Vector2( -0.0961342, 0.293663 )
+collision_layer = 16
+collision_mask = 19
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="particlespr" type="AnimatedSprite" parent="."]
+position = Vector2( 0.40514, -0.405882 )
+z_index = -1
+frames = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.228714, -0.23032 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1.67248 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+shape = SubResource( 4 )
+
+[node name="Son" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+[connection signal="area_entered" from="." to="." method="_on_projtog4_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_projdoub3_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

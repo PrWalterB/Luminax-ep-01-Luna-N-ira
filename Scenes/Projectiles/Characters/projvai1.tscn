@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/Projectiles/Characters/projvai1.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Projectiles/Vaisseau/base.png" type="Texture" id=2]
+[ext_resource path="res://Sons/proj_vai_begin.wav" type="AudioStream" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7.72364, 0.309024 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 7.98076, 0.52862 )
+
+[node name="projveg1" type="KinematicBody2D"]
+collision_layer = 8
+collision_mask = 34
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 8.14708, -0.145484 )
+frames = SubResource( 1 )
+
+[node name="veg" type="CollisionShape2D" parent="."]
+position = Vector2( 8.2272, 0.333241 )
+shape = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="boulpos" type="Position2D" parent="."]
+position = Vector2( 0.0417964, 0.0117511 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 8.15436, 0.368558 )
+shape = SubResource( 3 )
+
+[node name="Son" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

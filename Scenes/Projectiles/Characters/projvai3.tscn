@@ -1,0 +1,82 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scripts/Projectiles/Characters/projvai3.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Projectiles/Vaisseau/miss.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite402_33.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite402_30.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite402_0.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite402_24.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt03/sprite402_27.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Other/image.axd.png" type="Texture" id=8]
+[ext_resource path="res://Sons/Explo4.wav" type="AudioStream" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "explode",
+"speed": 7.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 3.77755
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 3.07701
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 27.6199
+
+[node name="projveg1" type="KinematicBody2D"]
+collision_layer = 8
+collision_mask = 34
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 2.02171, -0.472991 )
+rotation = 1.5708
+frames = SubResource( 1 )
+playing = true
+
+[node name="veg" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0.0267747, 0.056822 )
+shape = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="boulpos" type="Position2D" parent="."]
+position = Vector2( 0.0417964, 0.0117511 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.462745, 1, 0.984314, 0.427451 )
+self_modulate = Color( 0.388235, 0.984314, 1, 0.705882 )
+position = Vector2( 3.52592, 0.0221295 )
+scale = Vector2( 0.0541861, 0.0519766 )
+texture = ExtResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource( 3 )
+
+[node name="explode" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource( 4 )
+disabled = true
+
+[node name="active" type="Timer" parent="."]
+
+[node name="Son" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 9 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="active" to="." method="_on_active_timeout"]

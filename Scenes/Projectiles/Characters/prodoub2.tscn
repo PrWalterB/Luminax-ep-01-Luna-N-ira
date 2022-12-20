@@ -1,0 +1,68 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Scripts/Projectiles/Characters/prodoub2.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Projectiles/Doubliks/attd02/sprite381_0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Projectiles/Doubliks/attd02/sprite381_2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Projectiles/Doubliks/attd02/sprite381_4.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Projectiles/Doubliks/attd02/sprite381_6.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Projectiles/Doubliks/attd02/sprite381_8.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Projectiles/Doubliks/attd02/sprite381_10.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Projectiles/Doubliks/attd02/sprite382_0.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Projectiles/Doubliks/attd02/sprite382_2.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Projectiles/Doubliks/attd02/sprite382_4.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Projectiles/Doubliks/attd02/sprite382_6.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Projectiles/Doubliks/attd02/sprite382_8.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Projectiles/Doubliks/attd02/sprite382_10.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Projectiles/Doubliks/attd02/sprite383_0.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Projectiles/Doubliks/attd02/sprite383_2.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Projectiles/Doubliks/attd02/sprite383_4.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Projectiles/Doubliks/attd02/sprite383_6.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Projectiles/Doubliks/attd02/sprite383_8.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Projectiles/Doubliks/attd02/sprite383_10.png" type="Texture" id=19]
+[ext_resource path="res://Sons/tornado.wav" type="AudioStream" id=20]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "send",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "explode",
+"speed": 10.0
+} ]
+
+[node name="projdoub2" type="KinematicBody2D"]
+collision_layer = 8
+collision_mask = 3
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "send"
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="boulpos" type="Position2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -6.79912, 18.6726, -3.86904, 23.8002, 1.38068, 23.556, 3.9445, 18.6726, 7.11875, 12.202, 9.07214, 8.05105, 7.11875, 4.38845, -9.11876, 4.38845, -11.0721, 7.56271, -9.97337, 12.202 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( -12.1302, 7.5971, -11.0021, 12.0468, -4.48417, 24.1426, 1.28167, 24.3306, 2.15908, 23.4532, 9.67974, 8.16115, 7.54889, 3.83677, -9.12191, 3.71143 )
+
+[node name="Son" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 20 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

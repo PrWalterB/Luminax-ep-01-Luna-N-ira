@@ -1,0 +1,82 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Scripts/Entities/waspsoldier.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Mobs/WaspSoldier/wasp_soldier_0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Mobs/WaspSoldier/wasp_soldier_1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Mobs/WaspSoldier/wasp_soldier_2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Mobs/WaspSoldier/wasp_soldier_3.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Mobs/WaspSoldier/wasp_soldier_4.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Mobs/WaspSoldier/wasp_soldier_shoot.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Mobs/WaspSoldier/wasp_soldier_deg_0.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Mobs/WaspSoldier/wasp_soldier_deg_1.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Mobs/WaspSoldier/wasp_soldier_deg_2.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Mobs/WaspSoldier/wasp_soldier_deg_3.png" type="Texture" id=11]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "att",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "shoot",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "deg",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 355.251, 10 )
+
+[node name="soldier" type="KinematicBody2D"]
+scale = Vector2( 0.8, 0.8 )
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 1 )
+
+[node name="solpos" type="Position2D" parent="."]
+position = Vector2( -85.8025, 7.96105 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "deg"
+playing = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -48.3034, 21.5724, -42.6289, 7.21933, -27.2745, -1.2924, -20.2648, -0.958603, -15.7586, 7.88692, -9.24962, 5.38347, -8.91582, -6.2993, 1.26487, -8.80275, 4.9366, -6.79999, 15.2003, -19.5779, 8.81123, -25.1513, 17.2394, -32.628, 33.0083, -36.4342, 50.2724, -28.142, 54.9627, -9.57964, 49.5166, 30.2999, 21.9697, 54.778, -16.7503, 58.2828, 16.1283, 46.0994, 36.1559, 20.3973, 36.4756, 12.9208, 34.7273, -2.11421, 19.3427, -1.53146, 18.0606, -12.8368, 14.331, -12.6037, 9.08627, 0.333347, 8.96972, 11.7553, 1.74361, 5.22845, 3.49186, 21.3124, -4.13553, 16.3465, -7.93006, 8.72496, -17.6037, 14.4359, -18.4196, 18.049, -24.5967, 20.9627, -32.6149, 12.7717 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2( -337.597, 53.0875 )
+shape = SubResource( 2 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( -15.9275, 57.4966 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Hit" type="Timer" parent="."]
+
+[node name="Death" type="Timer" parent="."]
+
+[node name="SoundHit" type="AudioStreamPlayer2D" parent="."]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Hit" to="." method="_on_Hit_timeout"]
+[connection signal="timeout" from="Death" to="." method="_on_Death_timeout"]

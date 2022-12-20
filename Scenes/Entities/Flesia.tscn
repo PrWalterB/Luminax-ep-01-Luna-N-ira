@@ -1,0 +1,159 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://Scripts/Entities/Flesia.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Mobs/Fler/socle.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Mobs/Fler/socle_die.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Mobs/Fler/tige.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Mobs/Fler/tige_die.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/Entities/Petales.gd" type="Script" id=6]
+[ext_resource path="res://Sprites/Mobs/Fler/petales.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Mobs/Fler/petales_dam.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Mobs/Fler/petales_die_0.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Mobs/Fler/petales_die_1.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Mobs/Fler/petales_die_2.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Mobs/Fler/pistils_0.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Mobs/Fler/pistils_1.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Mobs/Fler/pistils_2.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Mobs/Fler/pistils_die.png" type="Texture" id=15]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "die",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "die",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "dam",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "die",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "die",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 4.57369
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 10.2363
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 17.8405
+
+[sub_resource type="CircleShape2D" id=8]
+radius = 432.285
+
+[node name="Flesia" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Socle" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+
+[node name="walls" type="StaticBody2D" parent="Socle"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Socle/walls"]
+polygon = PoolVector2Array( -7.69194, 1.52587, -5.8073, -2.15368, -1.49954, -3.94857, 1.10306, -3.94857, 6.75698, 0.000202179, 7.92367, 2.15408, 5.85954, 7.09005, -0.332859, 7.9875, -5.26883, 7.0003, -7.78169, 3.85923 )
+disabled = true
+
+[node name="Tige" type="AnimatedSprite" parent="."]
+position = Vector2( -1.12682, -1.11457 )
+frames = SubResource( 2 )
+offset = Vector2( 32.6356, 0.0446329 )
+
+[node name="soldier" type="KinematicBody2D" parent="."]
+collision_layer = 3
+collision_mask = 4
+script = ExtResource( 6 )
+
+[node name="Petales" type="AnimatedSprite" parent="soldier"]
+frames = SubResource( 3 )
+
+[node name="Pistils" type="AnimatedSprite" parent="soldier"]
+frames = SubResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soldier"]
+shape = SubResource( 5 )
+
+[node name="Area2D" type="Area2D" parent="soldier"]
+collision_layer = 32
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soldier/Area2D"]
+visible = false
+shape = SubResource( 6 )
+
+[node name="SoundAtt" type="AudioStreamPlayer2D" parent="soldier/Area2D"]
+
+[node name="cosmicgoo" type="Area2D" parent="soldier"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soldier/cosmicgoo"]
+visible = false
+shape = SubResource( 7 )
+
+[node name="SoundHit" type="AudioStreamPlayer2D" parent="soldier"]
+
+[node name="vision" type="Area2D" parent="."]
+collision_layer = 17
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="vision"]
+visible = false
+shape = SubResource( 8 )
+
+[node name="TURN" type="Timer" parent="."]
+
+[node name="HIT" type="Timer" parent="."]
+
+[node name="ATT" type="Timer" parent="."]
+[connection signal="animation_finished" from="soldier/Petales" to="soldier" method="_on_Petales_animation_finished"]
+[connection signal="body_entered" from="soldier/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="soldier/Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="area_entered" from="soldier/cosmicgoo" to="soldier" method="_on_cosmicgoo_area_entered"]
+[connection signal="area_exited" from="soldier/cosmicgoo" to="soldier" method="_on_cosmicgoo_area_exited"]
+[connection signal="body_entered" from="vision" to="." method="_on_vision_body_entered"]
+[connection signal="body_exited" from="vision" to="." method="_on_vision_body_exited"]
+[connection signal="timeout" from="TURN" to="." method="_on_TURN_timeout"]
+[connection signal="timeout" from="HIT" to="." method="_on_HIT_timeout"]
+[connection signal="timeout" from="ATT" to="." method="_on_ATT_timeout"]

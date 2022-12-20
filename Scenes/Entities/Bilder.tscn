@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Entities/Bilder.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Mobs/Bilder/bilder_0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Mobs/Bilder/bilder_1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Mobs/Gneu/gneu_0.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Mobs/Gneu/gneu_1.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Mobs/Gneu/gneu_2.png" type="Texture" id=6]
+[ext_resource path="res://Sons/gnonmarch.wav" type="AudioStream" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "0",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "1",
+"speed": 15.0
+} ]
+
+[node name="Bilder" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "1"
+frame = 1
+playing = true
+
+[node name="Moove" type="Timer" parent="."]
+
+[node name="Destroy" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+max_distance = 200.0
+attenuation = 0.757858
+[connection signal="timeout" from="Moove" to="." method="_on_Moove_timeout"]
+[connection signal="timeout" from="Destroy" to="." method="_on_Destroy_timeout"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_AudioStreamPlayer2D_finished"]

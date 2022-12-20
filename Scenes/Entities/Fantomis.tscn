@@ -1,0 +1,68 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Scripts/Entities/Fantomis.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Mobs/Fantomis/elec_0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Mobs/Fantomis/elec_1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Mobs/Fantomis/elec_2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Mobs/Fantomis/elec_3.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Mobs/Fantomis/rock_0.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Mobs/Fantomis/rock_1.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Mobs/Fantomis/tree_0.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Mobs/Fantomis/tree_1.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Mobs/Fantomis/water_0.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Mobs/Fantomis/water_1.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Mobs/Fantomis/water_2.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Mobs/Fantomis/fire_0.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Mobs/Fantomis/fire_3.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Mobs/Fantomis/fire_1.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Mobs/Fantomis/fire_2.png" type="Texture" id=16]
+[ext_resource path="res://Scenes/Maps/dialogpiq.tscn" type="PackedScene" id=17]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "elec",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "rock",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "tree",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "water",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "irony",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "fire",
+"speed": 8.0
+} ]
+
+[node name="Fantomis" type="Node2D"]
+z_index = 10
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "irony"
+frame = 1
+playing = true
+
+[node name="0001374" parent="." instance=ExtResource( 17 )]
+scale = Vector2( 0.406337, 1.02823 )
+
+[node name="Timer" type="Timer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

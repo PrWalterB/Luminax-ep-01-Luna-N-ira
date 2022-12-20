@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scripts/Entities/NSMissile.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nsarm1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nsarm2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nsmissile.png.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nsmissile_dam.png.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/Entities/missoldier.gd" type="Script" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "dam",
+"speed": 5.0
+} ]
+
+[node name="NSMissile" type="Node2D"]
+rotation = -1.03128
+script = ExtResource( 1 )
+
+[node name="arm1" type="Sprite" parent="."]
+position = Vector2( 0.242752, 0.130695 )
+rotation = -0.538749
+texture = ExtResource( 2 )
+offset = Vector2( -28.789, -0.633974 )
+
+[node name="arm2" type="Sprite" parent="arm1"]
+position = Vector2( -57.0498, -0.0638418 )
+rotation = 0.975913
+texture = ExtResource( 3 )
+offset = Vector2( -21.1235, -0.0470886 )
+
+[node name="missy" type="AnimatedSprite" parent="arm1/arm2"]
+position = Vector2( -42.2083, -0.0428162 )
+rotation = 3.58504
+scale = Vector2( -1, -1 )
+frames = SubResource( 1 )
+
+[node name="Position2D" type="Position2D" parent="arm1/arm2/missy"]
+position = Vector2( -12.5411, -0.220955 )
+
+[node name="soldier" type="KinematicBody2D" parent="arm1/arm2/missy"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="arm1/arm2/missy/soldier"]
+polygon = PoolVector2Array( -13.7447, -3.76178, -8.25298, -7.9269, 8.69183, -7.95056, 13.9244, -6.43433, 4.60091, -0.488762, 13.7699, 6.48031, 8.70547, 8.12982, -8.26903, 8.11202, -13.4347, 4.01485 )
+
+[node name="Position2D2" type="Position2D" parent="arm1/arm2/missy/soldier"]
+position = Vector2( -0.210091, 0.0401993 )
+
+[node name="Hit" type="Timer" parent="arm1/arm2/missy/soldier"]
+
+[node name="Death" type="Timer" parent="arm1/arm2/missy/soldier"]
+
+[node name="SoundHit" type="AudioStreamPlayer2D" parent="arm1/arm2/missy/soldier"]
+
+[node name="Bouge" type="Timer" parent="."]
+
+[node name="Mov" type="Timer" parent="."]
+
+[node name="ATT" type="Timer" parent="."]
+[connection signal="timeout" from="arm1/arm2/missy/soldier/Hit" to="arm1/arm2/missy/soldier" method="_on_Hit_timeout"]
+[connection signal="timeout" from="arm1/arm2/missy/soldier/Death" to="arm1/arm2/missy/soldier" method="_on_Death_timeout"]
+[connection signal="timeout" from="Bouge" to="." method="_on_Bouge_timeout"]
+[connection signal="timeout" from="Mov" to="." method="_on_Mov_timeout"]
+[connection signal="timeout" from="ATT" to="." method="_on_ATT_timeout"]

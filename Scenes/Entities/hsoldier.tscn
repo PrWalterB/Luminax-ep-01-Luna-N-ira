@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Entities/hsoldier.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Mobs/Hvaisseau/hvaisseau.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Mobs/Hvaisseau/hvaisseau_bouclier.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "shield",
+"speed": 5.0
+} ]
+
+[node name="hsoldier" type="KinematicBody2D"]
+collision_mask = 0
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 11.1616, -35.3645, 21.6605, -23.4673, 25.0069, -19.9309, 27.5062, -15.5232, 30.0543, -2.33289, 30.2042, 3.81258, 27.2064, 17.1528, 25.0396, 20.9758, 20.4972, 26.3416, 11.3563, 36.6965, 6.61355, 39.1129, -8.89138, 32.3982, -23.2975, 18.8467, -27.3264, 13.2307, -29.0356, 5.05095, -28.7907, -3.81623, -26.9013, -12.3183, -22.9337, -17.9864, -16.0996, -24.9405, -8.54221, -30.8919, 5.06116, -37.977, 7.13946, -37.8826 )
+disabled = true
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 28.524, 0.506504 )
+
+[node name="cible" type="Position2D" parent="."]
+position = Vector2( 67.4503, 0.599556 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

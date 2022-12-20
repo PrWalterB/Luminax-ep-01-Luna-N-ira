@@ -1,0 +1,408 @@
+[gd_scene load_steps=44 format=2]
+
+[ext_resource path="res://Scripts/Entities/NightmareSoldier.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nssoclepince.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nsarmp1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nsarmp2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nsbasepince.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nspince.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nsbase_0.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nsbase_1.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nsbase_2.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nsbase_3.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nsbase_4.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nsbase_5.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nsbase_6.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nsneck.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nswideneck.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nswideneckcir.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nslongneck.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nslongneckycir.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nslongneckcir.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nsminineck.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nseye.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nseyedam.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/laser.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/MEGALASER.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/MEGALASER_1.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/MEGALASER_2.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/MEGALASER_3.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/MEGALASER_4.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/MEGALASER_5.png" type="Texture" id=29]
+[ext_resource path="res://Scripts/Entities/eyesoldier.gd" type="Script" id=30]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nsmaskup.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nsmaskdown.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nsneckfront.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/Mobs/NightmareSoldier/nssocle.png" type="Texture" id=34]
+[ext_resource path="res://Scenes/Entities/NSMissile.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Sons/Descend_Tunnmar.wav" type="AudioStream" id=36]
+[ext_resource path="res://Sons/vvvvvv.wav" type="AudioStream" id=37]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 21 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ) ],
+"loop": true,
+"name": "dam",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "LASER",
+"speed": 30.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 783.418, 5.61884 )
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 9.24357
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 463.909
+
+[node name="NightmareSoldier" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Pince2" type="Node2D" parent="."]
+position = Vector2( 49.5682, 188.468 )
+rotation = -0.427487
+
+[node name="Base" type="Sprite" parent="Pince2"]
+position = Vector2( -2.09848, 0.699493 )
+texture = ExtResource( 2 )
+
+[node name="arm1" type="Sprite" parent="Pince2/Base"]
+position = Vector2( -3.85762, -0.0743408 )
+rotation = 0.804751
+texture = ExtResource( 3 )
+offset = Vector2( -44.5913, 0.0743408 )
+
+[node name="arm2" type="Sprite" parent="Pince2/Base/arm1"]
+position = Vector2( -88.3986, 0.0997314 )
+rotation = -0.232769
+texture = ExtResource( 4 )
+offset = Vector2( -37.157, -0.544876 )
+
+[node name="basepince" type="Sprite" parent="Pince2/Base/arm1/arm2"]
+position = Vector2( -77.2997, -0.0895081 )
+rotation = -0.070172
+texture = ExtResource( 5 )
+offset = Vector2( -2.01343, -0.0783997 )
+
+[node name="pince1" type="Sprite" parent="Pince2/Base/arm1/arm2/basepince"]
+position = Vector2( -0.610573, -11.0885 )
+rotation = 1.50195
+texture = ExtResource( 6 )
+offset = Vector2( -7.97477, 2.26645 )
+
+[node name="pince2" type="Sprite" parent="Pince2/Base/arm1/arm2/basepince"]
+position = Vector2( -0.733253, 10.9948 )
+rotation = -1.20405
+scale = Vector2( 1, -1 )
+texture = ExtResource( 6 )
+offset = Vector2( -7.97477, 2.26645 )
+
+[node name="Position2D" type="Position2D" parent="Pince2/Base/arm1/arm2/basepince"]
+position = Vector2( -11.2996, 0.0194855 )
+
+[node name="base" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -1.55515 )
+frames = SubResource( 1 )
+frame = 6
+playing = true
+
+[node name="Neck" type="Node2D" parent="."]
+position = Vector2( -0.586845, -0.880257 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="neck" type="Sprite" parent="Neck"]
+position = Vector2( 0.0213013, 58.4931 )
+texture = ExtResource( 14 )
+
+[node name="WideNeck" type="Node2D" parent="Neck"]
+position = Vector2( -16.6002, 52.3685 )
+rotation = -0.196295
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="wideneck" type="Sprite" parent="Neck/WideNeck"]
+position = Vector2( -0.169582, 0.269316 )
+texture = ExtResource( 15 )
+offset = Vector2( -40.8604, 1.51815 )
+
+[node name="wideneckcir" type="Sprite" parent="Neck/WideNeck"]
+position = Vector2( -39.6336, 1.74949 )
+texture = ExtResource( 16 )
+
+[node name="LongNeck" type="Node2D" parent="Neck/WideNeck"]
+position = Vector2( -74.1247, 1.66996 )
+rotation = 0.00644799
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="longneck" type="Sprite" parent="Neck/WideNeck/LongNeck"]
+position = Vector2( -0.164124, 0.502594 )
+texture = ExtResource( 17 )
+offset = Vector2( -26.4939, -0.502594 )
+
+[node name="longneckycir" type="Sprite" parent="Neck/WideNeck/LongNeck"]
+position = Vector2( -0.0848999, 0.300735 )
+texture = ExtResource( 18 )
+offset = Vector2( -24.8206, -0.552307 )
+
+[node name="longneckcir" type="Sprite" parent="Neck/WideNeck/LongNeck"]
+position = Vector2( -26.4739, -0.389328 )
+texture = ExtResource( 19 )
+
+[node name="Head" type="Node2D" parent="Neck/WideNeck/LongNeck"]
+position = Vector2( -54.0157, 1.57114 )
+rotation = -2.43974
+scale = Vector2( -1, -1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="minineck" type="Sprite" parent="Neck/WideNeck/LongNeck/Head"]
+position = Vector2( 0.0921936, -0.0342255 )
+rotation = -0.0334386
+texture = ExtResource( 20 )
+offset = Vector2( -11.9836, 0.0342255 )
+
+[node name="eye" type="AnimatedSprite" parent="Neck/WideNeck/LongNeck/Head"]
+position = Vector2( -29.9007, 1.29009 )
+frames = SubResource( 2 )
+
+[node name="MEGALASER" type="Area2D" parent="Neck/WideNeck/LongNeck/Head/eye"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -84.9657, -0.660889 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Neck/WideNeck/LongNeck/Head/eye/MEGALASER"]
+position = Vector2( 79.273, 0.0311752 )
+scale = Vector2( 100, 0.7 )
+frames = SubResource( 3 )
+playing = true
+offset = Vector2( -15.9993, 0.0442123 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neck/WideNeck/LongNeck/Head/eye/MEGALASER"]
+visible = false
+position = Vector2( -703.833, -0.106628 )
+shape = SubResource( 4 )
+disabled = true
+
+[node name="soldier" type="KinematicBody2D" parent="Neck/WideNeck/LongNeck/Head/eye"]
+script = ExtResource( 30 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Neck/WideNeck/LongNeck/Head/eye/soldier"]
+shape = SubResource( 5 )
+
+[node name="Hit" type="Timer" parent="Neck/WideNeck/LongNeck/Head/eye/soldier"]
+
+[node name="maskup" type="Sprite" parent="Neck/WideNeck/LongNeck/Head"]
+position = Vector2( -15.3479, 0.454015 )
+texture = ExtResource( 31 )
+offset = Vector2( -11.4997, 2.51489 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="walls" type="StaticBody2D" parent="Neck/WideNeck/LongNeck/Head/maskup"]
+editor/display_folded = true
+collision_mask = 13
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Neck/WideNeck/LongNeck/Head/maskup/walls"]
+polygon = PoolVector2Array( -24.1587, 1.02625, -23.6443, -17.7281, -22.1098, -22.6316, -4.86896, -20.2803, -6.92924, -5.49811, -8.25795, 0.442337 )
+
+[node name="maskdown" type="Sprite" parent="Neck/WideNeck/LongNeck/Head"]
+position = Vector2( -15.1861, 0.461937 )
+texture = ExtResource( 32 )
+offset = Vector2( -11.531, 2.38273 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="walls" type="StaticBody2D" parent="Neck/WideNeck/LongNeck/Head/maskdown"]
+collision_mask = 13
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Neck/WideNeck/LongNeck/Head/maskdown/walls"]
+polygon = PoolVector2Array( -24.3253, -1.53197, -24.3583, 8.20965, -23.1795, 16.4767, -19.1718, 22.9854, -14.0688, 27.6764, -11.2661, 20.0264, -7.39874, 7.90139, -7.40776, -0.5662 )
+
+[node name="neckfront" type="Sprite" parent="."]
+position = Vector2( -0.586845, 57.6412 )
+texture = ExtResource( 33 )
+
+[node name="Missiles" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( -26.192, -130.136 )
+
+[node name="Base" type="Sprite" parent="Missiles"]
+position = Vector2( -3.27042, 0.754715 )
+texture = ExtResource( 34 )
+
+[node name="NSMissile" parent="Missiles" instance=ExtResource( 35 )]
+position = Vector2( -15.314, 20.0592 )
+
+[node name="NSMissile2" parent="Missiles" instance=ExtResource( 35 )]
+position = Vector2( -18.5417, 14.7777 )
+
+[node name="NSMissile3" parent="Missiles" instance=ExtResource( 35 )]
+position = Vector2( -20.037, 7.84479 )
+
+[node name="NSMissile4" parent="Missiles" instance=ExtResource( 35 )]
+position = Vector2( -20.3089, -1.12718 )
+
+[node name="NSMissile5" parent="Missiles" instance=ExtResource( 35 )]
+position = Vector2( -19.1352, -9.92978 )
+
+[node name="NSMissile6" parent="Missiles" instance=ExtResource( 35 )]
+position = Vector2( -17.3746, -15.7982 )
+
+[node name="NSMissile7" parent="Missiles" instance=ExtResource( 35 )]
+position = Vector2( -14.0609, -18.8107 )
+
+[node name="NSMissile8" parent="Missiles" instance=ExtResource( 35 )]
+position = Vector2( -10.0543, 21.1124 )
+
+[node name="NSMissile9" parent="Missiles" instance=ExtResource( 35 )]
+position = Vector2( -7.33549, 14.1009 )
+
+[node name="NSMissile10" parent="Missiles" instance=ExtResource( 35 )]
+position = Vector2( -6.04765, 7.23237 )
+
+[node name="NSMissile11" parent="Missiles" instance=ExtResource( 35 )]
+position = Vector2( -6.33385, -5.50296 )
+
+[node name="NSMissile12" parent="Missiles" instance=ExtResource( 35 )]
+position = Vector2( -6.19075, -13.3731 )
+
+[node name="NSMissile13" parent="Missiles" instance=ExtResource( 35 )]
+position = Vector2( -9.19572, -19.9554 )
+
+[node name="NSMissile14" parent="Missiles" instance=ExtResource( 35 )]
+position = Vector2( -2.26697, 21.0146 )
+
+[node name="NSMissile15" parent="Missiles" instance=ExtResource( 35 )]
+position = Vector2( 1.64928, 16.0439 )
+
+[node name="NSMissile16" parent="Missiles" instance=ExtResource( 35 )]
+position = Vector2( 4.51115, 6.10271 )
+
+[node name="NSMissile17" parent="Missiles" instance=ExtResource( 35 )]
+position = Vector2( 5.11365, -3.6879 )
+
+[node name="NSMissile18" parent="Missiles" instance=ExtResource( 35 )]
+position = Vector2( 1.7999, -11.671 )
+
+[node name="NSMissile19" parent="Missiles" instance=ExtResource( 35 )]
+position = Vector2( -2.11635, -20.2566 )
+
+[node name="Pince1" type="Node2D" parent="."]
+position = Vector2( 47.0465, 206.481 )
+
+[node name="Base" type="Sprite" parent="Pince1"]
+position = Vector2( -2.09848, 0.699493 )
+texture = ExtResource( 2 )
+
+[node name="arm1" type="Sprite" parent="Pince1/Base"]
+position = Vector2( -3.85762, -0.0743408 )
+rotation = 0.668636
+texture = ExtResource( 3 )
+offset = Vector2( -44.5913, 0.0743408 )
+
+[node name="arm2" type="Sprite" parent="Pince1/Base/arm1"]
+position = Vector2( -88.3986, 0.0997314 )
+rotation = -0.305564
+texture = ExtResource( 4 )
+offset = Vector2( -37.157, -0.544876 )
+
+[node name="basepince" type="Sprite" parent="Pince1/Base/arm1/arm2"]
+position = Vector2( -77.2997, -0.0895081 )
+rotation = 0.459303
+texture = ExtResource( 5 )
+offset = Vector2( -2.01343, -0.0783997 )
+
+[node name="pince1" type="Sprite" parent="Pince1/Base/arm1/arm2/basepince"]
+position = Vector2( -0.610573, -11.0885 )
+rotation = 0.705709
+texture = ExtResource( 6 )
+offset = Vector2( -7.97477, 2.26645 )
+
+[node name="pince2" type="Sprite" parent="Pince1/Base/arm1/arm2/basepince"]
+position = Vector2( -0.733253, 10.9948 )
+rotation = -0.578993
+scale = Vector2( 1, -1 )
+texture = ExtResource( 6 )
+offset = Vector2( -7.97477, 2.26645 )
+
+[node name="Position2D" type="Position2D" parent="Pince1/Base/arm1/arm2/basepince"]
+position = Vector2( -10.8754, -0.0326385 )
+
+[node name="walls" type="StaticBody2D" parent="."]
+visible = false
+collision_mask = 41
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls"]
+position = Vector2( 423.75, -27.6779 )
+shape = SubResource( 6 )
+
+[node name="Bouge" type="Timer" parent="."]
+
+[node name="Mov" type="Timer" parent="."]
+
+[node name="GO" type="Timer" parent="."]
+
+[node name="TRANS" type="Timer" parent="."]
+
+[node name="ATT1" type="Timer" parent="."]
+
+[node name="ATT2" type="Timer" parent="."]
+
+[node name="toupeter" type="Timer" parent="."]
+
+[node name="BOSSEND" type="Timer" parent="."]
+
+[node name="Head" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( -17.1567, 49.8333 )
+stream = ExtResource( 36 )
+stream_paused = true
+
+[node name="sMEGALASER" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( -17.1567, 49.8333 )
+stream = ExtResource( 37 )
+autoplay = true
+stream_paused = true
+[connection signal="body_entered" from="Neck/WideNeck/LongNeck/Head/eye/MEGALASER" to="." method="_on_MEGALASER_body_entered"]
+[connection signal="timeout" from="Neck/WideNeck/LongNeck/Head/eye/soldier/Hit" to="Neck/WideNeck/LongNeck/Head/eye/soldier" method="_on_Hit_timeout"]
+[connection signal="timeout" from="Bouge" to="." method="_on_Bouge_timeout"]
+[connection signal="timeout" from="Mov" to="." method="_on_Mov_timeout"]
+[connection signal="timeout" from="GO" to="." method="_on_GO_timeout"]
+[connection signal="timeout" from="TRANS" to="." method="_on_TRANS_timeout"]
+[connection signal="timeout" from="ATT1" to="." method="_on_ATT1_timeout"]
+[connection signal="timeout" from="ATT2" to="." method="_on_ATT2_timeout"]
+[connection signal="timeout" from="toupeter" to="." method="_on_toupeter_timeout"]
+[connection signal="timeout" from="BOSSEND" to="." method="_on_BOSSEND_timeout"]
+[connection signal="finished" from="sMEGALASER" to="." method="_on_sMEGALASER_finished"]

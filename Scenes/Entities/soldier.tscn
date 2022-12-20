@@ -1,0 +1,154 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://Scripts/Entities/navigator.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Entities/soldier.gd" type="Script" id=2]
+[ext_resource path="res://Sprites/Other/shadow_0.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Mobs/Soldier/solback_0.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Mobs/Soldier/sprite212_0.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Mobs/Soldier/sprite212_1.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Mobs/Soldier/sprite212_2.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Mobs/Soldier/sprite212_3.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Mobs/Soldier/solbackm_0.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Mobs/Soldier/solbackm_4.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Mobs/Soldier/solbackm_8.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Mobs/Soldier/solbackm_12.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Mobs/Soldier/solfacem_0.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Mobs/Soldier/solfacem_4.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Mobs/Soldier/solfacem_8.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Mobs/Soldier/solfacem_12.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Mobs/Soldier/solbackatt_0.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Mobs/Soldier/solbackatt_5.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Mobs/Soldier/solfaceatt_0.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Mobs/Soldier/solfaceatt_5.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Mobs/Soldier/sprite213_0.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/Mobs/Soldier/sprite213_1.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Mobs/Soldier/sprite213_2.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Mobs/Soldier/sprite213_3.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Mobs/Soldier/solface_0.png" type="Texture" id=25]
+[ext_resource path="res://Scenes/Maps/nav2.tres" type="NavigationPolygon" id=26]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "b",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "fd",
+"speed": 16.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "bm",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "fm",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "ba",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "fa",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "bd",
+"speed": 16.0
+}, {
+"frames": [ ExtResource( 25 ) ],
+"loop": true,
+"name": "f",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 7.27676
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 170.374
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 21.4086
+
+[node name="soldier" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="soldier" type="KinematicBody2D" parent="."]
+position = Vector2( 0.237831, 12.8426 )
+collision_layer = 3
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="soldier"]
+position = Vector2( 0, 2.39233 )
+texture = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="soldier"]
+position = Vector2( -0.237831, -12.8426 )
+frames = SubResource( 1 )
+animation = "f"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soldier"]
+visible = false
+position = Vector2( 0, -0.59956 )
+shape = SubResource( 2 )
+
+[node name="vision" type="Area2D" parent="soldier"]
+visible = false
+collision_layer = 17
+collision_mask = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soldier/vision"]
+position = Vector2( -0.27739, -13.0373 )
+shape = SubResource( 3 )
+
+[node name="damzone" type="Area2D" parent="soldier"]
+editor/display_folded = true
+visible = false
+collision_layer = 16
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soldier/damzone"]
+position = Vector2( -0.27739, -13.0373 )
+shape = SubResource( 4 )
+
+[node name="solpos" type="Position2D" parent="soldier"]
+position = Vector2( -0.28479, -12.8156 )
+
+[node name="Hit" type="Timer" parent="soldier"]
+
+[node name="Timer" type="Timer" parent="soldier"]
+
+[node name="cosmicgoo" type="Area2D" parent="soldier"]
+visible = false
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="soldier/cosmicgoo"]
+position = Vector2( 0, -0.59956 )
+shape = SubResource( 2 )
+
+[node name="SoundHit" type="AudioStreamPlayer2D" parent="soldier"]
+
+[node name="navigator" type="Navigation2D" parent="."]
+visible = false
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="navigator"]
+navpoly = ExtResource( 26 )
+
+[node name="Timer" type="Timer" parent="."]
+[connection signal="body_entered" from="soldier/vision" to="soldier" method="_on_vision_body_entered"]
+[connection signal="body_entered" from="soldier/damzone" to="soldier" method="_on_damzone_body_entered"]
+[connection signal="body_exited" from="soldier/damzone" to="soldier" method="_on_damzone_body_exited"]
+[connection signal="timeout" from="soldier/Hit" to="soldier" method="_on_Hit_timeout"]
+[connection signal="timeout" from="soldier/Timer" to="soldier" method="_on_Timer_timeout"]
+[connection signal="area_entered" from="soldier/cosmicgoo" to="soldier" method="_on_cosmicgoo_area_entered"]
+[connection signal="area_exited" from="soldier/cosmicgoo" to="soldier" method="_on_cosmicgoo_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/BossParts/Tentacle3.gd" type="Script" id=1]
+[ext_resource path="res://Tiles/Bunker/tentacle3.png" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Tentacle3" type="KinematicBody2D"]
+position = Vector2( 72.2122, -75.2896 )
+scale = Vector2( 2.5, 1 )
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.111122, -0.109558 )
+rotation = 3.1401
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+offset = Vector2( -31.5194, -0.382584 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( 0.00316811, -2.0732, 8.15936, -3.15043, 18.6239, -2.15015, 32.2432, -1.76542, 31.9354, 2.6974, 24.7026, 3.31297, 15.7, 2.15879, 5.77406, 3.31297, -0.227668, 2.77435 )

@@ -1,0 +1,164 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Entities/Asteroide.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Mobs/Astéroïde/sprite163_0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Mobs/Astéroïde/sprite165_0.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Mobs/Astéroïde/sprite167_0.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Mobs/Astéroïde/sprite168_0.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Mobs/Astéroïde/sprite164_0.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Mobs/Astéroïde/sprite166_0.png" type="Texture" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "6",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "4",
+"speed": 5.0
+} ]
+
+[node name="Asteroide" type="KinematicBody2D"]
+collision_layer = 34
+collision_mask = 12
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "2"
+
+[node name="1" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -20.8466, -28.0071, -26.7906, -18.7414, -22.42, -6.50376, -17.5249, -5.10517, -12.6299, 4.16048, -14.5529, 20.5939, -8.60892, 26.1883, -0.217384, 29.6847, 11.8454, 29.8596, 25.3069, 23.0414, 28.2789, 16.7478, 25.3069, 11.3283, 25.4817, 4.51013, 27.9292, 1.18848, 26.7055, -6.32893, 20.7614, -13.1471, 9.22308, -15.9442, 6.95038, -23.6365, 3.27908, -27.6574, -7.7348, -29.056 )
+disabled = true
+
+[node name="2" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -23.5196, -9.56105, -23.5196, 10.1974, -18.4831, 21.4326, -10.9284, 26.2754, -2.59884, 27.6313, 5.92442, 23.176, 8.05523, 19.1081, 9.60492, 13.1031, 9.99234, 6.3232, 23.1646, 1.28673, 25.8766, -4.13716, 23.9395, -13.629, 9.99234, -26.4138, -0.661736, -26.4138, -11.7032, -23.3145, -17.902, -18.8591 )
+disabled = true
+
+[node name="3" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -2.20061, -12.4595, -12.0259, -7.76051, -13.5922, 0.783184, -8.75077, 11.4628, 3.77998, 14.1683, 12.3237, 6.90616, 14.8868, -1.92232, 13.0356, -4.05824, 7.48224, -7.33333 )
+disabled = true
+
+[node name="4" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -12.3743, 3.13205, -11.2176, -8.04844, -0.936737, -14.474, 6.38841, -11.9038, 11.7859, -6.24928, 12.6855, 5.9593, 8.05906, 10.4572, 1.762, 13.927, -1.57929, 6.73037 )
+disabled = true
+
+[node name="5" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -39.5495, -36.0456, -43.3694, -25.4163, -39.7156, -12.628, -34.567, -5.98465, -38.0548, 6.80369, -44.6981, 12.2844, -49.3484, 31.2178, -46.3935, 48.622, -40.9825, 55.1152, -31.378, 58.6324, 6.76963, 61.0674, 16.78, 55.7916, 20.5677, 48.0809, 23.679, 33.877, 44.8985, 22.4528, 52.839, 9.60565, 56.475, -2.29405, 57.6764, -24.2298, 55.6829, -36.1909, 50.3969, -46.9102, 45.3752, -50.8789, 34.846, -59.7073, 22.5348, -61.6512, -0.54853, -51.4459, -18.7591, -49.3808 )
+disabled = true
+
+[node name="6" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -46.7554, -46.8335, -58.4089, -23.2888, -56.5063, -5.68973, -50.5606, 13.812, -40.8098, 28.0815, -32.7237, 38.0702, -19.4055, 54.7179, -11.5572, 58.2853, 17.2197, 60.6636, 44.3318, 49.0101, 49.8017, 38.7836, 51.7043, 19.282, 49.8017, 10.9581, 45.0452, 2.39634, 42.4292, -15.9162, 46.9478, -41.1257, 45.2831, -56.5844, 38.3861, -59.9139, 21.2627, -59.2005, 6.75533, -56.8222, -10.3681, -51.3522, -26.5402, -52.5414 )
+disabled = true
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Area1" type="Area2D" parent="."]
+editor/display_folded = true
+visible = false
+collision_layer = 32
+collision_mask = 4
+
+[node name="coll" type="CollisionPolygon2D" parent="Area1"]
+visible = false
+scale = Vector2( 1.05, 1.05 )
+polygon = PoolVector2Array( -20.8466, -28.0071, -26.7906, -18.7414, -22.42, -6.50376, -17.5249, -5.10517, -12.6299, 4.16048, -14.5529, 20.5939, -8.60892, 26.1883, -0.217384, 29.6847, 11.8454, 29.8596, 25.3069, 23.0414, 28.2789, 16.7478, 25.3069, 11.3283, 25.4817, 4.51013, 27.9292, 1.18848, 26.7055, -6.32893, 20.7614, -13.1471, 9.22308, -15.9442, 6.95038, -23.6365, 3.27908, -27.6574, -7.7348, -29.056 )
+disabled = true
+
+[node name="Area2" type="Area2D" parent="."]
+editor/display_folded = true
+visible = false
+collision_layer = 32
+collision_mask = 4
+
+[node name="coll" type="CollisionPolygon2D" parent="Area2"]
+visible = false
+scale = Vector2( 1.05, 1.05 )
+polygon = PoolVector2Array( -23.5196, -9.56105, -23.5196, 10.1974, -18.4831, 21.4326, -10.9284, 26.2754, -2.59884, 27.6313, 5.92442, 23.176, 8.05523, 19.1081, 9.60492, 13.1031, 9.99234, 6.3232, 23.1646, 1.28673, 25.8766, -4.13716, 23.9395, -13.629, 9.99234, -26.4138, -0.661736, -26.4138, -11.7032, -23.3145, -17.902, -18.8591 )
+disabled = true
+
+[node name="Area3" type="Area2D" parent="."]
+editor/display_folded = true
+visible = false
+collision_layer = 32
+collision_mask = 4
+
+[node name="coll" type="CollisionPolygon2D" parent="Area3"]
+visible = false
+scale = Vector2( 1.05, 1.05 )
+polygon = PoolVector2Array( -2.20061, -12.4595, -12.0259, -7.76051, -13.5922, 0.783184, -8.75077, 11.4628, 3.77998, 14.1683, 12.3237, 6.90616, 14.8868, -1.92232, 13.0356, -4.05824, 7.48224, -7.33333 )
+disabled = true
+
+[node name="Area4" type="Area2D" parent="."]
+editor/display_folded = true
+visible = false
+collision_layer = 32
+collision_mask = 4
+
+[node name="coll" type="CollisionPolygon2D" parent="Area4"]
+visible = false
+scale = Vector2( 1.05, 1.05 )
+polygon = PoolVector2Array( -12.3743, 3.13205, -11.2176, -8.04844, -0.936737, -14.474, 6.38841, -11.9038, 11.7859, -6.24928, 12.6855, 5.9593, 8.05906, 10.4572, 1.762, 13.927, -1.57929, 6.73037 )
+disabled = true
+
+[node name="Area5" type="Area2D" parent="."]
+editor/display_folded = true
+visible = false
+collision_layer = 32
+collision_mask = 4
+
+[node name="coll" type="CollisionPolygon2D" parent="Area5"]
+visible = false
+scale = Vector2( 1.05, 1.05 )
+polygon = PoolVector2Array( -39.5495, -36.0456, -43.3694, -25.4163, -39.7156, -12.628, -34.567, -5.98465, -38.0548, 6.80369, -44.6981, 12.2844, -49.3484, 31.2178, -46.3935, 48.622, -40.9825, 55.1152, -31.378, 58.6324, 6.76963, 61.0674, 16.78, 55.7916, 20.5677, 48.0809, 23.679, 33.877, 44.8985, 22.4528, 52.839, 9.60565, 56.475, -2.29405, 57.6764, -24.2298, 55.6829, -36.1909, 50.3969, -46.9102, 45.3752, -50.8789, 34.846, -59.7073, 22.5348, -61.6512, -0.54853, -51.4459, -18.7591, -49.3808 )
+disabled = true
+
+[node name="Area6" type="Area2D" parent="."]
+editor/display_folded = true
+visible = false
+collision_layer = 32
+collision_mask = 4
+
+[node name="coll" type="CollisionPolygon2D" parent="Area6"]
+visible = false
+scale = Vector2( 1.05, 1.05 )
+polygon = PoolVector2Array( -46.7554, -46.8335, -58.4089, -23.2888, -56.5063, -5.68973, -50.5606, 13.812, -40.8098, 28.0815, -32.7237, 38.0702, -19.4055, 54.7179, -11.5572, 58.2853, 17.2197, 60.6636, 44.3318, 49.0101, 49.8017, 38.7836, 51.7043, 19.282, 49.8017, 10.9581, 45.0452, 2.39634, 42.4292, -15.9162, 46.9478, -41.1257, 45.2831, -56.5844, 38.3861, -59.9139, 21.2627, -59.2005, 6.75533, -56.8222, -10.3681, -51.3522, -26.5402, -52.5414 )
+disabled = true
+
+[node name="boulpos" type="Position2D" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Area1" to="." method="_on_Area1_body_entered"]
+[connection signal="body_entered" from="Area2" to="." method="_on_Area2_body_entered"]
+[connection signal="body_entered" from="Area3" to="." method="_on_Area3_body_entered"]
+[connection signal="body_entered" from="Area4" to="." method="_on_Area4_body_entered"]
+[connection signal="body_entered" from="Area5" to="." method="_on_Area5_body_entered"]
+[connection signal="body_entered" from="Area6" to="." method="_on_Area6_body_entered"]

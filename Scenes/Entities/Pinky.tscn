@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/Entities/Pinky.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Mobs/Pinky/mouche_0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Mobs/Pinky/mouche_1.png" type="Texture" id=3]
+[ext_resource path="res://Sons/insect.wav" type="AudioStream" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 1.95433
+
+[node name="Pinky" type="KinematicBody2D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.482587, -0.353897 )
+shape = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+max_distance = 100.0
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_AudioStreamPlayer2D_finished"]

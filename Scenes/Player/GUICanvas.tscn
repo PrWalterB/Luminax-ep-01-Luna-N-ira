@@ -1,0 +1,390 @@
+[gd_scene load_steps=45 format=2]
+
+[ext_resource path="res://Scripts/Player/GUICanvas.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/GUI/Att/attv1.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/GUI/Att/attv2.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/GUI/Att/attv3.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/GUI/Att/attv4.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/GUI/Att/attv5.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/GUI/Bars/baratt.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/GUI/Att/ouiv.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/GUI/Bars/spritebar2.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/GUI/Bars/spritebar.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/GUI/Bars/barv.png" type="Texture" id=11]
+[ext_resource path="res://Fonts/impact.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Sprites/GUI/loading_0.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/GUI/loading_1.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/GUI/loading_2.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/GUI/loading_3.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/GUI/loading_4.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/GUI/loading_5.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/GUI/gg_0.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/GUI/gg_1.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/GUI/gg_2.png" type="Texture" id=21]
+[ext_resource path="res://Sprites/GUI/Menu/success_cadre.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/GUI/Menu/unknowsucces.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_0.png" type="Texture" id=24]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_1.png" type="Texture" id=25]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_2.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_3.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_4.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_5.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Particules/Onomatopees/pointexl_6.png" type="Texture" id=30]
+[ext_resource path="res://Fonts/Squarewave.ttf" type="DynamicFontData" id=31]
+[ext_resource path="res://Fonts/defaut.tres" type="DynamicFont" id=32]
+[ext_resource path="res://Sprites/GUI/sprite226_0.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/GUI/Bars/boss1fd.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/GUI/Bars/boss1bar.png" type="Texture" id=35]
+[ext_resource path="res://Sprites/GUI/Bars/boss1.png" type="Texture" id=36]
+[ext_resource path="res://Sprites/GUI/Theme/theme.tres" type="Theme" id=37]
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
+outline_color = Color( 0.0392157, 0.384314, 0, 1 )
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+outline_color = Color( 0, 0.862745, 0.054902, 1 )
+extra_spacing_top = 1
+font_data = ExtResource( 12 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 22 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=7]
+size = 23
+font_data = ExtResource( 31 )
+
+[node name="CanvasLayer" type="CanvasLayer"]
+scale = Vector2( 3, 3 )
+transform = Transform2D( 3, 0, 0, 3, 0, 0 )
+script = ExtResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+anchor_left = 0.13
+anchor_top = 0.34
+anchor_right = 0.18
+anchor_bottom = 0.48
+margin_left = -132.315
+margin_top = -68.416
+margin_right = 157.485
+margin_bottom = -88.416
+
+[node name="barre" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 341.0
+margin_bottom = 64.0
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/barre"]
+margin_left = 10.0
+margin_right = 330.0
+margin_bottom = 64.0
+grow_horizontal = 2
+rect_min_size = Vector2( 320, 64 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="VBoxContainer/barre/MarginContainer"]
+margin_right = 320.0
+margin_bottom = 64.0
+
+[node name="attaque1" type="NinePatchRect" parent="VBoxContainer/barre/MarginContainer/NinePatchRect"]
+margin_left = 80.0
+margin_top = 30.0
+margin_right = 112.0
+margin_bottom = 61.0
+texture = ExtResource( 2 )
+
+[node name="attaque2" type="NinePatchRect" parent="VBoxContainer/barre/MarginContainer/NinePatchRect"]
+margin_left = 112.0
+margin_top = 30.0
+margin_right = 144.0
+margin_bottom = 61.0
+texture = ExtResource( 3 )
+
+[node name="attaque3" type="NinePatchRect" parent="VBoxContainer/barre/MarginContainer/NinePatchRect"]
+margin_left = 144.0
+margin_top = 30.0
+margin_right = 176.0
+margin_bottom = 61.0
+texture = ExtResource( 4 )
+
+[node name="attaque4" type="NinePatchRect" parent="VBoxContainer/barre/MarginContainer/NinePatchRect"]
+margin_left = 176.0
+margin_top = 30.0
+margin_right = 208.0
+margin_bottom = 61.0
+texture = ExtResource( 5 )
+
+[node name="attaque5" type="NinePatchRect" parent="VBoxContainer/barre/MarginContainer/NinePatchRect"]
+margin_left = 207.807
+margin_top = 29.5338
+margin_right = 239.807
+margin_bottom = 60.5338
+texture = ExtResource( 6 )
+
+[node name="attaques" type="NinePatchRect" parent="VBoxContainer/barre/MarginContainer/NinePatchRect"]
+margin_right = 320.0
+margin_bottom = 64.0
+texture = ExtResource( 7 )
+
+[node name="oui1" type="NinePatchRect" parent="VBoxContainer/barre/MarginContainer/NinePatchRect"]
+margin_left = 80.0
+margin_top = 30.0
+margin_right = 112.0
+margin_bottom = 61.0
+texture = ExtResource( 8 )
+
+[node name="oui2" type="NinePatchRect" parent="VBoxContainer/barre/MarginContainer/NinePatchRect"]
+margin_left = 112.0
+margin_top = 30.0
+margin_right = 144.0
+margin_bottom = 61.0
+texture = ExtResource( 8 )
+
+[node name="oui3" type="NinePatchRect" parent="VBoxContainer/barre/MarginContainer/NinePatchRect"]
+margin_left = 144.0
+margin_top = 30.0
+margin_right = 176.0
+margin_bottom = 61.0
+texture = ExtResource( 8 )
+
+[node name="oui4" type="NinePatchRect" parent="VBoxContainer/barre/MarginContainer/NinePatchRect"]
+margin_left = 176.0
+margin_top = 30.0
+margin_right = 208.0
+margin_bottom = 61.0
+texture = ExtResource( 8 )
+
+[node name="oui5" type="NinePatchRect" parent="VBoxContainer/barre/MarginContainer/NinePatchRect"]
+margin_left = 208.453
+margin_top = 29.6226
+margin_right = 240.453
+margin_bottom = 60.6226
+texture = ExtResource( 8 )
+
+[node name="Guigui" type="MarginContainer" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Bars" type="VBoxContainer" parent="Guigui"]
+margin_right = 100.0
+margin_bottom = 48.0
+
+[node name="bar" type="HBoxContainer" parent="Guigui/Bars"]
+margin_right = 100.0
+margin_bottom = 48.0
+
+[node name="Count" type="MarginContainer" parent="Guigui/Bars/bar"]
+margin_right = 100.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 100, 48 )
+
+[node name="lifebar" type="NinePatchRect" parent="Guigui/Bars/bar/Count"]
+margin_right = 100.0
+margin_bottom = 48.0
+
+[node name="TextureProgress" type="TextureProgress" parent="Guigui/Bars/bar/Count/lifebar"]
+margin_left = 44.2181
+margin_top = 38.2247
+margin_right = 144.218
+margin_bottom = 86.2247
+texture_under = ExtResource( 9 )
+texture_progress = ExtResource( 10 )
+
+[node name="Background" type="NinePatchRect" parent="Guigui/Bars/bar/Count"]
+margin_right = 100.0
+margin_bottom = 48.0
+texture = ExtResource( 11 )
+
+[node name="Title" type="TextureRect" parent="Guigui/Bars/bar/Count/Background"]
+margin_right = 100.0
+margin_bottom = 48.0
+stretch_mode = 4
+
+[node name="Name" type="Label" parent="Guigui/Bars/bar/Count/Background"]
+margin_left = 46.6667
+margin_top = 2.64298
+margin_right = 98.6667
+margin_bottom = 30.643
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.243137, 0.309804, 0.443137, 1 )
+custom_colors/font_color_shadow = Color( 0.0705882, 0.0705882, 0.0705882, 1 )
+text = "VEGET"
+
+[node name="Numbers" type="Label" parent="Guigui/Bars/bar/Count/Background"]
+margin_left = 48.0
+margin_top = 22.6667
+margin_right = 106.0
+margin_bottom = 48.6667
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0.101961, 0.0941176, 1 )
+text = "PV:"
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 330.805, 10 )
+scale = Vector2( 0.354166, 0.354167 )
+frames = SubResource( 3 )
+playing = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 330.918, 23.5089 )
+scale = Vector2( 0.354166, 0.354167 )
+frames = SubResource( 4 )
+playing = true
+
+[node name="cadre" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 317.914, 24.566 )
+scale = Vector2( 0.14, 0.14 )
+frames = SubResource( 5 )
+playing = true
+
+[node name="image" type="Sprite" parent="."]
+visible = false
+position = Vector2( 317.914, 24.566 )
+scale = Vector2( 0.14, 0.14 )
+texture = ExtResource( 23 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 330.805, 10 )
+scale = Vector2( 1.15623, 0.782729 )
+frames = SubResource( 6 )
+frame = 4
+playing = true
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 56.6667
+margin_top = 3.0
+margin_right = 674.667
+margin_bottom = 24.0
+rect_scale = Vector2( 0.428359, 0.481739 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 1, 0.952941, 1 )
+custom_colors/font_outline_modulate = Color( 0.0745098, 0.0745098, 0.0745098, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Création du point fixe dans le temps..."
+align = 2
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+margin_left = 70.0
+margin_top = 4.0
+margin_right = 705.0
+margin_bottom = 25.0
+rect_scale = Vector2( 0.39357, 0.435938 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 1, 0.952941, 1 )
+custom_colors/font_outline_modulate = Color( 0.0745098, 0.0745098, 0.0745098, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Utilisez ZQSD Pour vous déplacer"
+align = 2
+
+[node name="Bossfight" type="Label" parent="."]
+visible = false
+margin_left = -6.66667
+margin_top = 56.6667
+margin_right = 575.333
+margin_bottom = 77.6667
+rect_scale = Vector2( 0.606903, 0.729271 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 1, 0.952941, 1 )
+custom_colors/font_outline_modulate = Color( 0.0745098, 0.0745098, 0.0745098, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Bossfight:"
+align = 1
+
+[node name="Bossfight2" type="Label" parent="."]
+visible = false
+margin_left = -6.66667
+margin_top = 60.0
+margin_right = 575.333
+margin_bottom = 88.0
+rect_scale = Vector2( 0.606903, 1.76927 )
+custom_fonts/font = ExtResource( 32 )
+custom_colors/font_color = Color( 0, 1, 0.952941, 1 )
+custom_colors/font_outline_modulate = Color( 0.0745098, 0.0745098, 0.0745098, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "ANDDR MUTANT."
+align = 1
+
+[node name="perso" type="Sprite" parent="."]
+visible = false
+position = Vector2( 10, 56.6667 )
+texture = ExtResource( 33 )
+
+[node name="perso2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 10, 76.6667 )
+texture = ExtResource( 33 )
+
+[node name="perso3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 10, 96.6667 )
+texture = ExtResource( 33 )
+
+[node name="bossfd" type="Sprite" parent="."]
+visible = false
+position = Vector2( 330, 103.333 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 34 )
+
+[node name="bar" type="Sprite" parent="bossfd"]
+position = Vector2( 1.2121, 47.294 )
+texture = ExtResource( 35 )
+offset = Vector2( 0.0654297, -51.9884 )
+
+[node name="boss" type="Sprite" parent="bossfd"]
+position = Vector2( -0.159302, 1.13945 )
+texture = ExtResource( 36 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Timer2" type="Timer" parent="."]
+
+[node name="Temps" type="Label" parent="."]
+visible = false
+margin_left = 3.09744
+margin_top = 44.9988
+margin_right = 53.0974
+margin_bottom = 72.9988
+rect_scale = Vector2( 0.5, 0.5 )
+theme = ExtResource( 37 )
+text = "10:0:0"
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]

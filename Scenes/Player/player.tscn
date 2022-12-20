@@ -1,0 +1,482 @@
+[gd_scene load_steps=53 format=2]
+
+[ext_resource path="res://Scripts/Player/player.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt05/laser_0.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt05/laser_1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt05/laser_2.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt05/laser_3.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Projectiles/Tog/attt05/laser_4.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Other/shadow_0.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Characters/player.tres" type="SpriteFrames" id=8]
+[ext_resource path="res://Sprites/Cinematics/Vaisseau/sprite162_0.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Cinematics/Vaisseau/sprite162_1.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Cinematics/Vaisseau/sprite162_2.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Cinematics/Vaisseau/sprite162_3.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Props/vaisseauspace_dam.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Props/vaisseauspace_0.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Props/vaisseauspace_1.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Props/vaisseauspace_2.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/Props/vaisseauspace_3.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/Props/vaisseauspace_4.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Props/vaisseauspace_5.png" type="Texture" id=19]
+[ext_resource path="res://Sprites/Props/vaisseauspace_6.png" type="Texture" id=20]
+[ext_resource path="res://Sprites/Props/vaisseauspace_7.png" type="Texture" id=21]
+[ext_resource path="res://Scenes/Player/Camera2D.gd" type="Script" id=22]
+[ext_resource path="res://Sprites/Cinematics/Begin/back1.png" type="Texture" id=23]
+[ext_resource path="res://Sprites/Cinematics/Begin/backwhite.png" type="Texture" id=24]
+[ext_resource path="res://Scenes/Player/Black.gd" type="Script" id=25]
+[ext_resource path="res://Sprites/Characters/Vegetspr/specialveget.png" type="Texture" id=26]
+[ext_resource path="res://Sprites/Projectiles/Progfer/attp05/epines_0.png" type="Texture" id=27]
+[ext_resource path="res://Sprites/Projectiles/Progfer/attp05/epines_1.png" type="Texture" id=28]
+[ext_resource path="res://Sprites/Projectiles/Progfer/attp05/appepines_0.png" type="Texture" id=29]
+[ext_resource path="res://Sprites/Projectiles/Progfer/attp05/appepines_1.png" type="Texture" id=30]
+[ext_resource path="res://Sprites/Projectiles/Progfer/attp05/appepines_2.png" type="Texture" id=31]
+[ext_resource path="res://Sprites/Projectiles/Progfer/attp05/appepines_3.png" type="Texture" id=32]
+[ext_resource path="res://Sprites/Projectiles/Progfer/attp05/appepines_4.png" type="Texture" id=33]
+[ext_resource path="res://Sprites/Projectiles/Progfer/attp05/appepines_5.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/Projectiles/Progfer/attp05/appepines_6.png" type="Texture" id=35]
+[ext_resource path="res://Sprites/Projectiles/Progfer/attp05/appepines_7.png" type="Texture" id=36]
+[ext_resource path="res://Sprites/Projectiles/Progfer/attp05/appepines_8.png" type="Texture" id=37]
+[ext_resource path="res://Sprites/Projectiles/Progfer/attp05/appepines_9.png" type="Texture" id=38]
+[ext_resource path="res://Sprites/GUI/Theme/theme.tres" type="Theme" id=39]
+[ext_resource path="res://Fonts/Squarewave.ttf" type="DynamicFontData" id=40]
+[ext_resource path="res://Sons/Play_Menu.wav" type="AudioStream" id=41]
+[ext_resource path="res://Sons/vvvvvv.wav" type="AudioStream" id=42]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 25.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "betterdam",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "better",
+"speed": 30.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 8.125, 4.95215 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 14.0094, 7.39851 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 9.73334, 12.5825 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 7.01772, 4.85669 )
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 23.2876
+
+[sub_resource type="CircleShape2D" id=8]
+radius = 2.97771
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 27 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "default",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "dapp",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 38 ), ExtResource( 37 ), ExtResource( 36 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 32 ), ExtResource( 31 ), ExtResource( 30 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "app",
+"speed": 10.0
+} ]
+
+[sub_resource type="DynamicFont" id=10]
+size = 11
+font_data = ExtResource( 40 )
+
+[node name="player" type="KinematicBody2D"]
+position = Vector2( -0.252655, -0.0710526 )
+collision_layer = 4
+collision_mask = 1027
+script = ExtResource( 1 )
+
+[node name="Laser" type="AnimatedSprite" parent="."]
+editor/display_folded = true
+visible = false
+position = Vector2( -0.0679321, -0.306271 )
+scale = Vector2( 4.45514, -4.30136 )
+frames = SubResource( 1 )
+playing = true
+offset = Vector2( 63.9882, -0.134028 )
+
+[node name="LaserArea" type="Area2D" parent="Laser"]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Laser/LaserArea"]
+polygon = PoolVector2Array( -0.000782114, -1.17052, 6.04088, -7.10664, 7.05764, -8.08576, 17.0148, -13.0629, 31.0373, -16.2354, 128.006, -16.177, 128.054, 15.7903, 31.0241, 15.8982, 17.0376, 13.0032, 7.00618, 7.78612, 5.99363, 6.90246, -0.0220408, 0.842347 )
+disabled = true
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.5, 16 )
+texture = ExtResource( 7 )
+
+[node name="vegface" type="AnimatedSprite" parent="."]
+position = Vector2( 0.430664, -0.0759983 )
+frames = ExtResource( 8 )
+animation = "00000"
+playing = true
+
+[node name="vaisseau" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( -30, 0 )
+scale = Vector2( 1.5, 1.5 )
+frames = SubResource( 2 )
+animation = "better"
+frame = 7
+playing = true
+
+[node name="HitboxVeget" type="CollisionShape2D" parent="."]
+position = Vector2( 0.627396, 11.6472 )
+shape = SubResource( 3 )
+disabled = true
+one_way_collision_margin = 0.0
+
+[node name="HitboxProgfer" type="CollisionShape2D" parent="."]
+position = Vector2( 0.102936, 16.5343 )
+shape = SubResource( 4 )
+disabled = true
+
+[node name="HitboxDoub" type="CollisionShape2D" parent="."]
+position = Vector2( -0.376675, 18.4738 )
+shape = SubResource( 5 )
+disabled = true
+
+[node name="HitboxTog" type="CollisionShape2D" parent="."]
+position = Vector2( 0.909286, 10.8891 )
+shape = SubResource( 6 )
+disabled = true
+
+[node name="HitboxVai" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2( -37.6122, -0.189285 )
+polygon = PoolVector2Array( -56.6637, -4.66834, -41.2423, -5.43941, -11.5561, -10.7084, -4.35944, -13.1501, 24.7718, -6.25531, 48.8227, -1.9823, 51.5086, 1.31402, 50.4098, 7.90667, 36.9804, 13.8889, 20.1325, 16.941, 5.56507, 16.682, 3.4723, 14.4195, 6.6963, 10.7996, -29.2087, 8.67378, -30.5548, 7.77633, -38.3626, 12.9815, -51.9806, 8.94845, -49.9023, 5.54761, -53.3976, 4.88633, -58.121, 3.56378, -59.4436, 1.39102, -59.6325, -0.214933, -57.5542, -2.19876 )
+disabled = true
+
+[node name="HitboxVai2" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -20.3396, -1.51795 )
+shape = SubResource( 7 )
+disabled = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0.353867, 0.134667 )
+rotating = true
+current = true
+zoom = Vector2( 0.45, 0.45 )
+smoothing_enabled = true
+smoothing_speed = 20.0
+script = ExtResource( 22 )
+
+[node name="posvaif" type="Position2D" parent="."]
+visible = false
+position = Vector2( -32, 7 )
+
+[node name="posvegf" type="Position2D" parent="."]
+visible = false
+position = Vector2( -4, 8 )
+
+[node name="poseffect" type="Position2D" parent="."]
+position = Vector2( 0.219928, 0.0793753 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="oclock" type="Timer" parent="."]
+
+[node name="rollback" type="Timer" parent="."]
+
+[node name="champlife" type="KinematicBody2D" parent="."]
+collision_layer = 524288
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="champlife"]
+position = Vector2( 0.418697, 1.7699 )
+shape = SubResource( 8 )
+
+[node name="U" type="Position2D" parent="."]
+visible = false
+position = Vector2( 0, -12 )
+
+[node name="D" type="Position2D" parent="."]
+visible = false
+position = Vector2( 0, 29 )
+
+[node name="R" type="Position2D" parent="."]
+visible = false
+position = Vector2( 20, 10 )
+
+[node name="L" type="Position2D" parent="."]
+visible = false
+position = Vector2( -20, 10 )
+
+[node name="Black" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0.553986, 2.16579 )
+scale = Vector2( 7.7793, 6.26669 )
+z_index = 4096
+texture = ExtResource( 23 )
+
+[node name="Black2" type="Sprite" parent="."]
+editor/display_folded = true
+visible = false
+modulate = Color( 0, 0, 0, 0 )
+position = Vector2( 0.747696, 2.3595 )
+scale = Vector2( 7.7793, 6.26669 )
+z_index = 4096
+texture = ExtResource( 24 )
+script = ExtResource( 25 )
+
+[node name="Timer2" type="Timer" parent="Black2"]
+
+[node name="Blacktim" type="Timer" parent="."]
+
+[node name="SOUL" type="Timer" parent="."]
+
+[node name="Soul" type="Sprite" parent="."]
+editor/display_folded = true
+visible = false
+position = Vector2( 0.438704, -0.0626726 )
+texture = ExtResource( 26 )
+
+[node name="SoulArea" type="Area2D" parent="Soul"]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Soul/SoulArea"]
+polygon = PoolVector2Array( -6.97818, -8.92956, -6.01771, -10.9999, -3.96871, -12.9849, 3.97668, -12.9794, 5.98579, -10.9777, 6.99322, -8.99588, 6.99278, -7.03953, 3.99185, -3.97777, 4.9854, -3.97777, 5.99176, -2.9754, 6.95223, -1.05447, 7.99807, 1.99769, 7.9841, 6.97026, 7.01135, 7.97439, 5.00308, 8.02146, 5.00094, 14.9752, 4.00229, 16.0185, -3.98416, 16.0036, -5.01261, 14.9901, -5.02417, 7.96201, -6.9895, 7.99505, -7.99694, 6.95458, -7.98043, 1.95042, -6.97293, -1.00118, -5.97965, -2.98775, -4.96272, -4.02833, -3.99444, -4.02927, -6.00079, -5.99728, -7.00389, -6.9812 )
+
+[node name="PIERRE" type="Timer" parent="."]
+
+[node name="CerclePierre" type="Node2D" parent="."]
+editor/display_folded = true
+visible = false
+
+[node name="Pierre" type="AnimatedSprite" parent="CerclePierre"]
+position = Vector2( 0.0743364, 0.142502 )
+rotation = 0.00702113
+frames = SubResource( 9 )
+animation = "app"
+offset = Vector2( 0.0259207, -32.731 )
+
+[node name="proj" type="KinematicBody2D" parent="CerclePierre/Pierre"]
+position = Vector2( -0.0508392, -32.8397 )
+collision_layer = 9
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CerclePierre/Pierre/proj"]
+polygon = PoolVector2Array( -14.5513, 2.29876, -11.8861, -1.05128, -11.9584, -6.13439, -11.6169, -12.5749, -5.15367, -3.87767, -3.9115, -4.98526, -0.103049, -14.8962, 4.05849, -5.04367, 5.0738, -3.8935, 11.6941, -12.7492, 11.9809, -6.06948, 11.9344, -1.148, 14.6118, 2.30309, 13.9679, 3.0412, 12.033, 3.0442, 6.08696, 1.0724, 2.95415, 1.03118, 0.0962561, 0.0220718, -3.03499, 0.994385, -6.76649, 1.0923, -12.0615, 3.03543, -13.9504, 3.03835 )
+
+[node name="ProjArea" type="Area2D" parent="CerclePierre/Pierre"]
+position = Vector2( -0.0508247, -32.8303 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CerclePierre/Pierre/ProjArea"]
+polygon = PoolVector2Array( -16.0275, 0.997318, -13.0306, -2.20675, -13.076, -6.03809, -13.945, -6.03675, -14.033, -11.8825, -11.3511, -14.4936, -5.96888, -7.78705, -5.49263, -6.32633, -3.01637, -14.2011, -0.0578631, -16.7336, 3.22483, -13.9737, 5.48777, -6.55142, 5.999, -8.01368, 11.6762, -14.8953, 14.169, -12.0947, 14.0706, -5.93657, 13.0725, -6.00368, 12.9953, -2.17839, 15.9348, 1.00331, 16.0255, 3.01642, 14.1028, 4.98888, 12.0021, 5.0359, 6.39699, 3.07509, 2.93933, 2.99291, 0.0930992, 2.07822, -2.96904, 3.04582, -6.47021, 3.13877, -12.0255, 5.07309, -13.9951, 5.03238, -16.0552, 3.02232 )
+
+[node name="Pierre2" type="AnimatedSprite" parent="CerclePierre"]
+position = Vector2( 0.0743364, 0.142502 )
+rotation = -1.04767
+frames = SubResource( 9 )
+animation = "app"
+offset = Vector2( 0.0259207, -32.731 )
+
+[node name="proj" type="KinematicBody2D" parent="CerclePierre/Pierre2"]
+editor/display_folded = true
+position = Vector2( -0.0508392, -32.8397 )
+collision_layer = 9
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CerclePierre/Pierre2/proj"]
+polygon = PoolVector2Array( -14.5513, 2.29876, -11.8861, -1.05128, -11.9584, -6.13439, -11.6169, -12.5749, -5.15367, -3.87767, -3.9115, -4.98526, -0.103049, -14.8962, 4.05849, -5.04367, 5.0738, -3.8935, 11.6941, -12.7492, 11.9809, -6.06948, 11.9344, -1.148, 14.6118, 2.30309, 13.9679, 3.0412, 12.033, 3.0442, 6.08696, 1.0724, 2.95415, 1.03118, 0.0962561, 0.0220718, -3.03499, 0.994385, -6.76649, 1.0923, -12.0615, 3.03543, -13.9504, 3.03835 )
+
+[node name="ProjArea" type="Area2D" parent="CerclePierre/Pierre2"]
+editor/display_folded = true
+position = Vector2( -0.0508247, -32.8303 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CerclePierre/Pierre2/ProjArea"]
+polygon = PoolVector2Array( -16.0275, 0.997318, -13.0306, -2.20675, -13.076, -6.03809, -13.945, -6.03675, -14.033, -11.8825, -11.3511, -14.4936, -5.96888, -7.78705, -5.49263, -6.32633, -3.01637, -14.2011, -0.0578631, -16.7336, 3.22483, -13.9737, 5.48777, -6.55142, 5.999, -8.01368, 11.6762, -14.8953, 14.169, -12.0947, 14.0706, -5.93657, 13.0725, -6.00368, 12.9953, -2.17839, 15.9348, 1.00331, 16.0255, 3.01642, 14.1028, 4.98888, 12.0021, 5.0359, 6.39699, 3.07509, 2.93933, 2.99291, 0.0930992, 2.07822, -2.96904, 3.04582, -6.47021, 3.13877, -12.0255, 5.07309, -13.9951, 5.03238, -16.0552, 3.02232 )
+
+[node name="Pierre3" type="AnimatedSprite" parent="CerclePierre"]
+position = Vector2( 0.0743364, 0.142502 )
+rotation = -2.13448
+frames = SubResource( 9 )
+animation = "app"
+offset = Vector2( 0.0259207, -32.731 )
+
+[node name="proj" type="KinematicBody2D" parent="CerclePierre/Pierre3"]
+editor/display_folded = true
+position = Vector2( -0.0508392, -32.8397 )
+collision_layer = 9
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CerclePierre/Pierre3/proj"]
+polygon = PoolVector2Array( -14.5513, 2.29876, -11.8861, -1.05128, -11.9584, -6.13439, -11.6169, -12.5749, -5.15367, -3.87767, -3.9115, -4.98526, -0.103049, -14.8962, 4.05849, -5.04367, 5.0738, -3.8935, 11.6941, -12.7492, 11.9809, -6.06948, 11.9344, -1.148, 14.6118, 2.30309, 13.9679, 3.0412, 12.033, 3.0442, 6.08696, 1.0724, 2.95415, 1.03118, 0.0962561, 0.0220718, -3.03499, 0.994385, -6.76649, 1.0923, -12.0615, 3.03543, -13.9504, 3.03835 )
+
+[node name="ProjArea" type="Area2D" parent="CerclePierre/Pierre3"]
+editor/display_folded = true
+position = Vector2( -0.0508247, -32.8303 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CerclePierre/Pierre3/ProjArea"]
+polygon = PoolVector2Array( -16.0275, 0.997318, -13.0306, -2.20675, -13.076, -6.03809, -13.945, -6.03675, -14.033, -11.8825, -11.3511, -14.4936, -5.96888, -7.78705, -5.49263, -6.32633, -3.01637, -14.2011, -0.0578631, -16.7336, 3.22483, -13.9737, 5.48777, -6.55142, 5.999, -8.01368, 11.6762, -14.8953, 14.169, -12.0947, 14.0706, -5.93657, 13.0725, -6.00368, 12.9953, -2.17839, 15.9348, 1.00331, 16.0255, 3.01642, 14.1028, 4.98888, 12.0021, 5.0359, 6.39699, 3.07509, 2.93933, 2.99291, 0.0930992, 2.07822, -2.96904, 3.04582, -6.47021, 3.13877, -12.0255, 5.07309, -13.9951, 5.03238, -16.0552, 3.02232 )
+
+[node name="Pierre4" type="AnimatedSprite" parent="CerclePierre"]
+position = Vector2( 0.0743364, 0.142502 )
+rotation = -3.23851
+frames = SubResource( 9 )
+animation = "app"
+offset = Vector2( 0.0259207, -32.731 )
+
+[node name="proj" type="KinematicBody2D" parent="CerclePierre/Pierre4"]
+editor/display_folded = true
+position = Vector2( -0.0508392, -32.8397 )
+collision_layer = 9
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CerclePierre/Pierre4/proj"]
+polygon = PoolVector2Array( -14.5513, 2.29876, -11.8861, -1.05128, -11.9584, -6.13439, -11.6169, -12.5749, -5.15367, -3.87767, -3.9115, -4.98526, -0.103049, -14.8962, 4.05849, -5.04367, 5.0738, -3.8935, 11.6941, -12.7492, 11.9809, -6.06948, 11.9344, -1.148, 14.6118, 2.30309, 13.9679, 3.0412, 12.033, 3.0442, 6.08696, 1.0724, 2.95415, 1.03118, 0.0962561, 0.0220718, -3.03499, 0.994385, -6.76649, 1.0923, -12.0615, 3.03543, -13.9504, 3.03835 )
+
+[node name="ProjArea" type="Area2D" parent="CerclePierre/Pierre4"]
+editor/display_folded = true
+position = Vector2( -0.0508247, -32.8303 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CerclePierre/Pierre4/ProjArea"]
+polygon = PoolVector2Array( -16.0275, 0.997318, -13.0306, -2.20675, -13.076, -6.03809, -13.945, -6.03675, -14.033, -11.8825, -11.3511, -14.4936, -5.96888, -7.78705, -5.49263, -6.32633, -3.01637, -14.2011, -0.0578631, -16.7336, 3.22483, -13.9737, 5.48777, -6.55142, 5.999, -8.01368, 11.6762, -14.8953, 14.169, -12.0947, 14.0706, -5.93657, 13.0725, -6.00368, 12.9953, -2.17839, 15.9348, 1.00331, 16.0255, 3.01642, 14.1028, 4.98888, 12.0021, 5.0359, 6.39699, 3.07509, 2.93933, 2.99291, 0.0930992, 2.07822, -2.96904, 3.04582, -6.47021, 3.13877, -12.0255, 5.07309, -13.9951, 5.03238, -16.0552, 3.02232 )
+
+[node name="Pierre5" type="AnimatedSprite" parent="CerclePierre"]
+position = Vector2( 0.0743364, 0.142502 )
+rotation = -4.26146
+frames = SubResource( 9 )
+animation = "app"
+offset = Vector2( 0.0259207, -32.731 )
+
+[node name="proj" type="KinematicBody2D" parent="CerclePierre/Pierre5"]
+editor/display_folded = true
+position = Vector2( -0.0508392, -32.8397 )
+collision_layer = 9
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CerclePierre/Pierre5/proj"]
+polygon = PoolVector2Array( -14.5513, 2.29876, -11.8861, -1.05128, -11.9584, -6.13439, -11.6169, -12.5749, -5.15367, -3.87767, -3.9115, -4.98526, -0.103049, -14.8962, 4.05849, -5.04367, 5.0738, -3.8935, 11.6941, -12.7492, 11.9809, -6.06948, 11.9344, -1.148, 14.6118, 2.30309, 13.9679, 3.0412, 12.033, 3.0442, 6.08696, 1.0724, 2.95415, 1.03118, 0.0962561, 0.0220718, -3.03499, 0.994385, -6.76649, 1.0923, -12.0615, 3.03543, -13.9504, 3.03835 )
+
+[node name="ProjArea" type="Area2D" parent="CerclePierre/Pierre5"]
+editor/display_folded = true
+position = Vector2( -0.0508247, -32.8303 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CerclePierre/Pierre5/ProjArea"]
+polygon = PoolVector2Array( -16.0275, 0.997318, -13.0306, -2.20675, -13.076, -6.03809, -13.945, -6.03675, -14.033, -11.8825, -11.3511, -14.4936, -5.96888, -7.78705, -5.49263, -6.32633, -3.01637, -14.2011, -0.0578631, -16.7336, 3.22483, -13.9737, 5.48777, -6.55142, 5.999, -8.01368, 11.6762, -14.8953, 14.169, -12.0947, 14.0706, -5.93657, 13.0725, -6.00368, 12.9953, -2.17839, 15.9348, 1.00331, 16.0255, 3.01642, 14.1028, 4.98888, 12.0021, 5.0359, 6.39699, 3.07509, 2.93933, 2.99291, 0.0930992, 2.07822, -2.96904, 3.04582, -6.47021, 3.13877, -12.0255, 5.07309, -13.9951, 5.03238, -16.0552, 3.02232 )
+
+[node name="Pierre6" type="AnimatedSprite" parent="CerclePierre"]
+position = Vector2( 0.0743364, 0.142502 )
+rotation = -5.27082
+frames = SubResource( 9 )
+animation = "app"
+offset = Vector2( 0.0259207, -32.731 )
+
+[node name="proj" type="KinematicBody2D" parent="CerclePierre/Pierre6"]
+editor/display_folded = true
+position = Vector2( -0.0508392, -32.8397 )
+collision_layer = 9
+collision_mask = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CerclePierre/Pierre6/proj"]
+polygon = PoolVector2Array( -14.5513, 2.29876, -11.8861, -1.05128, -11.9584, -6.13439, -11.6169, -12.5749, -5.15367, -3.87767, -3.9115, -4.98526, -0.103049, -14.8962, 4.05849, -5.04367, 5.0738, -3.8935, 11.6941, -12.7492, 11.9809, -6.06948, 11.9344, -1.148, 14.6118, 2.30309, 13.9679, 3.0412, 12.033, 3.0442, 6.08696, 1.0724, 2.95415, 1.03118, 0.0962561, 0.0220718, -3.03499, 0.994385, -6.76649, 1.0923, -12.0615, 3.03543, -13.9504, 3.03835 )
+
+[node name="ProjArea" type="Area2D" parent="CerclePierre/Pierre6"]
+editor/display_folded = true
+position = Vector2( -0.0508247, -32.8303 )
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CerclePierre/Pierre6/ProjArea"]
+polygon = PoolVector2Array( -16.0275, 0.997318, -13.0306, -2.20675, -13.076, -6.03809, -13.945, -6.03675, -14.033, -11.8825, -11.3511, -14.4936, -5.96888, -7.78705, -5.49263, -6.32633, -3.01637, -14.2011, -0.0578631, -16.7336, 3.22483, -13.9737, 5.48777, -6.55142, 5.999, -8.01368, 11.6762, -14.8953, 14.169, -12.0947, 14.0706, -5.93657, 13.0725, -6.00368, 12.9953, -2.17839, 15.9348, 1.00331, 16.0255, 3.01642, 14.1028, 4.98888, 12.0021, 5.0359, 6.39699, 3.07509, 2.93933, 2.99291, 0.0930992, 2.07822, -2.96904, 3.04582, -6.47021, 3.13877, -12.0255, 5.07309, -13.9951, 5.03238, -16.0552, 3.02232 )
+
+[node name="LASER" type="Timer" parent="."]
+
+[node name="FUSION" type="Timer" parent="."]
+
+[node name="Tuto" type="Panel" parent="."]
+editor/display_folded = true
+visible = false
+margin_left = -79.0
+margin_top = -55.0
+margin_right = 80.0
+margin_bottom = -29.0
+theme = ExtResource( 39 )
+
+[node name="Label" type="Label" parent="Tuto"]
+margin_left = 1.1376
+margin_top = -1.25677
+margin_right = 158.138
+margin_bottom = 27.7432
+custom_fonts/font = SubResource( 10 )
+text = "Utilisez 
+ZQSD pour vous déplacer"
+align = 1
+autowrap = true
+
+[node name="SoundAttaque" type="AudioStreamPlayer2D" parent="."]
+
+[node name="SoundAttaqueDup" type="AudioStreamPlayer2D" parent="."]
+
+[node name="SoundHit" type="AudioStreamPlayer2D" parent="."]
+
+[node name="SoulSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 41 )
+
+[node name="LaserSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 42 )
+[connection signal="body_entered" from="Laser/LaserArea" to="." method="_on_LaserArea_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="oclock" to="." method="_on_oclock_timeout"]
+[connection signal="timeout" from="rollback" to="." method="_on_rollback_timeout"]
+[connection signal="timeout" from="Black2/Timer2" to="Black2" method="_on_Timer2_timeout"]
+[connection signal="timeout" from="Blacktim" to="." method="_on_Blacktim_timeout"]
+[connection signal="timeout" from="SOUL" to="." method="_on_SOUL_timeout"]
+[connection signal="body_entered" from="Soul/SoulArea" to="." method="_on_SoulArea_body_entered"]
+[connection signal="timeout" from="PIERRE" to="." method="_on_PIERRE_timeout"]
+[connection signal="animation_finished" from="CerclePierre/Pierre" to="." method="_on_Pierre_animation_finished"]
+[connection signal="body_entered" from="CerclePierre/Pierre/ProjArea" to="." method="_on_ProjArea_body_entered"]
+[connection signal="body_entered" from="CerclePierre/Pierre2/ProjArea" to="." method="_on_ProjArea_body_entered"]
+[connection signal="body_entered" from="CerclePierre/Pierre3/ProjArea" to="." method="_on_ProjArea_body_entered"]
+[connection signal="body_entered" from="CerclePierre/Pierre4/ProjArea" to="." method="_on_ProjArea_body_entered"]
+[connection signal="body_entered" from="CerclePierre/Pierre5/ProjArea" to="." method="_on_ProjArea_body_entered"]
+[connection signal="body_entered" from="CerclePierre/Pierre6/ProjArea" to="." method="_on_ProjArea_body_entered"]
+[connection signal="timeout" from="LASER" to="." method="_on_LASER_timeout"]
+[connection signal="timeout" from="FUSION" to="." method="_on_FUSION_timeout"]
+[connection signal="finished" from="SoundAttaqueDup" to="." method="_on_SoundAttaqueDup_finished"]
+[connection signal="finished" from="LaserSound" to="." method="_on_LaserSound_finished"]

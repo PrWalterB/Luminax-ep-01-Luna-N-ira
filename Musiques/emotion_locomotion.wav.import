@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/emotion_locomotion.wav-b9ab433a31587885fd07f2663b22a5ba.sample"
+
+[deps]
+
+source_file="res://Musiques/emotion_locomotion.wav"
+dest_files=[ "res://.import/emotion_locomotion.wav-b9ab433a31587885fd07f2663b22a5ba.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/norvegian_dance_begin.wav-ee98a0bef80a8bde98c90fe49710d43e.sample"
+
+[deps]
+
+source_file="res://Musiques/norvegian_dance_begin.wav"
+dest_files=[ "res://.import/norvegian_dance_begin.wav-ee98a0bef80a8bde98c90fe49710d43e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

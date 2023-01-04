@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Battle for Oosphiros.wav-27a445cdcc33d92c52fd343b5b02b4f0.sample"
+
+[deps]
+
+source_file="res://Musiques/Battle for Oosphiros.wav"
+dest_files=[ "res://.import/Battle for Oosphiros.wav-27a445cdcc33d92c52fd343b5b02b4f0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/emotion_locomotion.mp3-2fea4220f7a33856eedbe05f24a2e1c6.mp3str"
+
+[deps]
+
+source_file="res://Musiques/emotion_locomotion.mp3"
+dest_files=[ "res://.import/emotion_locomotion.mp3-2fea4220f7a33856eedbe05f24a2e1c6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

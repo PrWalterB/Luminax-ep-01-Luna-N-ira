@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/WAKEUP.wav-2dfc59398f4036fb8f23a1ef1c63beb7.sample"
+
+[deps]
+
+source_file="res://Musiques/WAKEUP.wav"
+dest_files=[ "res://.import/WAKEUP.wav-2dfc59398f4036fb8f23a1ef1c63beb7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

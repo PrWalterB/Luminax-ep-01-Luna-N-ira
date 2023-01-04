@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/moutain_king_0.wav-bb5bf98c13954ff80e86db264048c017.sample"
+
+[deps]
+
+source_file="res://Musiques/moutain_king_0.wav"
+dest_files=[ "res://.import/moutain_king_0.wav-bb5bf98c13954ff80e86db264048c017.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

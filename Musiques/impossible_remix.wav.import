@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/impossible_remix.wav-02343a86c0bfd1526e49fd1e6dde11e6.sample"
+
+[deps]
+
+source_file="res://Musiques/impossible_remix.wav"
+dest_files=[ "res://.import/impossible_remix.wav-02343a86c0bfd1526e49fd1e6dde11e6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

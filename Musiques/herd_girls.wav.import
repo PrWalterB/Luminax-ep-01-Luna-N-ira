@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/herd_girls.wav-18baea28806eb8821e67a8e4a4d9daa8.sample"
+
+[deps]
+
+source_file="res://Musiques/herd_girls.wav"
+dest_files=[ "res://.import/herd_girls.wav-18baea28806eb8821e67a8e4a4d9daa8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

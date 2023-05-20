@@ -8,4 +8,4 @@ A e un jorn ferai la revirada en occitan.
 
 
 
-PS: Hadoclat fai me la maison comuna de Champair
+PS: Hadoclat fai me la maison comuna de Champairòl
